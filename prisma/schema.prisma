@@ -115,7 +115,7 @@ model Inquiry {
   @@index([email])
 }
 
-/// File metadata only. Binary files live under /data/globalorbitnepal/uploads.
+/// File metadata only. Binary files live under /data/globalorbitusa/uploads.
 model MediaAsset {
   id           String   @id @default(cuid())
   originalName String

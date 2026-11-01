@@ -8,8 +8,8 @@ const globalForPrisma = globalThis as unknown as {
 assertDatabaseTarget(process.env.DATABASE_URL);
 
 /**
- * Singleton Prisma client. Import only from server-side GlobalOrbitNepal code.
- * Refuses to initialize if DATABASE_URL does not target globalorbitnepal_db.
+ * Singleton Prisma client. Import only from server-side GlobalOrbitUSA code.
+ * Refuses to initialize if DATABASE_URL does not target globalorbitusa_db.
  */
 export const prisma =
   globalForPrisma.prisma ??

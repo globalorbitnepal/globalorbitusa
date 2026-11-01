@@ -1,33 +1,138 @@
 {
-  "at": "2026-11-01T13:23:02.236Z",
-  "BASE": "https://arnav.theglobalorbit.com",
-  "EXPECT": "https://theglobalorbit.com",
-  "isApexExpect": true,
+  "at": "2026-11-01T14:35:21.835Z",
+  "BASE": "https://globalorbit.us",
+  "EXPECT": "https://globalorbit.us",
+  "isApexExpect": false,
   "results": [
     {
-      "name": "staging_redirect/",
+      "name": "home_http",
       "status": "PASS",
-      "detail": "https://theglobalorbit.com/"
+      "detail": "200"
     },
     {
-      "name": "staging_redirect/contact",
+      "name": "home_has_title",
       "status": "PASS",
-      "detail": "https://theglobalorbit.com/contact"
+      "detail": ""
     },
     {
-      "name": "staging_redirect/robots_txt",
+      "name": "home_canonical_host",
       "status": "PASS",
-      "detail": "https://theglobalorbit.com/robots.txt"
+      "detail": "globalorbit.us"
     },
     {
-      "name": "staging_redirect/sitemap_xml",
+      "name": "home_og_url_host",
       "status": "PASS",
-      "detail": "https://theglobalorbit.com/sitemap.xml"
+      "detail": "globalorbit.us"
     },
     {
-      "name": "staging_redirect_service",
+      "name": "home_og_image_host",
       "status": "PASS",
-      "detail": "https://theglobalorbit.com/service/website-development-nepal"
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "home_jsonld_present",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "home_jsonld_staging_hosts",
+      "status": "PASS",
+      "detail": "staging mode — arnav expected"
+    },
+    {
+      "name": "robots_http",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots_sitemap_dir",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "robots_staging_host",
+      "status": "FAIL",
+      "detail": "expected arnav in staging robots"
+    },
+    {
+      "name": "sitemap_http",
+      "status": "PASS",
+      "detail": "64 locs"
+    },
+    {
+      "name": "sitemap_locs_expect",
+      "status": "PASS",
+      "detail": "64 urls"
+    },
+    {
+      "name": "canonical_/contact",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "ogurl_/contact",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "page_/contact",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "canonical_/service/website-development-nepal",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "ogurl_/service/website-development-nepal",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "page_/service/website-development-nepal",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "canonical_/orbit-software",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "ogurl_/orbit-software",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "page_/orbit-software",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "canonical_/about",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "ogurl_/about",
+      "status": "PASS",
+      "detail": "globalorbit.us"
+    },
+    {
+      "name": "page_/about",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "home_abs_links_sampled",
+      "status": "PASS",
+      "detail": "35 absolute hrefs scanned"
+    },
+    {
+      "name": "staging_redirect_contact",
+      "status": "FAIL",
+      "detail": "Location=https://theglobalorbit.com/contact"
     }
   ]
 }

@@ -1,6 +1,6 @@
 /**
  * Live SEO crawl against sitemap (or BASE_URL).
- * Usage: BASE_URL=https://theglobalorbit.com node scripts/audit-seo-live.mjs
+ * Usage: BASE_URL=https://globalorbit.us node scripts/audit-seo-live.mjs
  * Writes reports/seo-live-crawl.json and prints a severity summary.
  */
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -8,11 +8,11 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const BASE = (process.env.BASE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://theglobalorbit.com").replace(
+const BASE = (process.env.BASE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://globalorbit.us").replace(
   /\/$/,
   "",
 );
-const INTENDED_APEX = "https://theglobalorbit.com";
+const INTENDED_APEX = "https://globalorbit.us";
 
 function abs(href, base = BASE) {
   try {

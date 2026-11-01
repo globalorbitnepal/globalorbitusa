@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
  * Parses DATABASE_URL (from the environment or a local .env) and confirms it
- * targets only GlobalOrbitNepal. Never prints the URL, password, or .env body.
+ * targets only GlobalOrbitUSA. Never prints the URL, password, or .env body.
  */
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const EXPECTED_DB = "globalorbitnepal_db";
-const EXPECTED_USER = "globalorbitnepal_app";
+const EXPECTED_DB = "globalorbitusa_db";
+const EXPECTED_USER = "globalorbitusa_app";
 
 function loadDatabaseUrl() {
   if (process.env.DATABASE_URL) {

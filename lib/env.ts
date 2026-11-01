@@ -2,7 +2,7 @@ import { assertDatabaseTarget } from "@/lib/assert-database-target";
 
 const DEFAULT_PORT = "3001";
 const DEFAULT_HOSTNAME = "127.0.0.1";
-const DEFAULT_UPLOAD_DIR = "/data/globalorbitnepal/uploads";
+const DEFAULT_UPLOAD_DIR = "/data/globalorbitusa/uploads";
 
 export type AppEnv = {
   nodeEnv: string;
@@ -24,7 +24,7 @@ export function getAppEnv(): AppEnv {
 }
 
 /**
- * Validates DATABASE_URL against GlobalOrbitNepal only. Does not log the value.
+ * Validates DATABASE_URL against GlobalOrbitUSA only. Does not log the value.
  */
 export function requireDatabaseUrl(): string {
   const parsed = assertDatabaseTarget(process.env.DATABASE_URL);

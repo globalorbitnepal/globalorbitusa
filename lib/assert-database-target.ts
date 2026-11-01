@@ -1,5 +1,5 @@
-const EXPECTED_DB = "globalorbitnepal_db";
-const EXPECTED_USER = "globalorbitnepal_app";
+const EXPECTED_DB = "globalorbitusa_db";
+const EXPECTED_USER = "globalorbitusa_app";
 const BLOCKED_DB_FRAGMENTS = ["hostingbeyond"];
 const BLOCKED_USERS = ["hostingbeyond_user", "hostingbeyond"];
 
@@ -8,7 +8,7 @@ function fail(message: string): never {
 }
 
 /**
- * Ensures DATABASE_URL targets only the GlobalOrbitNepal database/role.
+ * Ensures DATABASE_URL targets only the GlobalOrbitUSA database/role.
  * Never logs the URL, password, or query string.
  */
 export function assertDatabaseTarget(databaseUrl: string | undefined): URL {
@@ -43,11 +43,11 @@ export function assertDatabaseTarget(databaseUrl: string | undefined): URL {
   const userLower = user.toLowerCase();
 
   if (BLOCKED_DB_FRAGMENTS.some((fragment) => dbLower.includes(fragment))) {
-    fail("DATABASE_URL database name is not allowed for GlobalOrbitNepal");
+    fail("DATABASE_URL database name is not allowed for GlobalOrbitUSA");
   }
 
   if (BLOCKED_USERS.includes(userLower) || userLower.includes("hostingbeyond")) {
-    fail("DATABASE_URL role is not allowed for GlobalOrbitNepal");
+    fail("DATABASE_URL role is not allowed for GlobalOrbitUSA");
   }
 
   if (dbName !== EXPECTED_DB) {

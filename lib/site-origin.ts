@@ -1,15 +1,15 @@
 /**
  * Canonical public site origin.
  *
- * Production: https://theglobalorbit.com (DNS cutover complete)
+ * Production: https://globalorbit.us (DNS cutover complete)
  * Legacy staging hostname arnav.theglobalorbit.com → 301 to apex (nginx).
  *
  * Set NEXT_PUBLIC_SITE_URL in the server .env for the environment you are
  * serving. Never hardcode a hostname in page metadata or JSON-LD — use
  * SITE_ORIGIN / absoluteUrl() instead.
  */
-const FALLBACK_PUBLIC_ORIGIN = "https://theglobalorbit.com";
-const INTENDED_PRODUCTION_ORIGIN = "https://theglobalorbit.com";
+const FALLBACK_PUBLIC_ORIGIN = "https://globalorbit.us";
+const INTENDED_PRODUCTION_ORIGIN = "https://globalorbit.us";
 const LEGACY_STAGING_ORIGIN = "https://arnav.theglobalorbit.com";
 
 function normalizeOrigin(value: string | undefined): string | null {

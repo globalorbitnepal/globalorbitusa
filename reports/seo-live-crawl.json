@@ -1,1287 +1,1287 @@
 {
-  "BASE": "https://theglobalorbit.com",
-  "intendedApex": "https://theglobalorbit.com",
-  "crawledAt": "2026-11-01T13:23:01.869Z",
+  "BASE": "https://globalorbit.us",
+  "intendedApex": "https://globalorbit.us",
+  "crawledAt": "2026-11-01T14:35:17.201Z",
   "sitemapCount": 64,
   "robotsOk": true,
-  "robotsSnippet": "User-Agent: *\nAllow: /\nAllow: /sitemap.xml\nDisallow: /admin\nDisallow: /admin/\nDisallow: /orbit\nDisallow: /orbit/\nDisallow: /api/\nDisallow: /demo\nDisallow: /news\nDisallow: /_next/\n\nUser-Agent: GPTBot\nAllow: /\nDisallow: /admin\nDisallow: /orbit\nDisallow: /api/\n\nHost: theglobalorbit.com\nSitemap: https://theglobalorbit.com/sitemap.xml\n",
+  "robotsSnippet": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a Content-Signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a Content-Signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a Content-Signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via Content-Signal with respect to the correspon",
   "issues": [],
   "pages": [
     {
-      "url": "https://theglobalorbit.com/",
-      "finalUrl": "https://theglobalorbit.com/",
+      "url": "https://globalorbit.us/",
+      "finalUrl": "https://globalorbit.us/",
       "status": 200,
       "title": "Global Orbit | Web Development &amp; Software Company in Nepal",
       "description": "Global Orbit helps businesses in Nepal with website development, custom software, mobile apps, SEO and digital marketing. Contact our Kathmandu team for a co…",
-      "canonical": "https://theglobalorbit.com",
+      "canonical": "https://globalorbit.us",
       "robots": "index, follow",
       "ogTitle": "Global Orbit | Web Development &amp; Software Company in Nepal",
-      "ogUrl": "https://theglobalorbit.com",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/",
+          "url": "https://globalorbit.us/",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/about",
-      "finalUrl": "https://theglobalorbit.com/about",
+      "url": "https://globalorbit.us/about",
+      "finalUrl": "https://globalorbit.us/about",
       "status": 200,
       "title": "About Global Orbit · Web &amp; Software Studio Nepal",
       "description": "Enterprise websites, custom apps, ERP, and SEO from Kathmandu with teams in Nepal, India, and the United States — one accountable studio.",
-      "canonical": "https://theglobalorbit.com/about",
+      "canonical": "https://globalorbit.us/about",
       "robots": "index, follow",
       "ogTitle": "About Global Orbit · Web &amp; Software Studio Nepal",
-      "ogUrl": "https://theglobalorbit.com/about",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/about",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/about",
+          "url": "https://globalorbit.us/about",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/blog/core-web-vitals-2026-cheat-sheet",
-      "finalUrl": "https://theglobalorbit.com/blog/core-web-vitals-2026-cheat-sheet",
+      "url": "https://globalorbit.us/blog/core-web-vitals-2026-cheat-sheet",
+      "finalUrl": "https://globalorbit.us/blog/core-web-vitals-2026-cheat-sheet",
       "status": 200,
       "title": "Core Web Vitals 2026 Cheat Sheet",
       "description": "Complete guide to Core Web Vitals metrics for 2026.",
-      "canonical": "https://theglobalorbit.com/blog/core-web-vitals-2026-cheat-sheet",
+      "canonical": "https://globalorbit.us/blog/core-web-vitals-2026-cheat-sheet",
       "robots": "index, follow",
       "ogTitle": "Core Web Vitals 2026 Cheat Sheet",
-      "ogUrl": "https://theglobalorbit.com/blog/core-web-vitals-2026-cheat-sheet",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/blog/core-web-vitals-2026-cheat-sheet",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/blog/core-web-vitals-2026-cheat-sheet",
+          "url": "https://globalorbit.us/blog/core-web-vitals-2026-cheat-sheet",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/blog/rank-nepali-businesses-page-1-google",
-      "finalUrl": "https://theglobalorbit.com/blog/rank-nepali-businesses-page-1-google",
+      "url": "https://globalorbit.us/blog/rank-nepali-businesses-page-1-google",
+      "finalUrl": "https://globalorbit.us/blog/rank-nepali-businesses-page-1-google",
       "status": 200,
       "title": "Rank Nepali Businesses on Page 1 of Google",
       "description": "SEO strategies for Nepali businesses to rank on Google Page 1.",
-      "canonical": "https://theglobalorbit.com/blog/rank-nepali-businesses-page-1-google",
+      "canonical": "https://globalorbit.us/blog/rank-nepali-businesses-page-1-google",
       "robots": "index, follow",
       "ogTitle": "Rank Nepali Businesses on Page 1 of Google",
-      "ogUrl": "https://theglobalorbit.com/blog/rank-nepali-businesses-page-1-google",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/blog/rank-nepali-businesses-page-1-google",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/blog/rank-nepali-businesses-page-1-google",
+          "url": "https://globalorbit.us/blog/rank-nepali-businesses-page-1-google",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/blog/right-tech-stack-nepali-startup-2026",
-      "finalUrl": "https://theglobalorbit.com/blog/right-tech-stack-nepali-startup-2026",
+      "url": "https://globalorbit.us/blog/right-tech-stack-nepali-startup-2026",
+      "finalUrl": "https://globalorbit.us/blog/right-tech-stack-nepali-startup-2026",
       "status": 200,
       "title": "Right Tech Stack for Nepali Startups 2026",
       "description": "Choosing the right technology stack for Nepali startups in 2026.",
-      "canonical": "https://theglobalorbit.com/blog/right-tech-stack-nepali-startup-2026",
+      "canonical": "https://globalorbit.us/blog/right-tech-stack-nepali-startup-2026",
       "robots": "index, follow",
       "ogTitle": "Right Tech Stack for Nepali Startups 2026",
-      "ogUrl": "https://theglobalorbit.com/blog/right-tech-stack-nepali-startup-2026",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/blog/right-tech-stack-nepali-startup-2026",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/blog/right-tech-stack-nepali-startup-2026",
+          "url": "https://globalorbit.us/blog/right-tech-stack-nepali-startup-2026",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/blogs",
-      "finalUrl": "https://theglobalorbit.com/blogs",
+      "url": "https://globalorbit.us/blogs",
+      "finalUrl": "https://globalorbit.us/blogs",
       "status": 200,
       "title": "Blog",
       "description": "SEO, Core Web Vitals, and tech-stack notes from Global Orbit.",
-      "canonical": "https://theglobalorbit.com/blogs",
+      "canonical": "https://globalorbit.us/blogs",
       "robots": "index, follow",
       "ogTitle": "Blog",
-      "ogUrl": "https://theglobalorbit.com/blogs",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/blogs",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/blogs",
+          "url": "https://globalorbit.us/blogs",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/booking-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/booking-website-development-nepal",
+      "url": "https://globalorbit.us/booking-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/booking-website-development-nepal",
       "status": 200,
       "title": "Booking Website Development Nepal",
       "description": "Booking-led websites for hotels, tours, and appointments.",
-      "canonical": "https://theglobalorbit.com/booking-website-development-nepal",
+      "canonical": "https://globalorbit.us/booking-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Booking Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/booking-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/booking-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/booking-website-development-nepal",
+          "url": "https://globalorbit.us/booking-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/careers",
-      "finalUrl": "https://theglobalorbit.com/careers",
+      "url": "https://globalorbit.us/careers",
+      "finalUrl": "https://globalorbit.us/careers",
       "status": 200,
       "title": "Careers",
       "description": "Join Global Orbit — engineering, design, and SEO roles across Nepal, India, and the United States.",
-      "canonical": "https://theglobalorbit.com/careers",
+      "canonical": "https://globalorbit.us/careers",
       "robots": "index, follow",
       "ogTitle": "Careers",
-      "ogUrl": "https://theglobalorbit.com/careers",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/careers",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/careers",
+          "url": "https://globalorbit.us/careers",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/careers/senior-full-stack-developer",
-      "finalUrl": "https://theglobalorbit.com/careers/senior-full-stack-developer",
+      "url": "https://globalorbit.us/careers/senior-full-stack-developer",
+      "finalUrl": "https://globalorbit.us/careers/senior-full-stack-developer",
       "status": 200,
       "title": "Senior Full-Stack Developer · Careers",
       "description": "Own features across Next.js and Laravel — from API design to polished UI and production monitoring.",
-      "canonical": "https://theglobalorbit.com/careers/senior-full-stack-developer",
+      "canonical": "https://globalorbit.us/careers/senior-full-stack-developer",
       "robots": "index, follow",
       "ogTitle": "Senior Full-Stack Developer · Careers",
-      "ogUrl": "https://theglobalorbit.com/careers/senior-full-stack-developer",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/careers/senior-full-stack-developer",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/careers/senior-full-stack-developer",
+          "url": "https://globalorbit.us/careers/senior-full-stack-developer",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/careers/seo-specialist",
-      "finalUrl": "https://theglobalorbit.com/careers/seo-specialist",
+      "url": "https://globalorbit.us/careers/seo-specialist",
+      "finalUrl": "https://globalorbit.us/careers/seo-specialist",
       "status": 200,
       "title": "SEO Specialist · Careers",
       "description": "Technical SEO, content architecture, and measurable growth for Nepal and international export brands.",
-      "canonical": "https://theglobalorbit.com/careers/seo-specialist",
+      "canonical": "https://globalorbit.us/careers/seo-specialist",
       "robots": "index, follow",
       "ogTitle": "SEO Specialist · Careers",
-      "ogUrl": "https://theglobalorbit.com/careers/seo-specialist",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/careers/seo-specialist",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/careers/seo-specialist",
+          "url": "https://globalorbit.us/careers/seo-specialist",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/careers/ui-ux-designer",
-      "finalUrl": "https://theglobalorbit.com/careers/ui-ux-designer",
+      "url": "https://globalorbit.us/careers/ui-ux-designer",
+      "finalUrl": "https://globalorbit.us/careers/ui-ux-designer",
       "status": 200,
       "title": "UI/UX Designer · Careers",
       "description": "Design systems and product flows for hotel, trek, ecommerce, and SaaS clients — Figma to shipped UI.",
-      "canonical": "https://theglobalorbit.com/careers/ui-ux-designer",
+      "canonical": "https://globalorbit.us/careers/ui-ux-designer",
       "robots": "index, follow",
       "ogTitle": "UI/UX Designer · Careers",
-      "ogUrl": "https://theglobalorbit.com/careers/ui-ux-designer",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/careers/ui-ux-designer",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/careers/ui-ux-designer",
+          "url": "https://globalorbit.us/careers/ui-ux-designer",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/contact",
-      "finalUrl": "https://theglobalorbit.com/contact",
+      "url": "https://globalorbit.us/contact",
+      "finalUrl": "https://globalorbit.us/contact",
       "status": 200,
       "title": "Contact · Free Consultation",
       "description": "Contact Global Orbit — free consultation for websites, apps, ERP, SaaS, and SEO. Nepal, India, and United States sales offices. WhatsApp +977-9812322339.",
-      "canonical": "https://theglobalorbit.com/contact",
+      "canonical": "https://globalorbit.us/contact",
       "robots": "index, follow",
       "ogTitle": "Contact · Free Consultation",
-      "ogUrl": "https://theglobalorbit.com/contact",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/contact",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/contact",
+          "url": "https://globalorbit.us/contact",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/custom-software-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/custom-software-development-nepal",
+      "url": "https://globalorbit.us/custom-software-development-nepal",
+      "finalUrl": "https://globalorbit.us/custom-software-development-nepal",
       "status": 200,
       "title": "Custom Software Development Nepal",
       "description": "Bespoke software, ERP, and internal tools for Nepali operators.",
-      "canonical": "https://theglobalorbit.com/custom-software-development-nepal",
+      "canonical": "https://globalorbit.us/custom-software-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Custom Software Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/custom-software-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/custom-software-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/custom-software-development-nepal",
+          "url": "https://globalorbit.us/custom-software-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/ecommerce-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/ecommerce-website-development-nepal",
+      "url": "https://globalorbit.us/ecommerce-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/ecommerce-website-development-nepal",
       "status": 200,
       "title": "Ecommerce Website Development Nepal",
       "description": "Shopify, WooCommerce, and custom stores for Nepali brands.",
-      "canonical": "https://theglobalorbit.com/ecommerce-website-development-nepal",
+      "canonical": "https://globalorbit.us/ecommerce-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Ecommerce Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/ecommerce-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/ecommerce-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/ecommerce-website-development-nepal",
+          "url": "https://globalorbit.us/ecommerce-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/erp-software-nepal",
-      "finalUrl": "https://theglobalorbit.com/erp-software-nepal",
+      "url": "https://globalorbit.us/erp-software-nepal",
+      "finalUrl": "https://globalorbit.us/erp-software-nepal",
       "status": 200,
       "title": "ERP Software Nepal",
       "description": "ERP systems for manufacturing, hotels, warehouses, and retail.",
-      "canonical": "https://theglobalorbit.com/erp-software-nepal",
+      "canonical": "https://globalorbit.us/erp-software-nepal",
       "robots": "index, follow",
       "ogTitle": "ERP Software Nepal",
-      "ogUrl": "https://theglobalorbit.com/erp-software-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/erp-software-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/erp-software-nepal",
+          "url": "https://globalorbit.us/erp-software-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/hotel-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/hotel-website-development-nepal",
+      "url": "https://globalorbit.us/hotel-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/hotel-website-development-nepal",
       "status": 200,
       "title": "Hotel Website Development Nepal",
       "description": "Hotel websites with booking paths and channel-ready structure.",
-      "canonical": "https://theglobalorbit.com/hotel-website-development-nepal",
+      "canonical": "https://globalorbit.us/hotel-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Hotel Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/hotel-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/hotel-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/hotel-website-development-nepal",
+          "url": "https://globalorbit.us/hotel-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/inside-orbit",
-      "finalUrl": "https://theglobalorbit.com/inside-orbit",
+      "url": "https://globalorbit.us/inside-orbit",
+      "finalUrl": "https://globalorbit.us/inside-orbit",
       "status": 200,
       "title": "Inside Orbit",
       "description": "How Global Orbit works as a studio.",
-      "canonical": "https://theglobalorbit.com/inside-orbit",
+      "canonical": "https://globalorbit.us/inside-orbit",
       "robots": "index, follow",
       "ogTitle": "Inside Orbit",
-      "ogUrl": "https://theglobalorbit.com/inside-orbit",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/inside-orbit",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/inside-orbit",
+          "url": "https://globalorbit.us/inside-orbit",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/local-seo-nepal",
-      "finalUrl": "https://theglobalorbit.com/local-seo-nepal",
+      "url": "https://globalorbit.us/local-seo-nepal",
+      "finalUrl": "https://globalorbit.us/local-seo-nepal",
       "status": 200,
       "title": "Local SEO Nepal",
       "description": "Maps, citations, and local pack rankings for Kathmandu businesses.",
-      "canonical": "https://theglobalorbit.com/local-seo-nepal",
+      "canonical": "https://globalorbit.us/local-seo-nepal",
       "robots": "index, follow",
       "ogTitle": "Local SEO Nepal",
-      "ogUrl": "https://theglobalorbit.com/local-seo-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/local-seo-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/local-seo-nepal",
+          "url": "https://globalorbit.us/local-seo-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software",
-      "finalUrl": "https://theglobalorbit.com/orbit-software",
+      "url": "https://globalorbit.us/orbit-software",
+      "finalUrl": "https://globalorbit.us/orbit-software",
       "status": 200,
       "title": "ERP Software Nepal · Orbit Software",
       "description": "Orbit Software from Global Orbit: hotel PMS, billing, OTA, warehouse, manufacturing ERP, restaurant POS, CRM, and SaaS — operator systems built in Nepal.",
-      "canonical": "https://theglobalorbit.com/orbit-software",
+      "canonical": "https://globalorbit.us/orbit-software",
       "robots": "index, follow",
       "ogTitle": "ERP Software Nepal · Orbit Software",
-      "ogUrl": "https://theglobalorbit.com/orbit-software",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software",
+          "url": "https://globalorbit.us/orbit-software",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/android-apps",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/android-apps",
+      "url": "https://globalorbit.us/orbit-software/android-apps",
+      "finalUrl": "https://globalorbit.us/orbit-software/android-apps",
       "status": 200,
       "title": "Android Apps · Kotlin &amp; Play Store",
       "description": "Android apps built for the field. Kotlin-forward Android builds for booking, logistics, and staff — Material motion, push notifications, and secure APIs to your",
-      "canonical": "https://theglobalorbit.com/orbit-software/android-apps",
+      "canonical": "https://globalorbit.us/orbit-software/android-apps",
       "robots": "index, follow",
       "ogTitle": "Android Apps · Kotlin &amp; Play Store",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/android-apps",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/android-apps",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/android-apps",
+          "url": "https://globalorbit.us/orbit-software/android-apps",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/billing-software",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/billing-software",
+      "url": "https://globalorbit.us/orbit-software/billing-software",
+      "finalUrl": "https://globalorbit.us/orbit-software/billing-software",
       "status": 200,
       "title": "Billing Software | Business Billing &amp; Invoicing | Global Orbit",
       "description": "Billing and invoice management for retailers, distributors, and service businesses — sales and purchase invoices, tax-ready documents, payment tracking, and rep",
-      "canonical": "https://theglobalorbit.com/orbit-software/billing-software",
+      "canonical": "https://globalorbit.us/orbit-software/billing-software",
       "robots": "index, follow",
       "ogTitle": "Billing Software | Business Billing &amp; Invoicing | Global Orbit",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/billing-software",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/billing-software",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/billing-software",
+          "url": "https://globalorbit.us/orbit-software/billing-software",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/crm-software",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/crm-software",
+      "url": "https://globalorbit.us/orbit-software/crm-software",
+      "finalUrl": "https://globalorbit.us/orbit-software/crm-software",
       "status": 200,
       "title": "CRM Software | Lead &amp; Customer Management | Global Orbit",
       "description": "CRM software for leads, pipelines, follow-ups, deals, and sales reporting — practical customer relationship management for Nepali sales teams.",
-      "canonical": "https://theglobalorbit.com/orbit-software/crm-software",
+      "canonical": "https://globalorbit.us/orbit-software/crm-software",
       "robots": "index, follow",
       "ogTitle": "CRM Software | Lead &amp; Customer Management | Global Orbit",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/crm-software",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/crm-software",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/crm-software",
+          "url": "https://globalorbit.us/orbit-software/crm-software",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/hotel-management-system",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/hotel-management-system",
+      "url": "https://globalorbit.us/orbit-software/hotel-management-system",
+      "finalUrl": "https://globalorbit.us/orbit-software/hotel-management-system",
       "status": 200,
       "title": "Hotel Management System | Hotel Operations Software | Global Orbit",
       "description": "Hotel management software for front desk, reservations, room inventory, housekeeping, guest folios, and occupancy reporting — built for Nepali hospitality opera",
-      "canonical": "https://theglobalorbit.com/orbit-software/hotel-management-system",
+      "canonical": "https://globalorbit.us/orbit-software/hotel-management-system",
       "robots": "index, follow",
       "ogTitle": "Hotel Management System | Hotel Operations Software | Global Orbit",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/hotel-management-system",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/hotel-management-system",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/hotel-management-system",
+          "url": "https://globalorbit.us/orbit-software/hotel-management-system",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/ios-apps",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/ios-apps",
+      "url": "https://globalorbit.us/orbit-software/ios-apps",
+      "finalUrl": "https://globalorbit.us/orbit-software/ios-apps",
       "status": 200,
       "title": "iOS Apps · SwiftUI &amp; App Store",
       "description": "iOS apps with Apple-grade polish. SwiftUI and UIKit builds for premium brands — smooth motion, Sign in with Apple, in-app purchases, and Node.js backends your w",
-      "canonical": "https://theglobalorbit.com/orbit-software/ios-apps",
+      "canonical": "https://globalorbit.us/orbit-software/ios-apps",
       "robots": "index, follow",
       "ogTitle": "iOS Apps · SwiftUI &amp; App Store",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/ios-apps",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/ios-apps",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/ios-apps",
+          "url": "https://globalorbit.us/orbit-software/ios-apps",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/manufacturing-erp",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/manufacturing-erp",
+      "url": "https://globalorbit.us/orbit-software/manufacturing-erp",
+      "finalUrl": "https://globalorbit.us/orbit-software/manufacturing-erp",
       "status": 200,
       "title": "Manufacturing ERP",
       "description": "Plan production, manage BOM, track work orders, and control quality end-to-end.",
-      "canonical": "https://theglobalorbit.com/orbit-software/manufacturing-erp",
+      "canonical": "https://globalorbit.us/orbit-software/manufacturing-erp",
       "robots": "index, follow",
       "ogTitle": "Manufacturing ERP",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/manufacturing-erp",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/manufacturing-erp",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/manufacturing-erp",
+          "url": "https://globalorbit.us/orbit-software/manufacturing-erp",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/ota-management-system",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/ota-management-system",
+      "url": "https://globalorbit.us/orbit-software/ota-management-system",
+      "finalUrl": "https://globalorbit.us/orbit-software/ota-management-system",
       "status": 200,
       "title": "OTA Management System | Travel Booking Management | Global Orbit",
       "description": "Online travel agency and tour operator software for centralized bookings, supplier inventory, packages, commissions, and operational reporting — from Global Orb",
-      "canonical": "https://theglobalorbit.com/orbit-software/ota-management-system",
+      "canonical": "https://globalorbit.us/orbit-software/ota-management-system",
       "robots": "index, follow",
       "ogTitle": "OTA Management System | Travel Booking Management | Global Orbit",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/ota-management-system",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/ota-management-system",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/ota-management-system",
+          "url": "https://globalorbit.us/orbit-software/ota-management-system",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/restaurant-pos",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/restaurant-pos",
+      "url": "https://globalorbit.us/orbit-software/restaurant-pos",
+      "finalUrl": "https://globalorbit.us/orbit-software/restaurant-pos",
       "status": 200,
       "title": "Restaurant POS System | Restaurant Billing Software | Global Orbit",
       "description": "Restaurant POS for table service, takeaway, kitchen tickets, menu management, split bills, and shift reports — built for Kathmandu service speed.",
-      "canonical": "https://theglobalorbit.com/orbit-software/restaurant-pos",
+      "canonical": "https://globalorbit.us/orbit-software/restaurant-pos",
       "robots": "index, follow",
       "ogTitle": "Restaurant POS System | Restaurant Billing Software | Global Orbit",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/restaurant-pos",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/restaurant-pos",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/restaurant-pos",
+          "url": "https://globalorbit.us/orbit-software/restaurant-pos",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/saas-business-suite",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/saas-business-suite",
+      "url": "https://globalorbit.us/orbit-software/saas-business-suite",
+      "finalUrl": "https://globalorbit.us/orbit-software/saas-business-suite",
       "status": 200,
       "title": "SaaS Business Suite",
       "description": "All-in-one platform — billing, CRM, analytics, and automation in a single dashboard.",
-      "canonical": "https://theglobalorbit.com/orbit-software/saas-business-suite",
+      "canonical": "https://globalorbit.us/orbit-software/saas-business-suite",
       "robots": "index, follow",
       "ogTitle": "SaaS Business Suite",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/saas-business-suite",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/saas-business-suite",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/saas-business-suite",
+          "url": "https://globalorbit.us/orbit-software/saas-business-suite",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/saas-management-system",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/saas-management-system",
+      "url": "https://globalorbit.us/orbit-software/saas-management-system",
+      "finalUrl": "https://globalorbit.us/orbit-software/saas-management-system",
       "status": 200,
       "title": "SaaS Management System",
       "description": "Backend for your own SaaS: tenants, billing, roles, usage meters, and admin consoles.",
-      "canonical": "https://theglobalorbit.com/orbit-software/saas-management-system",
+      "canonical": "https://globalorbit.us/orbit-software/saas-management-system",
       "robots": "index, follow",
       "ogTitle": "SaaS Management System",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/saas-management-system",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/saas-management-system",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/saas-management-system",
+          "url": "https://globalorbit.us/orbit-software/saas-management-system",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/warehouse-management",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/warehouse-management",
+      "url": "https://globalorbit.us/orbit-software/warehouse-management",
+      "finalUrl": "https://globalorbit.us/orbit-software/warehouse-management",
       "status": 200,
       "title": "Warehouse Management Software | Inventory Control | Global Orbit",
       "description": "Warehouse and inventory management for receiving, stock tracking, transfers, picking, and reporting — with clear visibility for Nepali distributors and retailer",
-      "canonical": "https://theglobalorbit.com/orbit-software/warehouse-management",
+      "canonical": "https://globalorbit.us/orbit-software/warehouse-management",
       "robots": "index, follow",
       "ogTitle": "Warehouse Management Software | Inventory Control | Global Orbit",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/warehouse-management",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/warehouse-management",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/warehouse-management",
+          "url": "https://globalorbit.us/orbit-software/warehouse-management",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/orbit-software/web-apps",
-      "finalUrl": "https://theglobalorbit.com/orbit-software/web-apps",
+      "url": "https://globalorbit.us/orbit-software/web-apps",
+      "finalUrl": "https://globalorbit.us/orbit-software/web-apps",
       "status": 200,
       "title": "Web Apps · Next.js &amp; PWA",
       "description": "Progressive web apps that feel native. Installable PWAs, customer portals, and admin consoles on Next.js — fast first paint, SEO built in, and one codebase for",
-      "canonical": "https://theglobalorbit.com/orbit-software/web-apps",
+      "canonical": "https://globalorbit.us/orbit-software/web-apps",
       "robots": "index, follow",
       "ogTitle": "Web Apps · Next.js &amp; PWA",
-      "ogUrl": "https://theglobalorbit.com/orbit-software/web-apps",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/orbit-software/web-apps",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/orbit-software/web-apps",
+          "url": "https://globalorbit.us/orbit-software/web-apps",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages",
-      "finalUrl": "https://theglobalorbit.com/packages",
+      "url": "https://globalorbit.us/packages",
+      "finalUrl": "https://globalorbit.us/packages",
       "status": 200,
       "title": "Packages",
       "description": "Website and SEO packages from Global Orbit Nepal.",
-      "canonical": "https://theglobalorbit.com/packages",
+      "canonical": "https://globalorbit.us/packages",
       "robots": "index, follow",
       "ogTitle": "Packages",
-      "ogUrl": "https://theglobalorbit.com/packages",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages",
+          "url": "https://globalorbit.us/packages",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/business-website",
-      "finalUrl": "https://theglobalorbit.com/packages/business-website",
+      "url": "https://globalorbit.us/packages/business-website",
+      "finalUrl": "https://globalorbit.us/packages/business-website",
       "status": 200,
       "title": "Business Website",
       "description": "Multi-section marketing site with lead capture and integrations.",
-      "canonical": "https://theglobalorbit.com/packages/business-website",
+      "canonical": "https://globalorbit.us/packages/business-website",
       "robots": "index, follow",
       "ogTitle": "Business Website",
-      "ogUrl": "https://theglobalorbit.com/packages/business-website",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/business-website",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/business-website",
+          "url": "https://globalorbit.us/packages/business-website",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/enterprise-website",
-      "finalUrl": "https://theglobalorbit.com/packages/enterprise-website",
+      "url": "https://globalorbit.us/packages/enterprise-website",
+      "finalUrl": "https://globalorbit.us/packages/enterprise-website",
       "status": 200,
       "title": "Enterprise Website",
       "description": "Complex information architecture, multilingual, and operations.",
-      "canonical": "https://theglobalorbit.com/packages/enterprise-website",
+      "canonical": "https://globalorbit.us/packages/enterprise-website",
       "robots": "index, follow",
       "ogTitle": "Enterprise Website",
-      "ogUrl": "https://theglobalorbit.com/packages/enterprise-website",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/enterprise-website",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/enterprise-website",
+          "url": "https://globalorbit.us/packages/enterprise-website",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/professional-website",
-      "finalUrl": "https://theglobalorbit.com/packages/professional-website",
+      "url": "https://globalorbit.us/packages/professional-website",
+      "finalUrl": "https://globalorbit.us/packages/professional-website",
       "status": 200,
       "title": "Professional Website",
       "description": "Business site with service pages, blog, and conversion paths.",
-      "canonical": "https://theglobalorbit.com/packages/professional-website",
+      "canonical": "https://globalorbit.us/packages/professional-website",
       "robots": "index, follow",
       "ogTitle": "Professional Website",
-      "ogUrl": "https://theglobalorbit.com/packages/professional-website",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/professional-website",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/professional-website",
+          "url": "https://globalorbit.us/packages/professional-website",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/seo-enterprise",
-      "finalUrl": "https://theglobalorbit.com/packages/seo-enterprise",
+      "url": "https://globalorbit.us/packages/seo-enterprise",
+      "finalUrl": "https://globalorbit.us/packages/seo-enterprise",
       "status": 200,
       "title": "SEO Enterprise",
       "description": "Multi-site, multi-market search operations.",
-      "canonical": "https://theglobalorbit.com/packages/seo-enterprise",
+      "canonical": "https://globalorbit.us/packages/seo-enterprise",
       "robots": "index, follow",
       "ogTitle": "SEO Enterprise",
-      "ogUrl": "https://theglobalorbit.com/packages/seo-enterprise",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/seo-enterprise",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/seo-enterprise",
+          "url": "https://globalorbit.us/packages/seo-enterprise",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/seo-growth",
-      "finalUrl": "https://theglobalorbit.com/packages/seo-growth",
+      "url": "https://globalorbit.us/packages/seo-growth",
+      "finalUrl": "https://globalorbit.us/packages/seo-growth",
       "status": 200,
       "title": "SEO Growth",
       "description": "Content + technical work aimed at first-page movement.",
-      "canonical": "https://theglobalorbit.com/packages/seo-growth",
+      "canonical": "https://globalorbit.us/packages/seo-growth",
       "robots": "index, follow",
       "ogTitle": "SEO Growth",
-      "ogUrl": "https://theglobalorbit.com/packages/seo-growth",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/seo-growth",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/seo-growth",
+          "url": "https://globalorbit.us/packages/seo-growth",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/seo-pro",
-      "finalUrl": "https://theglobalorbit.com/packages/seo-pro",
+      "url": "https://globalorbit.us/packages/seo-pro",
+      "finalUrl": "https://globalorbit.us/packages/seo-pro",
       "status": 200,
       "title": "SEO Pro",
       "description": "Aggressive growth for competitive Nepali and regional terms.",
-      "canonical": "https://theglobalorbit.com/packages/seo-pro",
+      "canonical": "https://globalorbit.us/packages/seo-pro",
       "robots": "index, follow",
       "ogTitle": "SEO Pro",
-      "ogUrl": "https://theglobalorbit.com/packages/seo-pro",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/seo-pro",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/seo-pro",
+          "url": "https://globalorbit.us/packages/seo-pro",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/seo-starter",
-      "finalUrl": "https://theglobalorbit.com/packages/seo-starter",
+      "url": "https://globalorbit.us/packages/seo-starter",
+      "finalUrl": "https://globalorbit.us/packages/seo-starter",
       "status": 200,
       "title": "SEO Starter",
       "description": "Technical baseline and keyword map for a new domain.",
-      "canonical": "https://theglobalorbit.com/packages/seo-starter",
+      "canonical": "https://globalorbit.us/packages/seo-starter",
       "robots": "index, follow",
       "ogTitle": "SEO Starter",
-      "ogUrl": "https://theglobalorbit.com/packages/seo-starter",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/seo-starter",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/seo-starter",
+          "url": "https://globalorbit.us/packages/seo-starter",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/packages/starter-website",
-      "finalUrl": "https://theglobalorbit.com/packages/starter-website",
+      "url": "https://globalorbit.us/packages/starter-website",
+      "finalUrl": "https://globalorbit.us/packages/starter-website",
       "status": 200,
       "title": "Starter Website",
       "description": "Landing page for new brands that need to be live quickly.",
-      "canonical": "https://theglobalorbit.com/packages/starter-website",
+      "canonical": "https://globalorbit.us/packages/starter-website",
       "robots": "index, follow",
       "ogTitle": "Starter Website",
-      "ogUrl": "https://theglobalorbit.com/packages/starter-website",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/packages/starter-website",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/packages/starter-website",
+          "url": "https://globalorbit.us/packages/starter-website",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/privacy-policy",
-      "finalUrl": "https://theglobalorbit.com/privacy-policy",
+      "url": "https://globalorbit.us/privacy-policy",
+      "finalUrl": "https://globalorbit.us/privacy-policy",
       "status": 200,
       "title": "Privacy Policy",
       "description": "How Global Orbit collects, uses, and protects your information.",
-      "canonical": "https://theglobalorbit.com/privacy-policy",
+      "canonical": "https://globalorbit.us/privacy-policy",
       "robots": "index, follow",
       "ogTitle": "Privacy Policy",
-      "ogUrl": "https://theglobalorbit.com/privacy-policy",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/privacy-policy",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/privacy-policy",
+          "url": "https://globalorbit.us/privacy-policy",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/projects",
-      "finalUrl": "https://theglobalorbit.com/projects",
+      "url": "https://globalorbit.us/projects",
+      "finalUrl": "https://globalorbit.us/projects",
       "status": 200,
       "title": "Our Work · Projects",
       "description": "Hospitality, travel, spa, interior, and SaaS — nine production launches with Next.js, Node, and SEO baked in. Browse the mosaic, then scroll each case stud",
-      "canonical": "https://theglobalorbit.com/projects",
+      "canonical": "https://globalorbit.us/projects",
       "robots": "index, follow",
       "ogTitle": "Our Work · Projects",
-      "ogUrl": "https://theglobalorbit.com/projects",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/projects",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/projects",
+          "url": "https://globalorbit.us/projects",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/resort-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/resort-website-development-nepal",
+      "url": "https://globalorbit.us/resort-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/resort-website-development-nepal",
       "status": 200,
       "title": "Resort Website Development Nepal",
       "description": "Resort sites with galleries, seasons, and booking CTAs.",
-      "canonical": "https://theglobalorbit.com/resort-website-development-nepal",
+      "canonical": "https://globalorbit.us/resort-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Resort Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/resort-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/resort-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/resort-website-development-nepal",
+          "url": "https://globalorbit.us/resort-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/restaurant-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/restaurant-website-development-nepal",
+      "url": "https://globalorbit.us/restaurant-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/restaurant-website-development-nepal",
       "status": 200,
       "title": "Restaurant Website Development Nepal",
       "description": "Menus, reservations, and local SEO for restaurants.",
-      "canonical": "https://theglobalorbit.com/restaurant-website-development-nepal",
+      "canonical": "https://globalorbit.us/restaurant-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Restaurant Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/restaurant-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/restaurant-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/restaurant-website-development-nepal",
+          "url": "https://globalorbit.us/restaurant-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/seo-services-nepal",
-      "finalUrl": "https://theglobalorbit.com/seo-services-nepal",
+      "url": "https://globalorbit.us/seo-services-nepal",
+      "finalUrl": "https://globalorbit.us/seo-services-nepal",
       "status": 200,
       "title": "SEO Services Nepal",
       "description": "Technical and content SEO for Google visibility in Nepal.",
-      "canonical": "https://theglobalorbit.com/seo-services-nepal",
+      "canonical": "https://globalorbit.us/seo-services-nepal",
       "robots": "index, follow",
       "ogTitle": "SEO Services Nepal",
-      "ogUrl": "https://theglobalorbit.com/seo-services-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/seo-services-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/seo-services-nepal",
+          "url": "https://globalorbit.us/seo-services-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/service/ai-automation",
-      "finalUrl": "https://theglobalorbit.com/service/ai-automation",
+      "url": "https://globalorbit.us/service/ai-automation",
+      "finalUrl": "https://globalorbit.us/service/ai-automation",
       "status": 200,
       "title": "AI Automation Nepal · Workflows, WhatsApp, Invoice Capture",
       "description": "We wire models into the work you already run — WhatsApp, invoices, PMS, POS, and CRM — with audit logs, human gates, and Kathmandu delivery. No stock photos. No",
-      "canonical": "https://theglobalorbit.com/service/ai-automation",
+      "canonical": "https://globalorbit.us/service/ai-automation",
       "robots": "index, follow",
       "ogTitle": "AI Automation Nepal · Workflows, WhatsApp, Invoice Capture",
-      "ogUrl": "https://theglobalorbit.com/service/ai-automation",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/service/ai-automation",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/service/ai-automation",
+          "url": "https://globalorbit.us/service/ai-automation",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/service/digital-marketing-nepal",
-      "finalUrl": "https://theglobalorbit.com/service/digital-marketing-nepal",
+      "url": "https://globalorbit.us/service/digital-marketing-nepal",
+      "finalUrl": "https://globalorbit.us/service/digital-marketing-nepal",
       "status": 200,
       "title": "Digital Marketing Nepal",
       "description": "Complete digital marketing services in Nepal including SEO, Google Ads, and social media.",
-      "canonical": "https://theglobalorbit.com/service/digital-marketing-nepal",
+      "canonical": "https://globalorbit.us/service/digital-marketing-nepal",
       "robots": "index, follow",
       "ogTitle": "Digital Marketing Nepal",
-      "ogUrl": "https://theglobalorbit.com/service/digital-marketing-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/service/digital-marketing-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/service/digital-marketing-nepal",
+          "url": "https://globalorbit.us/service/digital-marketing-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/service/ecommerce-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/service/ecommerce-development-nepal",
+      "url": "https://globalorbit.us/service/ecommerce-development-nepal",
+      "finalUrl": "https://globalorbit.us/service/ecommerce-development-nepal",
       "status": 200,
       "title": "Ecommerce Development Nepal",
       "description": "Custom ecommerce website development in Nepal.",
-      "canonical": "https://theglobalorbit.com/service/ecommerce-development-nepal",
+      "canonical": "https://globalorbit.us/service/ecommerce-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Ecommerce Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/service/ecommerce-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/service/ecommerce-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/service/ecommerce-development-nepal",
+          "url": "https://globalorbit.us/service/ecommerce-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/service/erp-crm-software-nepal",
-      "finalUrl": "https://theglobalorbit.com/service/erp-crm-software-nepal",
+      "url": "https://globalorbit.us/service/erp-crm-software-nepal",
+      "finalUrl": "https://globalorbit.us/service/erp-crm-software-nepal",
       "status": 200,
       "title": "ERP &amp; CRM Software Nepal",
       "description": "Custom ERP and CRM software development in Nepal.",
-      "canonical": "https://theglobalorbit.com/service/erp-crm-software-nepal",
+      "canonical": "https://globalorbit.us/service/erp-crm-software-nepal",
       "robots": "index, follow",
       "ogTitle": "ERP &amp; CRM Software Nepal",
-      "ogUrl": "https://theglobalorbit.com/service/erp-crm-software-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/service/erp-crm-software-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/service/erp-crm-software-nepal",
+          "url": "https://globalorbit.us/service/erp-crm-software-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/service/google-ranking-services-nepal",
-      "finalUrl": "https://theglobalorbit.com/service/google-ranking-services-nepal",
+      "url": "https://globalorbit.us/service/google-ranking-services-nepal",
+      "finalUrl": "https://globalorbit.us/service/google-ranking-services-nepal",
       "status": 200,
       "title": "Google Ranking Services Nepal",
       "description": "Google ranking services to get your business on Page 1 in Nepal.",
-      "canonical": "https://theglobalorbit.com/service/google-ranking-services-nepal",
+      "canonical": "https://globalorbit.us/service/google-ranking-services-nepal",
       "robots": "index, follow",
       "ogTitle": "Google Ranking Services Nepal",
-      "ogUrl": "https://theglobalorbit.com/service/google-ranking-services-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/service/google-ranking-services-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/service/google-ranking-services-nepal",
+          "url": "https://globalorbit.us/service/google-ranking-services-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/service/seo-optimization-nepal",
-      "finalUrl": "https://theglobalorbit.com/service/seo-optimization-nepal",
+      "url": "https://globalorbit.us/service/seo-optimization-nepal",
+      "finalUrl": "https://globalorbit.us/service/seo-optimization-nepal",
       "status": 200,
       "title": "SEO Optimization Nepal",
       "description": "Expert SEO optimization services in Nepal for Google Page 1 rankings.",
-      "canonical": "https://theglobalorbit.com/service/seo-optimization-nepal",
+      "canonical": "https://globalorbit.us/service/seo-optimization-nepal",
       "robots": "index, follow",
       "ogTitle": "SEO Optimization Nepal",
-      "ogUrl": "https://theglobalorbit.com/service/seo-optimization-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/service/seo-optimization-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/service/seo-optimization-nepal",
+          "url": "https://globalorbit.us/service/seo-optimization-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/service/website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/service/website-development-nepal",
+      "url": "https://globalorbit.us/service/website-development-nepal",
+      "finalUrl": "https://globalorbit.us/service/website-development-nepal",
       "status": 200,
       "title": "Website Development Nepal | Custom Business Websites | Global Orbit",
       "description": "Website development in Nepal — custom business sites, e-commerce, hotel and travel websites, responsive design, and SEO-ready builds by Global Orbit Kathmandu.",
-      "canonical": "https://theglobalorbit.com/service/website-development-nepal",
+      "canonical": "https://globalorbit.us/service/website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Website Development Nepal | Custom Business Websites | Global Orbit",
-      "ogUrl": "https://theglobalorbit.com/service/website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/service/website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/service/website-development-nepal",
+          "url": "https://globalorbit.us/service/website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/services",
-      "finalUrl": "https://theglobalorbit.com/services",
+      "url": "https://globalorbit.us/services",
+      "finalUrl": "https://globalorbit.us/services",
       "status": 200,
       "title": "Solutions",
       "description": "Web development, ecommerce, SEO, ads, and automation from Global Orbit Nepal.",
-      "canonical": "https://theglobalorbit.com/services",
+      "canonical": "https://globalorbit.us/services",
       "robots": "index, follow",
       "ogTitle": "Solutions",
-      "ogUrl": "https://theglobalorbit.com/services",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/services",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/services",
+          "url": "https://globalorbit.us/services",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/services/digital-solutions",
-      "finalUrl": "https://theglobalorbit.com/services/digital-solutions",
+      "url": "https://globalorbit.us/services/digital-solutions",
+      "finalUrl": "https://globalorbit.us/services/digital-solutions",
       "status": 200,
-      "title": "Abstract orbital diagram",
+      "title": "Digital solutions and integrations",
       "description": "Operational digital solutions from Global Orbit Nepal: enquiry flows, internal tools, and integrations that match how the organisation already works.",
-      "canonical": "https://theglobalorbit.com/services/digital-solutions",
+      "canonical": "https://globalorbit.us/services/digital-solutions",
       "robots": "index, follow",
       "ogTitle": "Digital solutions and integrations",
-      "ogUrl": "https://theglobalorbit.com/services/digital-solutions",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/services/digital-solutions",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/services/digital-solutions",
+          "url": "https://globalorbit.us/services/digital-solutions",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/services/hosting",
-      "finalUrl": "https://theglobalorbit.com/services/hosting",
+      "url": "https://globalorbit.us/services/hosting",
+      "finalUrl": "https://globalorbit.us/services/hosting",
       "status": 200,
       "title": "Website hosting and operations",
       "description": "Hosting from Global Orbit Nepal: documented operations, backups, and access control for organisations that need their site to stay theirs.",
-      "canonical": "https://theglobalorbit.com/services/hosting",
+      "canonical": "https://globalorbit.us/services/hosting",
       "robots": "index, follow",
       "ogTitle": "Website hosting and operations",
-      "ogUrl": "https://theglobalorbit.com/services/hosting",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/services/hosting",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/services/hosting",
+          "url": "https://globalorbit.us/services/hosting",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/services/seo",
-      "finalUrl": "https://theglobalorbit.com/services/seo",
+      "url": "https://globalorbit.us/services/seo",
+      "finalUrl": "https://globalorbit.us/services/seo",
       "status": 200,
       "title": "SEO for company websites",
       "description": "Search engine foundations from Global Orbit Nepal: technical structure, honest metadata, and publishing discipline—without promised rankings.",
-      "canonical": "https://theglobalorbit.com/services/seo",
+      "canonical": "https://globalorbit.us/services/seo",
       "robots": "index, follow",
       "ogTitle": "SEO for company websites",
-      "ogUrl": "https://theglobalorbit.com/services/seo",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/services/seo",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/services/seo",
+          "url": "https://globalorbit.us/services/seo",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/services/web-development",
-      "finalUrl": "https://theglobalorbit.com/services/web-development",
+      "url": "https://globalorbit.us/services/web-development",
+      "finalUrl": "https://globalorbit.us/services/web-development",
       "status": 200,
       "title": "Web development in Kathmandu",
       "description": "Custom websites and web applications from Global Orbit Nepal: clear structure, accessible interfaces, and delivery that continues after launch.",
-      "canonical": "https://theglobalorbit.com/services/web-development",
+      "canonical": "https://globalorbit.us/services/web-development",
       "robots": "index, follow",
       "ogTitle": "Web development in Kathmandu",
-      "ogUrl": "https://theglobalorbit.com/services/web-development",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/services/web-development",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/services/web-development",
+          "url": "https://globalorbit.us/services/web-development",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/spa-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/spa-website-development-nepal",
+      "url": "https://globalorbit.us/spa-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/spa-website-development-nepal",
       "status": 200,
       "title": "Spa Website Development Nepal",
       "description": "Spa and wellness sites with treatment lists and enquiries.",
-      "canonical": "https://theglobalorbit.com/spa-website-development-nepal",
+      "canonical": "https://globalorbit.us/spa-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Spa Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/spa-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/spa-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/spa-website-development-nepal",
+          "url": "https://globalorbit.us/spa-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/studio",
-      "finalUrl": "https://theglobalorbit.com/studio",
+      "url": "https://globalorbit.us/studio",
+      "finalUrl": "https://globalorbit.us/studio",
       "status": 200,
       "title": "Studio",
       "description": "UI/UX and brand design from Global Orbit.",
-      "canonical": "https://theglobalorbit.com/studio",
+      "canonical": "https://globalorbit.us/studio",
       "robots": "index, follow",
       "ogTitle": "Studio",
-      "ogUrl": "https://theglobalorbit.com/studio",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/studio",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/studio",
+          "url": "https://globalorbit.us/studio",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/terms-and-conditions",
-      "finalUrl": "https://theglobalorbit.com/terms-and-conditions",
+      "url": "https://globalorbit.us/terms-and-conditions",
+      "finalUrl": "https://globalorbit.us/terms-and-conditions",
       "status": 200,
       "title": "Terms &amp; Conditions",
       "description": "Terms of use for Global Orbit websites and services.",
-      "canonical": "https://theglobalorbit.com/terms-and-conditions",
+      "canonical": "https://globalorbit.us/terms-and-conditions",
       "robots": "index, follow",
       "ogTitle": "Terms &amp; Conditions",
-      "ogUrl": "https://theglobalorbit.com/terms-and-conditions",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/terms-and-conditions",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/terms-and-conditions",
+          "url": "https://globalorbit.us/terms-and-conditions",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/travel-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/travel-website-development-nepal",
+      "url": "https://globalorbit.us/travel-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/travel-website-development-nepal",
       "status": 200,
       "title": "Travel Website Development Nepal",
       "description": "Travel brand websites for packages, seasons, and agents.",
-      "canonical": "https://theglobalorbit.com/travel-website-development-nepal",
+      "canonical": "https://globalorbit.us/travel-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Travel Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/travel-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/travel-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/travel-website-development-nepal",
+          "url": "https://globalorbit.us/travel-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/trekking-website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/trekking-website-development-nepal",
+      "url": "https://globalorbit.us/trekking-website-development-nepal",
+      "finalUrl": "https://globalorbit.us/trekking-website-development-nepal",
       "status": 200,
       "title": "Trekking Website Development Nepal",
       "description": "Trek operator sites built for enquiry, itineraries, and search.",
-      "canonical": "https://theglobalorbit.com/trekking-website-development-nepal",
+      "canonical": "https://globalorbit.us/trekking-website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Trekking Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/trekking-website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/trekking-website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/trekking-website-development-nepal",
+          "url": "https://globalorbit.us/trekking-website-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/web-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/web-development-nepal",
+      "url": "https://globalorbit.us/web-development-nepal",
+      "finalUrl": "https://globalorbit.us/web-development-nepal",
       "status": 200,
       "title": "Web Development Nepal",
       "description": "React, Next.js, Laravel and WordPress delivery from Global Orbit.",
-      "canonical": "https://theglobalorbit.com/web-development-nepal",
+      "canonical": "https://globalorbit.us/web-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Web Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/web-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/web-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/web-development-nepal",
+          "url": "https://globalorbit.us/web-development-nepal",
           "status": 200,
           "location": null
         }
       ]
     },
     {
-      "url": "https://theglobalorbit.com/website-development-nepal",
-      "finalUrl": "https://theglobalorbit.com/website-development-nepal",
+      "url": "https://globalorbit.us/website-development-nepal",
+      "finalUrl": "https://globalorbit.us/website-development-nepal",
       "status": 200,
       "title": "Website Development Nepal",
       "description": "Business websites designed to rank and convert, built in Kathmandu.",
-      "canonical": "https://theglobalorbit.com/website-development-nepal",
+      "canonical": "https://globalorbit.us/website-development-nepal",
       "robots": "index, follow",
       "ogTitle": "Website Development Nepal",
-      "ogUrl": "https://theglobalorbit.com/website-development-nepal",
-      "ogImage": "https://theglobalorbit.com/brand/og-default.jpg",
+      "ogUrl": "https://globalorbit.us/website-development-nepal",
+      "ogImage": "https://globalorbit.us/brand/og-default.jpg",
       "h1Count": 1,
       "chain": [
         {
-          "url": "https://theglobalorbit.com/website-development-nepal",
+          "url": "https://globalorbit.us/website-development-nepal",
           "status": 200,
           "location": null
         }
