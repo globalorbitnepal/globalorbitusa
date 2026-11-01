@@ -107,7 +107,8 @@ test.describe("horizontal overflow — homepage all viewports", () => {
   for (const width of ALL_VIEWPORTS) {
     test(`homepage @ ${width}px`, async ({ page }) => {
       await page.setViewportSize({ width, height: Math.min(1200, width < 768 ? 844 : 900) });
-      await page.goto("/", { waitUntil: "load", timeout: 60_000 });
+      await page.goto("/", { waitUntil: "domcontentloaded", timeout: 60_000 });
+      await page.waitForLoadState("networkidle", { timeout: 20_000 }).catch(() => undefined);
       expect(await assertNoHorizontalOverflow(page)).toBe(false);
     });
   }

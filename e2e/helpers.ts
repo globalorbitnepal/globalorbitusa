@@ -76,18 +76,30 @@ export function attachDiagnostics(page: Page) {
 }
 
 export async function assertNoHorizontalOverflow(page: Page) {
+  await page.waitForLoadState("domcontentloaded");
   await page.evaluate(() =>
     new Promise<void>((resolve) => {
       requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
     }),
   );
-  return page.evaluate(() => {
-    const doc = document.documentElement;
-    const body = document.body;
-    const clientW = doc.clientWidth;
-    const scrollW = Math.max(doc.scrollWidth, body.scrollWidth);
-    return scrollW > clientW + 2;
-  });
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      return await page.evaluate(() => {
+        const doc = document.documentElement;
+        const body = document.body;
+        const clientW = doc.clientWidth;
+        const scrollW = Math.max(doc.scrollWidth, body.scrollWidth);
+        return scrollW > clientW + 2;
+      });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      if (!/Execution context was destroyed|navigation/i.test(msg) || attempt === 2) {
+        throw err;
+      }
+      await page.waitForLoadState("load", { timeout: 15_000 }).catch(() => undefined);
+    }
+  }
+  return false;
 }
 
 export async function primaryH1Text(page: Page): Promise<string> {
