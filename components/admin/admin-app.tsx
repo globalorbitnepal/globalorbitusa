@@ -404,14 +404,11 @@ export function AdminApp(props: Props) {
             src={brandAssetUrl(BRAND_LOGO_PRIMARY)}
             alt="Global Orbit"
             className="go-cms-brand-logo"
-            width={280}
-            height={94}
+            width={240}
+            height={80}
             decoding="async"
           />
-          <div className="go-cms-brand-text">
-            <strong>GLOBAL ORBIT</strong>
-            <span>Management console</span>
-          </div>
+          <span className="go-cms-brand-kicker">Management console</span>
         </div>
         <nav>
           <p>Overview</p>
