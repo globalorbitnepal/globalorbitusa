@@ -7,8 +7,8 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return applyPageSeo("/blogs", {
-    title: "Blog",
-    description: "SEO, Core Web Vitals, and tech-stack notes from Global Orbit.",
+    title: "",
+    description: "SEO, Core Web Vitals, and tech-stack notes from Global Orbit USA.",
   });
 }
 
