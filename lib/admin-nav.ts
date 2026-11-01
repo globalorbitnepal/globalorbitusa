@@ -172,8 +172,8 @@ export const ADMIN_PAGES: AdminPage[] = [
   },
   {
     id: "website-development",
-    label: "Website Development Nepal",
-    path: "/service/website-development-nepal",
+    label: "Website Development USA",
+    path: "/service/website-development-usa",
     hint: "Full page editor",
     sections: [
       {

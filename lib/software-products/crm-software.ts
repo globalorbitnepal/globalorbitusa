@@ -5,7 +5,7 @@ export const CRM_SOFTWARE: SoftwareProductContent = {
   seo: {
     title: "CRM Software | Lead & Customer Management | Global Orbit",
     description:
-      "CRM software for leads, pipelines, follow-ups, deals, and sales reporting — practical customer relationship management for Nepali sales teams.",
+      "CRM software for leads, pipelines, follow-ups, deals, and sales reporting — practical customer relationship management for U.S. sales teams.",
     keywords: [
       "CRM software",
       "customer relationship management software",
@@ -15,7 +15,7 @@ export const CRM_SOFTWARE: SoftwareProductContent = {
       "CRM for small business",
       "sales pipeline management",
       "customer follow-up management software",
-      "CRM software Nepal",
+      "CRM software USA",
     ],
   },
   eyebrow: "Orbit Software · CRM",
@@ -165,9 +165,9 @@ export const CRM_SOFTWARE: SoftwareProductContent = {
   },
   longForm: [
     {
-      heading: "Follow-up management that respects Nepali selling",
+      heading: "Follow-up management that respects U.S. selling",
       paragraphs: [
-        "Relationships still matter — CRM does not replace calls; it remembers them. Reps in Kathmandu and export markets share one timeline so handoffs to India or US colleagues do not restart from zero.",
+        "Relationships still matter — CRM does not replace calls; it remembers them. Reps in United States and export markets share one timeline so handoffs to India or US colleagues do not restart from zero.",
       ],
     },
     {

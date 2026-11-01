@@ -5,13 +5,13 @@ export type HeroStudioLocation = {
 };
 
 export const DEFAULT_HERO_STUDIOS: HeroStudioLocation[] = [
-  { code: "np", label: "Nepal", city: "Kathmandu" },
+  { code: "np", label: "USA", city: "United States" },
   { code: "in", label: "India", city: "Delhi (NCR)" },
   { code: "us", label: "USA", city: "United States" },
 ];
 
 export const DEFAULT_GLOBAL_TAGLINE =
-  "Work originates in Kathmandu, India, and the United States — not a single-city shop pretending to be global.";
+  "Work originates in United States, India, and the United States — not a single-city shop pretending to be global.";
 
 export const DEFAULT_STUDIOS_KICKER = "Working across";
 

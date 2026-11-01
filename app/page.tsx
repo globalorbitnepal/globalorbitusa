@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: FALLBACK_SITE.defaultSeoTitle,
     description: FALLBACK_SITE.defaultSeoDescription,
     keywords: [],
-    focusKeyword: "web development company nepal",
+    focusKeyword: "web development company usa",
   };
   const meta = await applyPageSeo("/", {
     title: defaults.title,

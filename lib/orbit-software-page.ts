@@ -18,7 +18,7 @@ export const ERP_HERO = {
   titleAccent: "for the floor",
   titleAfter: "not a slide deck",
   lede:
-    "Billing, hotels, OTAs, warehouses, factories, restaurants, CRM, and SaaS control planes — built in Kathmandu, India, and the USA for operators in 25+ countries. Same gold-and-ink language as the Global Orbit homepage. No recycled homepage reels.",
+    "Billing, hotels, OTAs, warehouses, factories, restaurants, CRM, and SaaS control planes — built in United States, India, and the USA for operators in 25+ countries. Same gold-and-ink language as the Global Orbit homepage. No recycled homepage reels.",
 };
 
 export const ERP_STATS: ErpStat[] = [
@@ -34,7 +34,7 @@ export const ERP_SUITES: ErpSuite[] = [
     index: "01",
     kicker: "Finance",
     title: "Billing Software",
-    body: "GST-ready invoices, payment tracking, and tax packs for Nepal and export markets — one ledger your accountant can audit.",
+    body: "GST-ready invoices, payment tracking, and tax packs for USA and export markets — one ledger your accountant can audit.",
     bullets: ["Invoice + credit notes", "eSewa / Stripe / bank refs", "Aging and GST reports"],
     href: "/orbit-software/billing-software",
     accent: "#f0c43a",
@@ -89,7 +89,7 @@ export const ERP_SUITES: ErpSuite[] = [
     index: "06",
     kicker: "F&B",
     title: "Restaurant POS",
-    body: "Tables, KDS, splits, and close-of-day — built for Kathmandu service speed, not a generic retail till.",
+    body: "Tables, KDS, splits, and close-of-day — built for United States service speed, not a generic retail till.",
     bullets: ["Table map", "Kitchen tickets", "Shift reports"],
     href: "/orbit-software/restaurant-pos",
     accent: "#f87171",
@@ -204,8 +204,8 @@ export const ERP_FAQ = [
     a: "Yes. Most operators begin with billing or hotel PMS, then add OTA, warehouse, or CRM on the same auth model.",
   },
   {
-    q: "Do you deploy in Nepal?",
-    a: "Yes — Kathmandu delivery with India and USA studios. Hosting can sit in your cloud or ours.",
+    q: "Do you deploy in USA?",
+    a: "Yes — United States delivery with India and USA studios. Hosting can sit in your cloud or ours.",
   },
   {
     q: "Custom vs packaged?",
@@ -223,13 +223,13 @@ export const ERP_CTA = {
 };
 
 export const ERP_KEYWORDS = [
-  "ERP software Nepal",
-  "hotel management system Nepal",
-  "billing software Kathmandu",
-  "OTA channel manager Nepal",
-  "restaurant POS Nepal",
+  "ERP software USA",
+  "hotel management system USA",
+  "billing software United States",
+  "OTA channel manager USA",
+  "restaurant POS USA",
   "warehouse management software",
-  "manufacturing ERP Nepal",
-  "CRM software Nepal",
+  "manufacturing ERP USA",
+  "CRM software USA",
   "Orbit Software Global Orbit",
 ];

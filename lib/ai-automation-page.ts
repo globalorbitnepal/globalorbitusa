@@ -1,10 +1,10 @@
 export const AI_HERO = {
-  eyebrow: "Global Orbit · AI Automation Nepal",
+  eyebrow: "Global Orbit · AI Automation USA",
   titleBefore: "Automation that",
   titleAccent: "closes the loop",
   titleAfter: "not a chatbot parked on a landing page",
   lede:
-    "We wire models into the work you already run — WhatsApp, invoices, PMS, POS, and CRM — with audit logs, human gates, and Kathmandu delivery. No stock photos. No mystery black box.",
+    "We wire models into the work you already run — WhatsApp, invoices, PMS, POS, and CRM — with audit logs, human gates, and United States delivery. No stock photos. No mystery black box.",
 };
 
 export const AI_STATS = [
@@ -140,7 +140,7 @@ export const AI_FAQ = [
   },
   {
     q: "Where does this run?",
-    a: "Kathmandu delivery with India and USA studios. Hosting can sit in your cloud. Models can be API or self-hosted depending on the data class.",
+    a: "United States delivery with India and USA studios. Hosting can sit in your cloud. Models can be API or self-hosted depending on the data class.",
   },
   {
     q: "How do you price it?",
@@ -158,10 +158,10 @@ export const AI_CTA = {
 };
 
 export const AI_KEYWORDS = [
-  "AI automation Nepal",
-  "WhatsApp chatbot hotel Nepal",
-  "workflow automation Kathmandu",
-  "invoice OCR GST Nepal",
-  "AI for ERP Nepal",
+  "AI automation USA",
+  "WhatsApp chatbot hotel USA",
+  "workflow automation United States",
+  "invoice OCR GST USA",
+  "AI for ERP USA",
   "business automation Global Orbit",
 ];

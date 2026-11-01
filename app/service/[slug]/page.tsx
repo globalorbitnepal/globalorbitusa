@@ -11,17 +11,17 @@ import { getWebsiteDevelopmentPageConfig } from "@/lib/website-development-store
 
 type Props = { params: Promise<{ slug: string }> };
 
-const WEBSITE_DEV_SLUG = "website-development-nepal";
+const WEBSITE_DEV_SLUG = "website-development-usa";
 const AI_AUTOMATION_SLUG = "ai-automation";
 
 const WEBSITE_DEV_KEYWORDS = [
-  "website development nepal",
-  "web design kathmandu",
-  "custom website nepal",
+  "website development usa",
+  "web design united states",
+  "custom website usa",
   "professional website development",
-  "Next.js website nepal",
-  "SEO friendly website nepal",
-  "business website kathmandu",
+  "Next.js website usa",
+  "SEO friendly website usa",
+  "business website united states",
   "Global Orbit web development",
 ];
 
@@ -36,16 +36,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === WEBSITE_DEV_SLUG) {
     return applyPageSeo(item.href, {
-      title: "Website Development Nepal | Custom Business Websites | Global Orbit",
+      title: "Website Development USA | Custom Business Websites | Global Orbit",
       description:
-        "Website development in Nepal — custom business sites, e-commerce, hotel and travel websites, responsive design, and SEO-ready builds by Global Orbit Kathmandu.",
+        "Website development in USA — custom business sites, e-commerce, hotel and travel websites, responsive design, and SEO-ready builds by Global Orbit United States.",
       keywords: WEBSITE_DEV_KEYWORDS,
     });
   }
 
   if (slug === AI_AUTOMATION_SLUG) {
     return applyPageSeo(item.href, {
-      title: "AI Automation Nepal · Workflows, WhatsApp, Invoice Capture",
+      title: "AI Automation USA · Workflows, WhatsApp, Invoice Capture",
       description: AI_HERO.lede,
       keywords: AI_KEYWORDS,
     });
@@ -60,14 +60,14 @@ function aiAutomationJsonLd() {
     "@graph": [
       {
         "@type": "Service",
-        name: "AI Automation Nepal",
+        name: "AI Automation USA",
         description: AI_HERO.lede,
         provider: {
           "@type": "Organization",
           name: "Global Orbit",
-          areaServed: { "@type": "Country", name: "Nepal" },
+          areaServed: { "@type": "Country", name: "USA" },
         },
-        areaServed: "Nepal",
+        areaServed: "USA",
         serviceType: "AI workflow automation",
       },
       {
@@ -84,7 +84,7 @@ function aiAutomationJsonLd() {
 
 async function websiteDevJsonLd() {
   const config = await getWebsiteDevelopmentPageConfig();
-  const pageUrl = `${SITE_ORIGIN}/service/website-development-nepal`;
+  const pageUrl = `${SITE_ORIGIN}/service/website-development-usa`;
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -93,25 +93,25 @@ async function websiteDevJsonLd() {
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_ORIGIN}/` },
           { "@type": "ListItem", position: 2, name: "Solutions", item: `${SITE_ORIGIN}/services` },
-          { "@type": "ListItem", position: 3, name: "Website Development Nepal", item: pageUrl },
+          { "@type": "ListItem", position: 3, name: "Website Development USA", item: pageUrl },
         ],
       },
       {
         "@type": "WebPage",
-        name: "Website Development Nepal | Global Orbit",
+        name: "Website Development USA | Global Orbit",
         description: config.hero.lede,
         url: pageUrl,
       },
       {
         "@type": "Service",
-        name: "Website Development Nepal",
+        name: "Website Development USA",
         description: config.hero.lede,
         provider: {
           "@type": "Organization",
           name: "Global Orbit",
-          areaServed: { "@type": "Country", name: "Nepal" },
+          areaServed: { "@type": "Country", name: "USA" },
         },
-        areaServed: "Nepal",
+        areaServed: "USA",
         serviceType: "Website design and development",
         url: pageUrl,
       },

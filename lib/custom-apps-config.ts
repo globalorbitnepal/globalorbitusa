@@ -74,7 +74,7 @@ export const DEFAULT_CUSTOM_APPS: CustomAppsConfig = {
   heroTitleAccent: "built for operators",
   heroTitleAfter: "not demo-day slides",
   heroLede:
-    "Booking portals, staff dashboards, customer apps, and field tools — engineered on Next.js and Node.js with the same premium bar as our homepage. One studio in Nepal, India, and the USA; deployments in 25+ countries.",
+    "Booking portals, staff dashboards, customer apps, and field tools — engineered on Next.js and Node.js with the same premium bar as our homepage. One studio in USA, India, and the USA; deployments in 25+ countries.",
   heroVideoSrc: "/brand/custom-apps/01-customer-portal.mp4",
   appVideosEyebrow: "Live product motion",
   appVideosTitle: "Four app experiences",
@@ -150,7 +150,7 @@ export const DEFAULT_CUSTOM_APPS: CustomAppsConfig = {
   platforms: [
     {
       title: "Progressive web apps",
-      body: "Installable, fast, and SEO-friendly — ideal for bookings and portals in Nepal and global markets.",
+      body: "Installable, fast, and SEO-friendly — ideal for bookings and portals in USA and global markets.",
     },
     {
       title: "Responsive admin",

@@ -21,5 +21,5 @@ export default async function LandingPage({ params }: Props) {
   const { slug } = await params;
   const item = findBySlug(ORBIT_LANDINGS, slug);
   if (!item) notFound();
-  return <OrbitArticlePage eyebrow="Nepal" title={item.title} summary={item.summary} />;
+  return <OrbitArticlePage eyebrow="USA" title={item.title} summary={item.summary} />;
 }

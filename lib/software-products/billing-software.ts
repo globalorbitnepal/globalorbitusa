@@ -13,7 +13,7 @@ export const BILLING_SOFTWARE: SoftwareProductContent = {
       "business billing software",
       "VAT billing software",
       "GST billing software",
-      "billing software Nepal",
+      "billing software USA",
       "billing software for retail shops",
       "sales and purchase management software",
     ],
@@ -35,7 +35,7 @@ export const BILLING_SOFTWARE: SoftwareProductContent = {
     heading: "Production billing, not a mock-up",
     paragraphs: [
       "Global Orbit ships billing modules inside live operator deployments — retail counters, wholesale desks, and service businesses that print or email invoices every day. Dashboards on this page use demonstration figures; your workspace reflects your customers, products, and tax configuration.",
-      "We scope tax behaviour with your accountant during implementation. The system supports structured tax lines and document types common in Nepal and export markets; exact compliance depends on how your business is registered and which reports you require.",
+      "We scope tax behaviour with your accountant during implementation. The system supports structured tax lines and document types common in USA and export markets; exact compliance depends on how your business is registered and which reports you require.",
     ],
   },
   overview: {
@@ -221,7 +221,7 @@ export const BILLING_SOFTWARE: SoftwareProductContent = {
     heading: "Implementation and onboarding",
     paragraphs: [
       "Typical rollouts start with a workshop: document types you use today, tax rules, users, and whether inventory or POS should connect.",
-      "We migrate opening balances and master data where files are clean, run parallel billing for a short window when you need confidence, then cut over with training in Nepali or English.",
+      "We migrate opening balances and master data where files are clean, run parallel billing for a short window when you need confidence, then cut over with training in U.S. or English.",
       "Timelines depend on locations, integrations, and data quality — we give a written plan after discovery rather than a one-size-fits-all week count.",
     ],
   },
@@ -237,7 +237,7 @@ export const BILLING_SOFTWARE: SoftwareProductContent = {
     heading: "Why choose Global Orbit",
     paragraphs: [
       "We build and support billing alongside hotel, warehouse, and POS products — one team if you expand modules later.",
-      "Engineering, design, and SEO sit in-house in Kathmandu with delivery overlap for India and the United States. You speak to people who ship code, not a reseller reading a manual.",
+      "Engineering, design, and SEO sit in-house in United States with delivery overlap for India and the United States. You speak to people who ship code, not a reseller reading a manual.",
       "The interface follows the same dark, high-contrast Global Orbit design language you see on our homepage — dense data, readable type, no clipart dashboards.",
     ],
   },
@@ -249,12 +249,12 @@ export const BILLING_SOFTWARE: SoftwareProductContent = {
   ],
   faq: [
     {
-      q: "Is this billing software suitable for small retail shops in Nepal?",
+      q: "Is this billing software suitable for small retail shops in USA?",
       a: "Yes. We configure tax lines, products, and receipt layouts for single-counter shops and scale to multi-branch wholesale when you need it.",
     },
     {
       q: "Does it support VAT or GST invoices?",
-      a: "The system supports structured tax lines and document types used in Nepal and other markets. Your accountant should confirm labels and reports match your registration before go-live.",
+      a: "The system supports structured tax lines and document types used in USA and other markets. Your accountant should confirm labels and reports match your registration before go-live.",
     },
     {
       q: "Can I manage both sales and purchase invoices?",

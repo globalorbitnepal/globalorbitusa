@@ -22,7 +22,7 @@ export function AiAutomationFlow() {
             <i />
           </span>
           <p>Orbit Automations · live</p>
-          <em>Kathmandu</em>
+          <em>United States</em>
         </div>
         <div className="orbit-ai-kpis">
           <article>

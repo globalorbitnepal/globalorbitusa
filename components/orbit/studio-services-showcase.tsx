@@ -8,7 +8,7 @@ const SERVICES = [
   {
     title: "Website Development",
     body: "Fast, SEO-ready marketing sites and platforms that drive engagement and business growth.",
-    href: "/service/website-development-nepal",
+    href: "/service/website-development-usa",
     tone: "blue",
     index: "01",
   },

@@ -7,7 +7,7 @@ import { applyPageSeo } from "@/lib/apply-page-seo";
 export async function generateMetadata(): Promise<Metadata> {
   return applyPageSeo("/packages", {
     title: "Packages",
-    description: "Website and SEO packages from Global Orbit Nepal.",
+    description: "Website and SEO packages from Global Orbit USA.",
   });
 }
 

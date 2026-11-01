@@ -6,13 +6,13 @@ export type FallbackNavItem = {
 
 export const FALLBACK_SITE = {
   companyName: "Global Orbit Pvt Ltd",
-  tagline: "Studios in Nepal, India and the United States",
+  tagline: "Studios in the United States, India, and Nepal",
   email: "support@theglobalorbit.com",
-  phone: "+977-9823631899",
-  address: "Kathmandu · India · United States",
-  defaultSeoTitle: "Global Orbit | Web Development & Software Company in Nepal",
+  phone: "+1 (646) 907-4410",
+  address: "United States · India · Nepal",
+  defaultSeoTitle: "Global Orbit | Web Development & Software Company in USA",
   defaultSeoDescription:
-    "Global Orbit helps businesses in Nepal with website development, custom software, mobile apps, SEO and digital marketing. Contact our Kathmandu team for a consultation.",
+    "Global Orbit helps U.S. businesses with website development, custom software, mobile apps, SEO and digital marketing. Contact our United States team for a consultation.",
 } as const;
 
 export const FALLBACK_HEADER_NAV: FallbackNavItem[] = [

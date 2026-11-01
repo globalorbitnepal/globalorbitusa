@@ -1,29 +1,29 @@
 export const ORBIT_BRAND = {
   name: "Global Orbit Pvt Ltd",
   phones: [
-    { label: "+977-9823631899", href: "tel:+9779823631899" },
+    { label: "+1 (646) 907-4410", href: "tel:+16469074410" },
     { label: "+977-9812322339", href: "tel:+9779812322339" },
   ],
   email: "support@theglobalorbit.com",
-  salesEmail: "sales@theglobalorbit.com",
+  salesEmail: "usa@theglobalorbit.com",
   webmail: "https://webmail.globalorbitmail.cloud/",
-  whatsapp: "https://wa.me/9779812322339",
-  address: "Kathmandu · India · United States",
+  whatsapp: "https://wa.me/16469074410",
+  address: "United States · India · Nepal",
   offices: [
-    { name: "Kathmandu", country: "Nepal", code: "np", role: "Headquarters & engineering" },
+    { name: "United States", country: "USA", code: "us", role: "Sales & client success" },
     { name: "India", country: "India", code: "in", role: "Delivery studio" },
-    { name: "United States", country: "USA", code: "us", role: "Client office" },
+    { name: "Nepal", country: "Nepal", code: "np", role: "Engineering studio" },
   ],
   salesOffices: [
     {
-      code: "np",
-      country: "Nepal",
-      city: "Kathmandu",
-      landmark: "Sales office · Kathmandu",
-      image: "/brand/offices/nepal.jpg",
-      phone: "+977-9823631899",
-      phoneHref: "tel:+9779823631899",
-      email: "sales@theglobalorbit.com",
+      code: "us",
+      country: "USA",
+      city: "United States",
+      landmark: "Sales office · USA",
+      image: "/brand/offices/usa.jpg",
+      phone: "+1 (646) 907-4410",
+      phoneHref: "tel:+16469074410",
+      email: "usa@theglobalorbit.com",
     },
     {
       code: "in",
@@ -36,14 +36,14 @@ export const ORBIT_BRAND = {
       email: "india@theglobalorbit.com",
     },
     {
-      code: "us",
-      country: "USA",
-      city: "United States",
-      landmark: "Sales office · USA",
-      image: "/brand/offices/usa.jpg",
-      phone: "+1 (646) 907-4410",
-      phoneHref: "tel:+16469074410",
-      email: "usa@theglobalorbit.com",
+      code: "np",
+      country: "Nepal",
+      city: "Kathmandu",
+      landmark: "Engineering studio · Nepal",
+      image: "/brand/offices/nepal.jpg",
+      phone: "+977-9823631899",
+      phoneHref: "tel:+9779823631899",
+      email: "sales@theglobalorbit.com",
     },
   ],
   social: [
@@ -66,8 +66,8 @@ export const ORBIT_HEADER_NAV = [
 
 export const ORBIT_FOOTER_STATS = [
   { label: "Web · Apps · SEO", icon: "rocket" as const },
-  { label: "3 studios · Nepal · India · USA", icon: "clients" as const },
-  { label: "Kathmandu engineering HQ", icon: "star" as const },
+  { label: "3 studios · USA · India · Nepal", icon: "clients" as const },
+  { label: "U.S. sales · global delivery", icon: "star" as const },
 ];
 
 export const ORBIT_FOOTER_LEGAL = [
@@ -78,21 +78,21 @@ export const ORBIT_FOOTER_LEGAL = [
 
 export const ORBIT_FOOTER_QUICK = [
   { label: "Home", href: "/", icon: "home" as const },
-  { label: "Website Development", href: "/service/website-development-nepal", icon: "website" as const },
-  { label: "Hotel Websites", href: "/hotel-website-development-nepal", icon: "hotel" as const },
-  { label: "Trekking Websites", href: "/trekking-website-development-nepal", icon: "trek" as const },
-  { label: "Restaurant Websites", href: "/restaurant-website-development-nepal", icon: "restaurant" as const },
-  { label: "E-commerce", href: "/ecommerce-website-development-nepal", icon: "ecommerce" as const },
+  { label: "Website Development", href: "/service/website-development-usa", icon: "website" as const },
+  { label: "Hotel Websites", href: "/hotel-website-development-usa", icon: "hotel" as const },
+  { label: "Trekking Websites", href: "/trekking-website-development-usa", icon: "trek" as const },
+  { label: "Restaurant Websites", href: "/restaurant-website-development-usa", icon: "restaurant" as const },
+  { label: "E-commerce", href: "/ecommerce-website-development-usa", icon: "ecommerce" as const },
   { label: "About Us", href: "/about", icon: "about" as const },
   { label: "Contact", href: "/contact", icon: "contact" as const },
 ];
 
 export const ORBIT_FOOTER_SERVICES = [
-  { label: "Website Development", href: "/service/website-development-nepal", icon: "website" as const },
-  { label: "Custom Software Development", href: "/custom-software-development-nepal", icon: "custom" as const },
-  { label: "Web Development", href: "/web-development-nepal", icon: "web" as const },
-  { label: "ERP Software Nepal", href: "/erp-software-nepal", icon: "erp" as const },
-  { label: "SEO Services Nepal", href: "/seo-services-nepal", icon: "seo" as const },
-  { label: "Local SEO Nepal", href: "/local-seo-nepal", icon: "local" as const },
+  { label: "Website Development", href: "/service/website-development-usa", icon: "website" as const },
+  { label: "Custom Software Development", href: "/custom-software-development-usa", icon: "custom" as const },
+  { label: "Web Development", href: "/web-development-usa", icon: "web" as const },
+  { label: "ERP Software USA", href: "/erp-software-usa", icon: "erp" as const },
+  { label: "SEO Services USA", href: "/seo-services-usa", icon: "seo" as const },
+  { label: "Local SEO USA", href: "/local-seo-usa", icon: "local" as const },
   { label: "Software Products", href: "/orbit-software", icon: "products" as const },
 ];

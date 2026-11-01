@@ -15,12 +15,12 @@ export type WebsiteDevDemo = {
 };
 
 export const WEBSITE_DEV_HERO = {
-  eyebrow: "Global Orbit · Website Development Nepal",
+  eyebrow: "Global Orbit · Website Development USA",
   titleBefore: "Original websites",
   titleAccent: "designed from scratch",
   titleAfter: "for operators who need clarity and polish",
   lede:
-    "We ship bespoke frontends in Kathmandu — not recycled agency templates and not a clone of our own marketing site. Every layout below is a fictional brand we art-directed to show how different industries feel when the UX, motion, and SEO structure are done properly.",
+    "We ship bespoke frontends in United States — not recycled agency templates and not a clone of our own marketing site. Every layout below is a fictional brand we art-directed to show how different industries feel when the UX, motion, and SEO structure are done properly.",
 };
 
 /** Capability-led trust indicators — not unverified performance statistics */
@@ -79,7 +79,7 @@ export const WEBSITE_DEV_DEMOS: WebsiteDevDemo[] = [
     brand: "Norwood Atelier",
     tagline: "Retail editorial with product grid",
     story:
-      "Whitespace-forward ecommerce storytelling — lookbook rows, size guides, and cart UX tuned for fashion labels in Nepal and export markets.",
+      "Whitespace-forward ecommerce storytelling — lookbook rows, size guides, and cart UX tuned for fashion labels in USA and export markets.",
     bullets: ["Collection landing pages", "Quick-add product cards", "GST-ready checkout hooks"],
     stack: ["Headless cart", "Stripe / eSewa", "PWA shell"],
     audience: "Fashion and lifestyle retail",
@@ -125,7 +125,7 @@ export const WEBSITE_DEV_PROCESS = {
   steps: [
     {
       title: "Brand & sitemap workshop",
-      body: "We map pages, conversion goals, and Nepal/international SEO targets before design pixels.",
+      body: "We map pages, conversion goals, and USA/international SEO targets before design pixels.",
     },
     {
       title: "Art direction & prototypes",
@@ -158,11 +158,11 @@ export const WEBSITE_DEV_VERTICALS = {
     },
     {
       title: "Restaurants & tasting rooms",
-      body: "Menu rhythm, reservation CTAs, and local SEO for Kathmandu, Pokhara, and tourist corridors.",
+      body: "Menu rhythm, reservation CTAs, and local SEO for United States, Pokhara, and tourist corridors.",
     },
     {
       title: "Retail & labels",
-      body: "Lookbooks, GST-ready checkout hooks, and collection landings for Nepal plus export shops.",
+      body: "Lookbooks, GST-ready checkout hooks, and collection landings for USA plus export shops.",
     },
     {
       title: "SaaS & B2B products",
@@ -181,7 +181,7 @@ export const WEBSITE_DEV_SEO = {
   paragraphs: [
     "Technical SEO is part of the build: search-friendly information architecture, clean URLs, unique titles and meta descriptions, logical heading hierarchy, canonical URLs, XML sitemaps, and sensible robots directives.",
     "We plan internal linking, image optimization with descriptive alt text, and structured data where eligible. Mobile usability and Core Web Vitals are tested on staging before launch — strong scores are a goal, not a guarantee.",
-    "For redesigns we plan redirects and Search Console monitoring. Local SEO foundations help Kathmandu and Nepal-facing businesses; multilingual hreflang is added when you serve multiple languages. Technical work supports visibility — it does not promise a specific Google ranking.",
+    "For redesigns we plan redirects and Search Console monitoring. Local SEO foundations help United States and USA-facing businesses; multilingual hreflang is added when you serve multiple languages. Technical work supports visibility — it does not promise a specific Google ranking.",
   ],
   bullets: [
     "Unique H1 and H2 structure per template",
@@ -189,7 +189,7 @@ export const WEBSITE_DEV_SEO = {
     "JSON-LD where content supports it",
     "Analytics and Search Console setup when in scope",
     "301 redirect maps for migrations",
-    "Nepali and English content architecture when required",
+    "U.S. and English content architecture when required",
   ],
 };
 
@@ -212,7 +212,7 @@ export const WEBSITE_DEV_FAQ = [
     a: "No. Our marketing site uses Orbit design language internally; client sites get original art direction, type, and section flow matched to their brand.",
   },
   {
-    q: "Which stack do you use for website development in Nepal?",
+    q: "Which stack do you use for website development in USA?",
     a: "Most production sites ship on Next.js and Node.js; WordPress and WooCommerce when the client team prefers classic CMS workflows.",
   },
   {
@@ -228,14 +228,14 @@ export const WEBSITE_DEV_FAQ = [
     a: "No. These demos exist to prove we can art-direct lodge, trek, restaurant, retail, SaaS, and spa sites as unique products. Your brand gets its own type, color, and motion.",
   },
   {
-    q: "How long does a professional website take in Nepal?",
+    q: "How long does a professional website take in USA?",
     a: "Typical production sites ship in 6–10 weeks after discovery: sitemap, design, build, content, SEO pass, and launch.",
   },
 ];
 
 export const WEBSITE_DEV_PORTFOLIO = {
   eyebrow: "Selected work",
-  title: "Real projects from our Nepal studio",
+  title: "Real projects from our USA studio",
   lede: "Hotel, trek, interior, spa, and travel brands we have shipped — see the live portfolio for screenshots and delivery notes.",
   href: "/projects",
   linkLabel: "View full portfolio",

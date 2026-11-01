@@ -18,7 +18,7 @@ export default async function BlogsPage() {
     <OrbitCatalogPage
       eyebrow="Blog"
       title="Notes from the studio"
-      lede="Practical writing on ranking, performance, and stacks for Nepali businesses."
+      lede="Practical writing on ranking, performance, and stacks for U.S. businesses."
       items={posts.map((item) => ({
         slug: item.slug,
         title: item.title,

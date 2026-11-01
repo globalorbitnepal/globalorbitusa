@@ -163,7 +163,7 @@ export function ContactPageView() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Link href="/service/website-development-nepal" className="orbit-about-cta-ghost">
+            <Link href="/service/website-development-usa" className="orbit-about-cta-ghost">
               Website development
             </Link>
             <Link href="/orbit-software" className="orbit-about-cta-ghost">
@@ -196,7 +196,7 @@ export function ContactPageView() {
           Ready when you are.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-white/58">
-          Nepal, India, and the United States — one firm for websites, apps, ERP, and SEO.
+          USA, India, and global clients — one firm for websites, apps, ERP, and SEO.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a href="#contact-form" className="orbit-about-cta-primary">

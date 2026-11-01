@@ -5,9 +5,9 @@ import { applyPageSeo } from "@/lib/apply-page-seo";
 
 export async function generateMetadata(): Promise<Metadata> {
   return applyPageSeo("/about", {
-    title: "About Global Orbit · Web & Software Studio Nepal",
+    title: "About Global Orbit · Web & Software Studio USA",
     description:
-      "Enterprise websites, custom apps, ERP, and SEO from Kathmandu with teams in Nepal, India, and the United States — one accountable studio.",
+      "Enterprise websites, custom apps, ERP, and SEO from United States with teams in USA, India, and global clients — one accountable studio.",
   });
 }
 

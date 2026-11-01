@@ -80,13 +80,13 @@ export const DEFAULT_ABOUT: AboutConfig = {
   heroEyebrow: "About Global Orbit",
   heroTitleBefore: "Building enterprise-grade",
   heroTitleAccent: "digital systems",
-  heroTitleAfter: "from Nepal to the world",
+  heroTitleAfter: "from USA to the world",
   heroLede:
-    "Global Orbit Pvt Ltd is a Kathmandu-based technology company. We design, build, and operate websites, custom software, ERP platforms, and SEO programmes for organisations that need delivery to stay clear after launch — across Nepal, India, the United States, and fifteen-plus countries.",
+    "Global Orbit Pvt Ltd is a United States-based technology company. We design, build, and operate websites, custom software, ERP platforms, and SEO programmes for organisations that need delivery to stay clear after launch — across USA, India, the United States, and fifteen-plus countries.",
   storyEyebrow: "Our story",
   storyTitle: "A studio built for operators, not slide decks",
   storyParagraphs: [
-    "We started in 2016 as a focused web development team in Kathmandu. Today we run a full product and services practice: billing and ERP software, hotel and OTA systems, warehouse and POS platforms, and the marketing sites that introduce them to the market.",
+    "We started in 2016 as a focused web development team in United States. Today we run a full product and services practice: billing and ERP software, hotel and OTA systems, warehouse and POS platforms, and the marketing sites that introduce them to the market.",
     "Our clients are owners, operations leads, and founders who need a named team — not a rotating bench. Every engagement gets a project lead, documented handover, and support that continues after go-live.",
     "We do not borrow prestige with fake logos or inflated numbers. What you see on this site is what we ship: real products, live deployments, and relationships measured in years — not campaigns.",
   ],
@@ -118,19 +118,19 @@ export const DEFAULT_ABOUT: AboutConfig = {
     },
   ],
   journeyEyebrow: "Our journey",
-  journeyTitle: "From Kathmandu to",
+  journeyTitle: "From United States to",
   journeyTitleAccent: "global delivery",
   journeyLede: "Nine years of product launches, international clients, and software used in production every day.",
   journey: [
     {
       year: "2016",
-      title: "Founded in Nepal",
-      body: "Started as a web development studio in Kathmandu with a focus on premium digital experiences.",
+      title: "Founded in USA",
+      body: "Started as a web development studio in United States with a focus on premium digital experiences.",
     },
     {
       year: "2018",
       title: "SEO & growth practice",
-      body: "Expanded into technical SEO, local ranking, and measurable traffic programmes across Nepal.",
+      body: "Expanded into technical SEO, local ranking, and measurable traffic programmes across USA.",
     },
     {
       year: "2020",
@@ -150,7 +150,7 @@ export const DEFAULT_ABOUT: AboutConfig = {
     {
       year: "2025",
       title: "Studios in three countries",
-      body: "Nepal, India, and United States delivery with unified standards and shared product roadmap.",
+      body: "USA, India, and United States delivery with unified standards and shared product roadmap.",
     },
   ],
   stats: [
@@ -190,7 +190,7 @@ export const DEFAULT_ABOUT: AboutConfig = {
   presenceLede: "Local time zones, shared playbooks, and one quality bar across regions.",
   regions: [
     {
-      title: "Nepal · Kathmandu",
+      title: "USA · United States",
       body: "Headquarters and product engineering — ERP, hospitality software, and delivery for South Asia.",
     },
     {
@@ -205,7 +205,7 @@ export const DEFAULT_ABOUT: AboutConfig = {
   whyEyebrow: "Why Global Orbit",
   whyTitle: "Why teams choose us",
   whyBullets: [
-    "Nine-plus years serving Nepal and international clients with documented delivery",
+    "Nine-plus years serving USA and international clients with documented delivery",
     "Data-driven SEO and Core Web Vitals–first engineering",
     "Ultra-fast marketing sites and apps — performance as a default",
     "Dedicated project lead on every engagement",

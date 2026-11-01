@@ -60,12 +60,12 @@ export function OrbitPremiumTrustStrip() {
 
 const KEYWORD_PILLARS = [
   {
-    title: "Website development Nepal",
+    title: "Website development USA",
     body: "Custom business, hotel, trek, restaurant, and ecommerce sites — mobile-perfect, fast, and structured for Google.",
   },
   {
     title: "SEO & Google ranking",
-    body: "Technical SEO, local SEO Kathmandu, metadata, schema, sitemaps, and content plans you can measure.",
+    body: "Technical SEO, local SEO United States, metadata, schema, sitemaps, and content plans you can measure.",
   },
   {
     title: "Digital marketing & ads",
@@ -83,7 +83,7 @@ export function OrbitPremiumPillars() {
       <div className="mx-auto max-w-[min(1200px,96vw)]">
         <OrbitPremiumReveal>
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#f0c43a]/90">Nepal · Digital studio</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#f0c43a]/90">USA · Digital studio</p>
             <h2 className="mt-4 font-[family-name:var(--font-display)] text-[clamp(1.55rem,4vw,2.35rem)] text-white">
               Everything you search for — one accountable team
             </h2>
@@ -117,7 +117,7 @@ export function OrbitCtaBand() {
           Ready to brief the studio?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-white/68">
-          Nepal, India, and the United States. Free consultation for websites, SEO, social ads, and software — no commitment.
+          USA, India, and global clients. Free consultation for websites, SEO, social ads, and software — no commitment.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Link href="/contact" className="orbit-btn-gold inline-flex h-12 items-center rounded-full px-7 text-sm font-semibold">

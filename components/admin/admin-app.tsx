@@ -324,7 +324,7 @@ export function AdminApp(props: Props) {
     setBusy(false);
     if (response.ok && data.config) {
       setWebsiteDevelopment(data.config);
-      setWdStatus("Published. Open /service/website-development-nepal on the live site.");
+      setWdStatus("Published. Open /service/website-development-usa on the live site.");
     } else {
       setWdStatus("Could not save website development page.");
     }
@@ -773,7 +773,7 @@ export function AdminApp(props: Props) {
               <button type="button" className="go-cms-back" onClick={() => go("page", page, "hub")}>
                 ← All sections
               </button>
-              <p className="go-cms-help">Website Development Nepal · full page</p>
+              <p className="go-cms-help">Website Development USA · full page</p>
             </div>
             <AdminWebsiteDevelopmentEditor
               config={websiteDevelopment}
@@ -992,7 +992,7 @@ function SeoPanel({
           Keywords
           <input
             value={seo.keywords}
-            placeholder="web development nepal, erp software, android apps"
+            placeholder="web development usa, erp software, android apps"
             onChange={(e) => onChange({ keywords: e.target.value })}
           />
         </label>
@@ -1000,7 +1000,7 @@ function SeoPanel({
           Tags
           <input
             value={seo.tags}
-            placeholder="nepal, kathmandu, software"
+            placeholder="usa, united states, software"
             onChange={(e) => onChange({ tags: e.target.value })}
           />
         </label>

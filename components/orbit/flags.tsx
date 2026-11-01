@@ -63,7 +63,7 @@ export function OrbitCountryFlags({ compact = false }: { compact?: boolean }) {
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <h2 className="text-3xl font-semibold text-white sm:text-4xl">Markets we ship into</h2>
           <p className="mt-3 text-[15px] leading-7 text-white/65">
-            Official flags for 25 countries. Work is run from Nepal, India, and the USA.
+            Official flags for 25 countries. Work is run from USA, India, and the USA.
           </p>
         </div>
       )}

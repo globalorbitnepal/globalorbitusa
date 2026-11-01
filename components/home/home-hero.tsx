@@ -19,7 +19,7 @@ import {
 const STAT_ICONS = [IconPeople, IconChart, IconGlobe, IconShield];
 const PLACES = [
   { src: "/brand/places/himalaya.jpg", alt: "Himalaya" },
-  { src: "/brand/places/pagoda.jpg", alt: "Kathmandu" },
+  { src: "/brand/places/pagoda.jpg", alt: "United States" },
   { src: "/brand/places/city.jpg", alt: "Global city" },
 ] as const;
 
@@ -202,7 +202,7 @@ export function HomeHero() {
               ))}
             </div>
             <p className="text-right text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6b6458]">
-              From Nepal
+              From USA
               <span className="mt-1 block tracking-[0.14em] text-[#1c242c]">To the world</span>
             </p>
           </div>

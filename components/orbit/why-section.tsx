@@ -55,7 +55,7 @@ const CARDS: WhyCard[] = [
 ];
 
 const STATS = [
-  { label: "Kathmandu engineering", icon: "people" },
+  { label: "United States engineering", icon: "people" },
   { label: "3 Global Offices", icon: "globe" },
   { label: "Web · Apps · SEO", icon: "uptime" },
   { label: "One accountable team", icon: "bars" },

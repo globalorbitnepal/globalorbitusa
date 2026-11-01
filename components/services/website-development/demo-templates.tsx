@@ -129,7 +129,7 @@ export function DemoEmberSlate() {
       <Topbar brand="Ember & Slate" links={["Menu", "Wine", "Private"]} cta="Reserve" />
       <section className="wd-app-hero-row wd-app-hero-row--ember">
         <div>
-          <p className="wd-app-kicker">Kathmandu · Thu–Sun</p>
+          <p className="wd-app-kicker">United States · Thu–Sun</p>
           <p className="wd-app-demo-title">Seven-course tasting, one seating</p>
           <p className="wd-app-lede">Wood-fired produce and natural wines. Last table 21:30.</p>
           <form className="wd-app-reserve" onSubmit={(e) => e.preventDefault()}>

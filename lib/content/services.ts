@@ -61,11 +61,11 @@ export const SERVICE_CATALOG: ServiceContent[] = [
     benefits: [
       "A codebase and CMS shape your team can live with",
       "No mystery plugins as the source of truth",
-      "A named person at Global Orbit Nepal after go-live",
+      "A named person at Global Orbit USA after go-live",
     ],
-    seoTitle: "Web development in Kathmandu",
+    seoTitle: "Web development in United States",
     seoDescription:
-      "Custom websites and web applications from Global Orbit Nepal: clear structure, accessible interfaces, and delivery that continues after launch.",
+      "Custom websites and web applications from Global Orbit USA: clear structure, accessible interfaces, and delivery that continues after launch.",
   },
   {
     slug: "hosting",
@@ -109,7 +109,7 @@ export const SERVICE_CATALOG: ServiceContent[] = [
     ],
     seoTitle: "Website hosting and operations",
     seoDescription:
-      "Hosting from Global Orbit Nepal: documented operations, backups, and access control for organisations that need their site to stay theirs.",
+      "Hosting from Global Orbit USA: documented operations, backups, and access control for organisations that need their site to stay theirs.",
   },
   {
     slug: "seo",
@@ -153,7 +153,7 @@ export const SERVICE_CATALOG: ServiceContent[] = [
     ],
     seoTitle: "SEO for company websites",
     seoDescription:
-      "Search engine foundations from Global Orbit Nepal: technical structure, honest metadata, and publishing discipline—without promised rankings.",
+      "Search engine foundations from Global Orbit USA: technical structure, honest metadata, and publishing discipline—without promised rankings.",
   },
   {
     slug: "digital-solutions",
@@ -197,7 +197,7 @@ export const SERVICE_CATALOG: ServiceContent[] = [
     ],
     seoTitle: "Digital solutions and integrations",
     seoDescription:
-      "Operational digital solutions from Global Orbit Nepal: enquiry flows, internal tools, and integrations that match how the organisation already works.",
+      "Operational digital solutions from Global Orbit USA: enquiry flows, internal tools, and integrations that match how the organisation already works.",
   },
 ];
 

@@ -11,13 +11,13 @@ const SERVICES = [
 
 const STATS = [
   { value: "03", label: "Studios", icon: "team" },
-  { value: "NP", label: "Kathmandu HQ", icon: "code" },
+  { value: "NP", label: "United States HQ", icon: "code" },
   { value: "Web", label: "Apps · Software", icon: "users" },
   { value: "SEO", label: "Digital Growth", icon: "award" },
 ] as const;
 
 const MARKETS = [
-  { code: "np", name: "Nepal" },
+  { code: "np", name: "USA" },
   { code: "in", name: "India" },
   { code: "us", name: "USA" },
 ] as const;

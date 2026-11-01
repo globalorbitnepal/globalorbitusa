@@ -6,7 +6,7 @@ import {
   type OrbitCard,
 } from "@/lib/orbit/catalog";
 import { SERVICE_CATALOG } from "@/lib/content/services";
-import { keywordsCsv, keywordsString, NEPAL_AGENCY_KEYWORDS } from "@/lib/seo-keywords";
+import { keywordsCsv, keywordsString, USA_AGENCY_KEYWORDS } from "@/lib/seo-keywords";
 
 export type PageSeoDefaults = {
   title: string;
@@ -22,9 +22,9 @@ function trimDesc(text: string, max = 158): string {
 }
 
 function cardSeo(card: OrbitCard, focus: string, extraKw: string[] = [], titleOverride?: string): PageSeoDefaults {
-  const title = titleOverride ?? `${card.title} | Global Orbit Nepal`;
+  const title = titleOverride ?? `${card.title} | Global Orbit USA`;
   const description = trimDesc(
-    `${card.summary} Nepal-based studio: websites, SEO, apps, ERP, and digital marketing with measurable delivery.`,
+    `${card.summary} USA-based studio: websites, SEO, apps, ERP, and digital marketing with measurable delivery.`,
   );
   return {
     title,
@@ -36,190 +36,190 @@ function cardSeo(card: OrbitCard, focus: string, extraKw: string[] = [], titleOv
 
 const STATIC: Record<string, PageSeoDefaults> = {
   "/": {
-    title: "Global Orbit | Web Development & Software Company in Nepal",
+    title: "Global Orbit | Web Development & Software Company in USA",
     description: trimDesc(
-      "Global Orbit helps businesses in Nepal with website development, custom software, mobile apps, SEO and digital marketing. Contact our Kathmandu team for a consultation.",
+      "Global Orbit helps businesses in USA with website development, custom software, mobile apps, SEO and digital marketing. Contact our United States team for a consultation.",
     ),
     keywords: keywordsCsv(),
-    focusKeyword: "web development company nepal",
+    focusKeyword: "web development company usa",
   },
   "/about": {
-    title: "About Global Orbit · Web & Software Studio Nepal",
+    title: "About Global Orbit · Web & Software Studio USA",
     description: trimDesc(
-      "Enterprise websites, custom apps, ERP, and SEO from Kathmandu with teams in Nepal, India, and the United States — one accountable studio.",
+      "Enterprise websites, custom apps, ERP, and SEO from United States with teams in USA, India, and global clients — one accountable studio.",
     ),
-    keywords: keywordsCsv(["about Global Orbit", "software company nepal"]),
-    focusKeyword: "web development company nepal",
+    keywords: keywordsCsv(["about Global Orbit", "software company usa"]),
+    focusKeyword: "web development company usa",
   },
   "/contact": {
-    title: "Contact · Free Website & SEO Consultation Nepal",
+    title: "Contact · Free Website & SEO Consultation USA",
     description: trimDesc(
-      "Free consultation for website development, SEO, social media ads, and web apps. Kathmandu sales office — WhatsApp, phone, and email.",
+      "Free consultation for website development, SEO, social media ads, and web apps. United States sales office — WhatsApp, phone, and email.",
     ),
-    keywords: keywordsCsv(["contact web developer nepal", "free website consultation kathmandu"]),
-    focusKeyword: "website consultation nepal",
+    keywords: keywordsCsv(["contact web developer usa", "free website consultation united states"]),
+    focusKeyword: "website consultation usa",
   },
   "/projects": {
-    title: "Portfolio · Websites & Apps Built in Nepal",
+    title: "Portfolio · Websites & Apps Built in USA",
     description: trimDesc(
-      "Selected websites, ecommerce, hotel, trek, SaaS, and ERP projects shipped by Global Orbit Nepal — performance, SEO, and polish.",
+      "Selected websites, ecommerce, hotel, trek, SaaS, and ERP projects shipped by Global Orbit USA — performance, SEO, and polish.",
     ),
-    keywords: keywordsCsv(["web design portfolio nepal", "website examples kathmandu"]),
-    focusKeyword: "website portfolio nepal",
+    keywords: keywordsCsv(["web design portfolio usa", "website examples united states"]),
+    focusKeyword: "website portfolio usa",
   },
   "/services": {
-    title: "Digital Solutions Nepal · Web, SEO, Ads & Automation",
+    title: "Digital Solutions USA · Web, SEO, Ads & Automation",
     description: trimDesc(
-      "Website development, ecommerce, SEO, Google ranking, digital marketing, social ads, and AI automation — one Nepal studio.",
+      "Website development, ecommerce, SEO, Google ranking, digital marketing, social ads, and AI automation — one USA studio.",
     ),
-    keywords: keywordsCsv(["digital solutions nepal", "it services kathmandu"]),
-    focusKeyword: "digital marketing nepal",
+    keywords: keywordsCsv(["digital solutions usa", "it services united states"]),
+    focusKeyword: "digital marketing usa",
   },
   "/orbit-software/web-apps": {
-    title: "Web Apps Nepal · Next.js, PWA & Cloud Dashboards",
+    title: "Web Apps USA · Next.js, PWA & Cloud Dashboards",
     description: trimDesc(
-      "Custom web applications, PWAs, and operator dashboards from Kathmandu — Next.js, secure APIs, and SEO-ready delivery for Nepal, India, and the US.",
+      "Custom web applications, PWAs, and operator dashboards from United States — Next.js, secure APIs, and SEO-ready delivery for USA, India, and the US.",
     ),
-    keywords: keywordsCsv(["web app development nepal", "PWA nepal", "next.js agency kathmandu"]),
-    focusKeyword: "web app development nepal",
+    keywords: keywordsCsv(["web app development usa", "PWA usa", "next.js agency united states"]),
+    focusKeyword: "web app development usa",
   },
   "/orbit-software/android-apps": {
-    title: "Android App Development Nepal · Kotlin & Play Store",
+    title: "Android App Development USA · Kotlin & Play Store",
     description: trimDesc(
-      "Native Android apps for Nepali businesses — Kotlin, Play Store launch, billing, and aftercare from Global Orbit Kathmandu.",
+      "Native Android apps for U.S. businesses — Kotlin, Play Store launch, billing, and aftercare from Global Orbit United States.",
     ),
-    keywords: keywordsCsv(["android app development nepal", "kotlin app kathmandu", "play store nepal"]),
-    focusKeyword: "android app development nepal",
+    keywords: keywordsCsv(["android app development usa", "kotlin app united states", "play store usa"]),
+    focusKeyword: "android app development usa",
   },
   "/orbit-software/ios-apps": {
-    title: "iOS App Development Nepal · SwiftUI & App Store",
+    title: "iOS App Development USA · SwiftUI & App Store",
     description: trimDesc(
-      "iPhone and iPad apps with SwiftUI, TestFlight, and App Store launch — designed and engineered in Kathmandu for Nepal, India, and US clients.",
+      "iPhone and iPad apps with SwiftUI, TestFlight, and App Store launch — designed and engineered in United States for USA, India, and US clients.",
     ),
-    keywords: keywordsCsv(["ios app development nepal", "swiftui kathmandu", "app store nepal"]),
-    focusKeyword: "ios app development nepal",
+    keywords: keywordsCsv(["ios app development usa", "swiftui united states", "app store usa"]),
+    focusKeyword: "ios app development usa",
   },
   "/orbit-software": {
-    title: "ERP & Business Software Nepal · Billing, Hotel, POS, CRM",
+    title: "ERP & Business Software USA · Billing, Hotel, POS, CRM",
     description: trimDesc(
-      "Billing, hotel PMS, warehouse, restaurant POS, CRM, and SaaS suites built and supported from Nepal for operators who need reliability.",
+      "Billing, hotel PMS, warehouse, restaurant POS, CRM, and SaaS suites built and supported from USA for operators who need reliability.",
     ),
-    keywords: keywordsCsv(["erp nepal", "billing software nepal", "hotel software nepal"]),
-    focusKeyword: "erp software nepal",
+    keywords: keywordsCsv(["erp usa", "billing software usa", "hotel software usa"]),
+    focusKeyword: "erp software usa",
   },
   "/packages": {
-    title: "Website & SEO Packages Nepal · Transparent Pricing",
+    title: "Website & SEO Packages USA · Transparent Pricing",
     description: trimDesc(
-      "Starter to enterprise website packages and SEO retainers in NPR — clear scope, mobile-first builds, and search foundations.",
+      "Starter to enterprise website packages and SEO retainers in USD — clear scope, mobile-first builds, and search foundations.",
     ),
-    keywords: keywordsCsv(["website package price nepal", "seo package nepal"]),
-    focusKeyword: "website package nepal",
+    keywords: keywordsCsv(["website package price usa", "seo package usa"]),
+    focusKeyword: "website package usa",
   },
   "/blogs": {
-    title: "Blog · SEO, Web Development & Digital Marketing Nepal",
+    title: "Blog · SEO, Web Development & Digital Marketing USA",
     description: trimDesc(
-      "Guides on websites, SEO, ads, and software from Global Orbit — practical notes for Nepali businesses growing online.",
+      "Guides on websites, SEO, ads, and software from Global Orbit — practical notes for U.S. businesses growing online.",
     ),
-    keywords: keywordsCsv(["seo blog nepal", "web development tips nepal"]),
-    focusKeyword: "seo tips nepal",
+    keywords: keywordsCsv(["seo blog usa", "web development tips usa"]),
+    focusKeyword: "seo tips usa",
   },
   "/careers": {
-    title: "Careers · Web, SEO & Software Jobs Kathmandu",
+    title: "Careers · Web, SEO & Software Jobs United States",
     description: trimDesc(
-      "Join Global Orbit Nepal — developers, designers, and SEO specialists building world-class websites and software.",
+      "Join Global Orbit USA — developers, designers, and SEO specialists building world-class websites and software.",
     ),
-    keywords: keywordsCsv(["web developer jobs nepal", "seo jobs kathmandu"]),
-    focusKeyword: "web developer jobs nepal",
+    keywords: keywordsCsv(["web developer jobs usa", "seo jobs united states"]),
+    focusKeyword: "web developer jobs usa",
   },
   "/studio": {
-    title: "Design Studio Nepal · Premium Websites & Brand UI",
+    title: "Design Studio USA · Premium Websites & Brand UI",
     description: trimDesc(
-      "Ultra HD website design, motion, and brand systems from Kathmandu — built for conversion and search visibility.",
+      "Ultra HD website design, motion, and brand systems from United States — built for conversion and search visibility.",
     ),
-    keywords: keywordsCsv(["website design studio nepal", "ui ux nepal"]),
-    focusKeyword: "website design nepal",
+    keywords: keywordsCsv(["website design studio usa", "ui ux usa"]),
+    focusKeyword: "website design usa",
   },
   "/inside-orbit": {
     title: "Inside Orbit · How We Ship Websites & Software",
     description: trimDesc(
       "Process, tools, and standards behind Global Orbit deliveries — from discovery to SEO launch and aftercare.",
     ),
-    keywords: keywordsCsv(["software development process nepal"]),
-    focusKeyword: "web development nepal",
+    keywords: keywordsCsv(["software development process usa"]),
+    focusKeyword: "web development usa",
   },
   "/demo": {
     title: "Software Demo · ERP, Hotel, POS & SaaS",
     description: trimDesc(
-      "Book a live demo of billing, hotel, POS, CRM, or SaaS products from Global Orbit Nepal.",
+      "Book a live demo of billing, hotel, POS, CRM, or SaaS products from Global Orbit USA.",
     ),
-    keywords: keywordsCsv(["erp demo nepal"]),
-    focusKeyword: "software demo nepal",
+    keywords: keywordsCsv(["erp demo usa"]),
+    focusKeyword: "software demo usa",
   },
   "/privacy-policy": {
-    title: "Privacy Policy · Global Orbit Nepal",
+    title: "Privacy Policy · Global Orbit USA",
     description: "How Global Orbit Pvt Ltd handles data for website, app, and marketing clients.",
-    keywords: keywordsCsv(["privacy policy nepal"]),
+    keywords: keywordsCsv(["privacy policy usa"]),
     focusKeyword: "privacy policy",
   },
   "/terms-and-conditions": {
-    title: "Terms & Conditions · Global Orbit Nepal",
+    title: "Terms & Conditions · Global Orbit USA",
     description: "Terms for website development, software, SEO, and digital marketing services.",
-    keywords: keywordsCsv(["terms of service nepal"]),
+    keywords: keywordsCsv(["terms of service usa"]),
     focusKeyword: "terms and conditions",
   },
 };
 
 const SERVICE_FOCUS: Record<string, string> = {
-  "website-development-nepal": "website development nepal",
-  "seo-optimization-nepal": "seo services nepal",
-  "ecommerce-development-nepal": "ecommerce website nepal",
-  "google-ranking-services-nepal": "google ranking nepal",
-  "erp-crm-software-nepal": "crm software nepal",
-  "digital-marketing-nepal": "digital marketing nepal",
-  "ai-automation": "ai automation nepal",
+  "website-development-usa": "website development usa",
+  "seo-optimization-usa": "seo services usa",
+  "ecommerce-development-usa": "ecommerce website usa",
+  "google-ranking-services-usa": "google ranking usa",
+  "erp-crm-software-usa": "crm software usa",
+  "digital-marketing-usa": "digital marketing usa",
+  "ai-automation": "ai automation usa",
 };
 
 const LANDING_FOCUS: Record<string, string> = {
-  "website-development-nepal": "website development nepal",
-  "custom-software-development-nepal": "custom software development nepal",
-  "web-development-nepal": "web development nepal",
-  "erp-software-nepal": "erp software nepal",
-  "seo-services-nepal": "seo services nepal",
-  "local-seo-nepal": "local seo nepal",
-  "hotel-website-development-nepal": "hotel website nepal",
-  "trekking-website-development-nepal": "trekking website nepal",
-  "travel-website-development-nepal": "travel website nepal",
-  "restaurant-website-development-nepal": "restaurant website nepal",
-  "resort-website-development-nepal": "resort website nepal",
-  "spa-website-development-nepal": "spa website nepal",
-  "ecommerce-website-development-nepal": "ecommerce development nepal",
-  "booking-website-development-nepal": "booking website nepal",
+  "website-development-usa": "website development usa",
+  "custom-software-development-usa": "custom software development usa",
+  "web-development-usa": "web development usa",
+  "erp-software-usa": "erp software usa",
+  "seo-services-usa": "seo services usa",
+  "local-seo-usa": "local seo usa",
+  "hotel-website-development-usa": "hotel website usa",
+  "trekking-website-development-usa": "trekking website usa",
+  "travel-website-development-usa": "travel website usa",
+  "restaurant-website-development-usa": "restaurant website usa",
+  "resort-website-development-usa": "resort website usa",
+  "spa-website-development-usa": "spa website usa",
+  "ecommerce-website-development-usa": "ecommerce development usa",
+  "booking-website-development-usa": "booking website usa",
 };
 
 function buildDynamicMap(): Record<string, PageSeoDefaults> {
   const map: Record<string, PageSeoDefaults> = { ...STATIC };
 
   for (const item of ORBIT_SERVICE_PAGES) {
-    const focus = SERVICE_FOCUS[item.slug] ?? `${item.slug.replace(/-/g, " ")} nepal`;
+    const focus = SERVICE_FOCUS[item.slug] ?? `${item.slug.replace(/-/g, " ")} usa`;
     // Service funnel pages: commercial “company / services” framing
-    map[item.href] = cardSeo(item, focus, [], `${item.title} Services | Kathmandu · Global Orbit`);
+    map[item.href] = cardSeo(item, focus, [], `${item.title} Services | United States · Global Orbit`);
   }
 
   for (const item of ORBIT_LANDINGS) {
     const focus = LANDING_FOCUS[item.slug] ?? `${item.slug.replace(/-/g, " ")}`;
     // Industry / long-tail landings: distinct from /service/* to avoid title cannibalization
-    map[item.href] = cardSeo(item, focus, [], `${item.title} | Nepal Guide · Global Orbit`);
+    map[item.href] = cardSeo(item, focus, [], `${item.title} | USA Guide · Global Orbit`);
   }
 
   for (const item of ORBIT_PACKAGES) {
-    map[item.href] = cardSeo(item, `${item.slug.replace(/-/g, " ")} nepal`, ["website price nepal"]);
+    map[item.href] = cardSeo(item, `${item.slug.replace(/-/g, " ")} usa`, ["website price usa"]);
   }
 
   const softwareSeen = new Set<string>();
   for (const item of ORBIT_SOFTWARE) {
     if (softwareSeen.has(item.href)) continue;
     softwareSeen.add(item.href);
-    map[item.href] = cardSeo(item, `${item.title.toLowerCase()} nepal`);
+    map[item.href] = cardSeo(item, `${item.title.toLowerCase()} usa`);
   }
 
   for (const svc of SERVICE_CATALOG) {
@@ -227,7 +227,7 @@ function buildDynamicMap(): Record<string, PageSeoDefaults> {
     map[path] = {
       title: `${svc.seoTitle} · Global Orbit`,
       description: trimDesc(svc.seoDescription),
-      keywords: keywordsCsv([svc.slug.replace(/-/g, " "), ...NEPAL_AGENCY_KEYWORDS.slice(0, 8)]),
+      keywords: keywordsCsv([svc.slug.replace(/-/g, " "), ...USA_AGENCY_KEYWORDS.slice(0, 8)]),
       focusKeyword: svc.slug.replace(/-/g, " "),
     };
   }
@@ -246,10 +246,10 @@ export function listSeoDefaultPaths(): string[] {
   return Object.keys(SEO_BY_PATH).sort();
 }
 
-/** Legacy homepage titles that must not win over current Nepal SEO defaults. */
+/** Legacy homepage titles that must not win over current USA SEO defaults. */
 const STALE_TITLES = new Set([
-  "Web Developer Nepal · Website, SEO, Apps & Digital Marketing",
-  "Web Developer Nepal · Website, SEO, Apps & Digital Marketing | Global Orbit",
+  "Web Developer USA · Website, SEO, Apps & Digital Marketing",
+  "Web Developer USA · Website, SEO, Apps & Digital Marketing | Global Orbit",
 ]);
 
 export function mergeSeoFallback(

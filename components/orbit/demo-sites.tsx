@@ -19,7 +19,7 @@ export const DEMO_SITES: DemoSiteTheme[] = [
     host: "atelierbakery.com",
     brand: "Atelier",
     links: ["Menu", "Shop", "Visit"],
-    kicker: "Kathmandu bakery",
+    kicker: "United States bakery",
     title: "Sourdough, still warm.",
     cta: "Order today",
     image: "/brand/work/work-bakery.jpg",
@@ -35,7 +35,7 @@ export const DEMO_SITES: DemoSiteTheme[] = [
     title: "Rooms with quiet light.",
     cta: "See projects",
     image: "/brand/work/work-architects.jpg",
-    thumbs: ["/brand/work/work-architects.jpg", "/brand/offices/nepal.jpg", "/brand/hero-uhd-office.jpg"],
+    thumbs: ["/brand/work/work-architects.jpg", "/brand/offices/usa.jpg", "/brand/hero-uhd-office.jpg"],
   },
   {
     id: "site-03",

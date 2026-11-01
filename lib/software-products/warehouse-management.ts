@@ -5,7 +5,7 @@ export const WAREHOUSE_MANAGEMENT: SoftwareProductContent = {
   seo: {
     title: "Warehouse Management Software | Inventory Control | Global Orbit",
     description:
-      "Warehouse and inventory management for receiving, stock tracking, transfers, picking, and reporting — with clear visibility for Nepali distributors and retailers.",
+      "Warehouse and inventory management for receiving, stock tracking, transfers, picking, and reporting — with clear visibility for U.S. distributors and retailers.",
     keywords: [
       "warehouse management system",
       "warehouse management software",
@@ -14,7 +14,7 @@ export const WAREHOUSE_MANAGEMENT: SoftwareProductContent = {
       "warehouse inventory management",
       "stock tracking software",
       "inventory control software",
-      "warehouse management software Nepal",
+      "warehouse management software USA",
     ],
   },
   eyebrow: "Orbit Software · Inventory",
@@ -33,7 +33,7 @@ export const WAREHOUSE_MANAGEMENT: SoftwareProductContent = {
   trust: {
     heading: "Inventory visibility for the floor",
     paragraphs: [
-      "Warehouse modules power distributors and retail chains we deploy in Nepal. Numbers in marketing previews are illustrative; your tenant shows your SKUs, locations, and on-hand counts.",
+      "Warehouse modules power distributors and retail chains we deploy in USA. Numbers in marketing previews are illustrative; your tenant shows your SKUs, locations, and on-hand counts.",
       "Barcode scanning and serial tracking are enabled when hardware and scope are included — we confirm during discovery rather than assuming every site has scanners day one.",
     ],
   },

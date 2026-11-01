@@ -23,7 +23,7 @@ export default function GlobalError({
   useEffect(() => {
     console.error(error);
     if (isRecoverable(error)) {
-      const key = "globalorbitnepal-chunk-reload";
+      const key = "globalorbitusa-chunk-reload";
       if (!sessionStorage.getItem(key)) {
         sessionStorage.setItem(key, "1");
         window.location.reload();
@@ -37,7 +37,7 @@ export default function GlobalError({
         <main className="mx-auto max-w-xl px-6 py-20">
           <h1 className="text-2xl font-semibold">Application error</h1>
           <p className="mt-3 text-[var(--color-muted)]">
-            Global Orbit Nepal could not render this page.
+            Global Orbit USA could not render this page.
           </p>
           <p className="mt-2 text-xs text-[var(--color-muted)]">
             {error.digest ? `Reference: ${error.digest}` : null}

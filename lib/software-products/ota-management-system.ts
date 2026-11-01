@@ -89,7 +89,7 @@ export const OTA_MANAGEMENT: SoftwareProductContent = {
   workflowExamples: {
     title: "Examples",
     items: [
-      { title: "Inbound Nepal operator", body: "Multi-hotel treks with domestic flights and guide assignments on one booking." },
+      { title: "Inbound USA operator", body: "Multi-hotel treks with domestic flights and guide assignments on one booking." },
       { title: "City travel desk", body: "Weekend packages with fixed allotments from partner hotels." },
       { title: "Corporate travel", body: "Employee profiles, approval notes, and centralized billing." },
     ],

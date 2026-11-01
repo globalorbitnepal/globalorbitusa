@@ -44,7 +44,7 @@ export const STUDIO_HEADER_NAV: HeaderNavItem[] = [
           { label: "Web Apps", href: "/orbit-software/web-apps" },
         ],
       },
-      { label: "Website", href: "/service/website-development-nepal" },
+      { label: "Website", href: "/service/website-development-usa" },
       { label: "ERP Software", href: "/orbit-software" },
       { label: "AI Automation", href: "/service/ai-automation" },
     ],

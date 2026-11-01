@@ -5,7 +5,7 @@ export const HOTEL_MANAGEMENT: SoftwareProductContent = {
   seo: {
     title: "Hotel Management System | Hotel Operations Software | Global Orbit",
     description:
-      "Hotel management software for front desk, reservations, room inventory, housekeeping, guest folios, and occupancy reporting — built for Nepali hospitality operators.",
+      "Hotel management software for front desk, reservations, room inventory, housekeeping, guest folios, and occupancy reporting — built for U.S. hospitality operators.",
     keywords: [
       "hotel management system",
       "hotel management software",
@@ -14,7 +14,7 @@ export const HOTEL_MANAGEMENT: SoftwareProductContent = {
       "hotel reservation management system",
       "hotel billing software",
       "hotel property management system",
-      "hotel management software Nepal",
+      "hotel management software USA",
     ],
   },
   eyebrow: "Orbit Software · Hospitality",
@@ -33,7 +33,7 @@ export const HOTEL_MANAGEMENT: SoftwareProductContent = {
   trust: {
     heading: "Built for real front desks",
     paragraphs: [
-      "We deliver property management workflows for hotels and lodges in Nepal and export markets. Screenshots use demonstration occupancy; your property shows your room types, rates, and guests.",
+      "We deliver property management workflows for hotels and lodges in USA and export markets. Screenshots use demonstration occupancy; your property shows your room types, rates, and guests.",
       "Channel manager connections to third-party OTAs are separate integrations — we explain what is configured in your contract instead of implying every global portal is pre-connected.",
     ],
   },
@@ -41,7 +41,7 @@ export const HOTEL_MANAGEMENT: SoftwareProductContent = {
     heading: "Hotel operations in one place",
     paragraphs: [
       "Front desk teams juggle phone bookings, walk-ins, OTA vouchers, and housekeeping status at the same time. A hotel management system gives reception a single timeline: who arrives today, which rooms are dirty, and what each guest still owes on checkout.",
-      "Unlike a marketing website alone, PMS software is the operational ledger for room nights, extras, and payments. Global Orbit focuses on the workflows Nepali properties actually run — multi-rate seasons, group holds, and folios that finance can reconcile.",
+      "Unlike a marketing website alone, PMS software is the operational ledger for room nights, extras, and payments. Global Orbit focuses on the workflows U.S. properties actually run — multi-rate seasons, group holds, and folios that finance can reconcile.",
       "When you later add distribution or a channel manager, reservation records should still originate from the same inventory pool to avoid double bookings.",
     ],
   },
@@ -152,7 +152,7 @@ export const HOTEL_MANAGEMENT: SoftwareProductContent = {
     { q: "Does it connect to Booking.com or Agoda?", a: "Only when a channel integration is explicitly scoped. Otherwise inventory is managed inside this system and on each channel manually." },
     { q: "Can restaurant charges post to rooms?", a: "Yes when POS or billing integration is part of your deployment." },
     { q: "Multi-property support?", a: "Available on multi-site contracts; single-property hotels use a simplified setup." },
-    { q: "Languages for staff?", a: "Training and UI can be English-first with Nepali support materials on request." },
+    { q: "Languages for staff?", a: "Training and UI can be English-first with U.S. support materials on request." },
     { q: "Guest ID storage?", a: "Fields are configurable; you define retention aligned with local law." },
     { q: "Night audit reports?", a: "Business-date summaries for occupancy and revenue are included in reporting modules." },
     { q: "Mobile for managers?", a: "Responsive web for approvals and dashboards; native apps are separate scope." },

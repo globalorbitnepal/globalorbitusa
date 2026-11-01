@@ -33,7 +33,7 @@ export const DEFAULT_HERO: HeroConfig = {
   eyebrow: "WEB · APPS · SOFTWARE · SEO",
   headline: "We Build Digital",
   headlineSecond: "Solutions",
-  lede: "Website development, custom software, mobile apps, SEO and digital marketing for businesses in Nepal — built by our Kathmandu studio.",
+  lede: "Website development, custom software, mobile apps, SEO and digital marketing for businesses in USA — built by our United States studio.",
   primaryLabel: "Get a Free Consultation",
   primaryHref: "/contact",
   secondaryLabel: "Explore Our Services",

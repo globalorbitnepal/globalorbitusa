@@ -327,7 +327,7 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
             <div className="orbit-about-glass">
               <Badge>FAQ</Badge>
               <h2 id="wd-faq-heading" className="orbit-about-h2 mt-4">
-                Website development Nepal — frequently asked questions
+                Website development USA — frequently asked questions
               </h2>
               <WebsiteDevFaq items={faq} />
             </div>

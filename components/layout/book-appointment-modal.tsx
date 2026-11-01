@@ -139,7 +139,7 @@ function BookAppointmentModalForm({ onClose }: { onClose: () => void }) {
           <form onSubmit={submit} className="flex min-h-0 flex-1 flex-col">
             <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5 sm:px-6">
               <p className="mb-5 text-sm leading-relaxed text-white/55">
-                Share your details and we will schedule a consultation at the studio you choose — Nepal, India, or the
+                Share your details and we will schedule a consultation at the studio you choose — USA, India, or the
                 USA.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
@@ -179,7 +179,7 @@ function BookAppointmentModalForm({ onClose }: { onClose: () => void }) {
                     className={inputClass}
                     value={form.country}
                     onChange={(event) => setForm((c) => ({ ...c, country: event.target.value }))}
-                    placeholder="e.g. Nepal"
+                    placeholder="e.g. USA"
                   />
                 </label>
                 <label className="block text-sm">

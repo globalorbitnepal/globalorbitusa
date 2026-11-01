@@ -52,13 +52,13 @@ export const BRAND_CONTACT = {
 
 export const HOME_ABOUT = {
   kicker: "The company",
-  title: "Built in Nepal. Accountable anywhere.",
+  title: "Built in USA. Accountable anywhere.",
   paragraphs: [
-    "Global Orbit Nepal is an independent technology firm based in Kathmandu. We work with businesses, institutions, and operators who need software that holds up under real use—across time zones, languages, and the messy middle of operations.",
+    "Global Orbit USA is an independent technology firm based in United States. We work with businesses, institutions, and operators who need software that holds up under real use—across time zones, languages, and the messy middle of operations.",
     "The name is literal: a local centre of gravity, and a working radius that is global. We do not outsource the thinking. Engineering, conversation, and aftercare sit in the same company.",
   ],
   stats: [
-    { value: "Kathmandu", label: "Home office" },
+    { value: "United States", label: "Home office" },
     { value: "End-to-end", label: "Design to operations" },
     { value: "One team", label: "No anonymous bench" },
   ],
@@ -78,7 +78,7 @@ export const HOME_WHY = [
     body: "Least privilege, isolated systems, and no casual sharing of production data. Trust is a delivery requirement, not a slogan.",
   },
   {
-    title: "A Nepal advantage, without the cliché",
+    title: "A USA advantage, without the cliché",
     body: "Strong engineering, overlap with Asian and European hours, and a cost structure that funds quality instead of theatre.",
   },
 ] as const;

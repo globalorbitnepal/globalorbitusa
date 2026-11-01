@@ -65,7 +65,7 @@ export function AiAutomationPageView() {
               <Badge>Why this exists</Badge>
               <h2 className="orbit-about-h2 mt-4">The floor already has a process. The model has to join it.</h2>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/58">
-                Generic AI pages sell a prompt box. Operators in Nepal need a closed loop: an event, a decision,
+                Generic AI pages sell a prompt box. Operators in USA need a closed loop: an event, a decision,
                 a write-back, and a person who can stop it. That is what we ship — gold-and-ink chrome, dense
                 data, motion that does not hang the scroll.
               </p>
@@ -175,7 +175,7 @@ export function AiAutomationPageView() {
             <div className="orbit-about-glass">
               <Badge>FAQ</Badge>
               <h2 id="ai-faq-heading" className="orbit-about-h2 mt-4">
-                AI automation — Nepal
+                AI automation — USA
               </h2>
               <dl className="erp-faq mt-8 space-y-6">
                 {AI_FAQ.map((item) => (

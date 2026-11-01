@@ -65,7 +65,7 @@ export const DEFAULT_CAREERS: CareersConfig = {
   heroEyebrow: "Careers at Global Orbit",
   heroTitleBefore: "Build products that",
   heroTitleAccent: "ship worldwide",
-  heroTitleAfter: "from Kathmandu and beyond",
+  heroTitleAfter: "from United States and beyond",
   heroLede:
     "We are a product-led studio hiring engineers, designers, and growth specialists who care about craft, clarity, and code that stays maintainable after launch. Three regions, one quality bar.",
   cultureEyebrow: "Life here",
@@ -73,7 +73,7 @@ export const DEFAULT_CAREERS: CareersConfig = {
   cultureParagraphs: [
     "You will work on real ERP, hospitality, and SaaS products — not endless pitch decks. Teams are small, senior-heavy, and focused on outcomes clients can operate every day.",
     "We favour async documentation, honest reviews, and room to learn. You are expected to own your module end-to-end, from spec to production support.",
-    "Remote-friendly within our regions, with core overlap hours for Nepal, India, and US clients. We invest in tools, training, and time to do the work properly.",
+    "Remote-friendly within our regions, with core overlap hours for USA, India, and US clients. We invest in tools, training, and time to do the work properly.",
   ],
   perksEyebrow: "Why join us",
   perksTitle: "Benefits that match",
@@ -86,7 +86,7 @@ export const DEFAULT_CAREERS: CareersConfig = {
     },
     {
       title: "Global exposure",
-      body: "Work with clients and teammates across Nepal, India, and the United States without leaving a structured delivery process.",
+      body: "Work with clients and teammates across USA, India, and global clients without leaving a structured delivery process.",
     },
     {
       title: "Growth & learning",
@@ -106,7 +106,7 @@ export const DEFAULT_CAREERS: CareersConfig = {
       slug: "senior-full-stack-developer",
       title: "Senior Full-Stack Developer",
       summary: "Own features across Next.js and Laravel — from API design to polished UI and production monitoring.",
-      location: "Kathmandu · Hybrid",
+      location: "United States · Hybrid",
       employmentType: "Full-time",
       department: "Engineering",
     },
@@ -114,15 +114,15 @@ export const DEFAULT_CAREERS: CareersConfig = {
       slug: "ui-ux-designer",
       title: "UI/UX Designer",
       summary: "Design systems and product flows for hotel, trek, ecommerce, and SaaS clients — Figma to shipped UI.",
-      location: "Kathmandu · On-site",
+      location: "United States · On-site",
       employmentType: "Full-time",
       department: "Design",
     },
     {
       slug: "seo-specialist",
       title: "SEO Specialist",
-      summary: "Technical SEO, content architecture, and measurable growth for Nepal and international export brands.",
-      location: "Remote · Nepal / India",
+      summary: "Technical SEO, content architecture, and measurable growth for USA and international export brands.",
+      location: "Remote · USA / India",
       employmentType: "Full-time",
       department: "Growth",
     },
@@ -149,7 +149,7 @@ export const DEFAULT_CAREERS: CareersConfig = {
   officesLede: "Roles are tied to delivery studios — relocation support discussed for the right candidate.",
   offices: [
     {
-      title: "Nepal · Kathmandu HQ",
+      title: "USA · United States HQ",
       body: "Engineering, design, and product — core ERP and hospitality platforms.",
     },
     {

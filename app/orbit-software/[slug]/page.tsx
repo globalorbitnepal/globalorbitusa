@@ -29,19 +29,19 @@ const PLATFORM_SEO: Record<
     title: "Web Apps · Next.js & PWA",
     serviceName: "Web application development",
     breadcrumb: "Web Apps",
-    keywords: ["web app development Nepal", "Next.js PWA", "progressive web app Kathmandu", "Global Orbit"],
+    keywords: ["web app development USA", "Next.js PWA", "progressive web app United States", "Global Orbit"],
   },
   "android-apps": {
     title: "Android Apps · Kotlin & Play Store",
     serviceName: "Android application development",
     breadcrumb: "Android Apps",
-    keywords: ["Android app development Nepal", "Kotlin app Kathmandu", "Play Store launch", "Global Orbit"],
+    keywords: ["Android app development USA", "Kotlin app United States", "Play Store launch", "Global Orbit"],
   },
   "ios-apps": {
     title: "iOS Apps · SwiftUI & App Store",
     serviceName: "iOS application development",
     breadcrumb: "iOS Apps",
-    keywords: ["iOS app development Nepal", "SwiftUI app", "TestFlight App Store", "Global Orbit"],
+    keywords: ["iOS app development USA", "SwiftUI app", "TestFlight App Store", "Global Orbit"],
   },
 };
 

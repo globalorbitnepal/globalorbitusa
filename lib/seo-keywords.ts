@@ -1,29 +1,29 @@
-/** High-intent Nepal + digital agency keywords (titles, meta, on-page copy). */
-export const NEPAL_AGENCY_KEYWORDS = [
-  "web developer nepal",
-  "website development nepal",
-  "web development company kathmandu",
-  "website design nepal",
-  "seo services nepal",
-  "seo company nepal",
-  "digital marketing nepal",
-  "social media marketing nepal",
-  "facebook ads nepal",
-  "google ads nepal",
-  "web application development nepal",
-  "mobile app development nepal",
-  "ecommerce website nepal",
-  "custom software development nepal",
-  "erp software nepal",
-  "google ranking nepal",
-  "local seo nepal",
-  "website banau nepal",
-  "professional website kathmandu",
-  "Global Orbit Nepal",
+/** High-intent USA + digital agency keywords (titles, meta, on-page copy). */
+export const USA_AGENCY_KEYWORDS = [
+  "web developer usa",
+  "website development usa",
+  "web development company united states",
+  "website design usa",
+  "seo services usa",
+  "seo company usa",
+  "digital marketing usa",
+  "social media marketing usa",
+  "facebook ads usa",
+  "google ads usa",
+  "web application development usa",
+  "mobile app development usa",
+  "ecommerce website usa",
+  "custom software development usa",
+  "erp software usa",
+  "google ranking usa",
+  "local seo usa",
+  "hire web developer usa",
+  "professional website united states",
+  "Global Orbit USA",
 ] as const;
 
 export function keywordsCsv(extra: string[] = []): string[] {
-  const set = new Set<string>([...NEPAL_AGENCY_KEYWORDS, ...extra]);
+  const set = new Set<string>([...USA_AGENCY_KEYWORDS, ...extra]);
   return [...set];
 }
 

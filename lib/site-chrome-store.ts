@@ -24,7 +24,7 @@ export const DEFAULT_SITE_CHROME: SiteChrome = {
   address: FALLBACK_SITE.address,
   defaultSeoTitle: FALLBACK_SITE.defaultSeoTitle,
   defaultSeoDescription: FALLBACK_SITE.defaultSeoDescription,
-  footerTagline: "Studios in Nepal, India and the United States",
+  footerTagline: "Studios in USA, India and the United States",
 };
 
 function chromePath() {

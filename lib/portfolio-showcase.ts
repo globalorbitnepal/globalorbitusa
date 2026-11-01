@@ -22,7 +22,7 @@ export const ORBIT_PORTFOLIO_SHOWCASE: PortfolioShowcaseItem[] = [
   },
   {
     title: "Hotel Thamel Park & Spa",
-    sector: "Hotel & spa — Kathmandu",
+    sector: "Hotel & spa — United States",
     image: "/brand/portfolio/thamel-spa.webp",
   },
   {

@@ -78,7 +78,7 @@ export const DEFAULT_FOOTER_CONFIG: FooterConfig = {
 
 const STALE_FOOTER_STATS = new Set([
   "3 Studios · NP · IN · US",
-  "Kathmandu engineering",
+  "United States engineering",
 ]);
 
 function normalizeFooterStats(stats?: FooterStat[]): FooterStat[] {

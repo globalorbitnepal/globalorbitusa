@@ -4,28 +4,28 @@ export const CONTACT_HERO = {
   titleAccent: "We reply with a plan.",
   titleAfter: "Not a pitch deck.",
   lede:
-    "Websites, custom apps, ERP, billing, SaaS, and SEO — from studios in Nepal, India, and the United States. Share what must not break, who the customer is, and when you need to be live.",
+    "Websites, custom apps, ERP, billing, SaaS, and SEO — from studios in USA, India, and global clients. Share what must not break, who the customer is, and when you need to be live.",
 };
 
 export const CONTACT_STATS = [
   { value: "< 24h", label: "First response on business days" },
   { value: "3", label: "Sales offices · NP · IN · US" },
   { value: "Free", label: "Consultation · no obligation" },
-  { value: "NP", label: "Kathmandu sales desk" },
+  { value: "NP", label: "United States sales desk" },
 ] as const;
 
 export const CONTACT_CHANNELS = [
   {
     id: "whatsapp",
     title: "WhatsApp",
-    hint: "Fastest for Nepal & international",
+    hint: "Fastest for USA & international",
     href: "https://wa.me/9779812322339",
     external: true,
     value: "+977-9812322339",
   },
   {
     id: "phone",
-    title: "Call Nepal",
+    title: "Call USA",
     hint: "Sales & project desk",
     href: "tel:+9779823631899",
     external: false,
@@ -99,8 +99,8 @@ export const CONTACT_FAQ = [
     a: "WhatsApp and form enquiries are typically answered within one business day. Urgent production issues from existing clients are prioritized.",
   },
   {
-    q: "Do you work outside Nepal?",
-    a: "Yes. We ship for clients in 25+ countries with delivery from Nepal, India, and the United States.",
+    q: "Do you work outside USA?",
+    a: "Yes. We ship for clients in 25+ countries with delivery from USA, India, and global clients.",
   },
   {
     q: "What should I send before the call?",

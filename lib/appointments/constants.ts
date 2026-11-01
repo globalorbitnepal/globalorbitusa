@@ -1,4 +1,4 @@
-export const APPOINTMENT_STUDIOS = ["Nepal", "India", "USA"] as const;
+export const APPOINTMENT_STUDIOS = ["USA", "India", "USA"] as const;
 
 export const APPOINTMENT_SERVICES = [
   "Website",

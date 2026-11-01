@@ -7,7 +7,7 @@ import {
   saveWebsiteDevelopmentPageConfig,
 } from "@/lib/website-development-store";
 
-const PATH = "/service/website-development-nepal";
+const PATH = "/service/website-development-usa";
 
 export async function GET() {
   if (!(await isOrbitAuthed())) {

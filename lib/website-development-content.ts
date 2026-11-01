@@ -1,12 +1,12 @@
-/** Long-form copy and section data for /service/website-development-nepal */
+/** Long-form copy and section data for /service/website-development-usa */
 
-export const WD_BREADCRUMB = { parent: "Solutions", parentHref: "/services", current: "Website Development Nepal" };
+export const WD_BREADCRUMB = { parent: "Solutions", parentHref: "/services", current: "Website Development USA" };
 
 export const WD_HERO = {
-  eyebrow: "Global Orbit · Website Development Nepal",
-  h1: "Website Development Company in Nepal for Ambitious Businesses",
+  eyebrow: "Global Orbit · Website Development USA",
+  h1: "Website Development Company in USA for Ambitious Businesses",
   lede:
-    "Global Orbit designs and builds custom business websites, e-commerce stores, hospitality and travel experiences, restaurant sites, and scalable web applications — with responsive layouts, clear user journeys, and SEO-ready structure from Kathmandu for Nepal and international brands.",
+    "Global Orbit designs and builds custom business websites, e-commerce stores, hospitality and travel experiences, restaurant sites, and scalable web applications — with responsive layouts, clear user journeys, and SEO-ready structure from United States for USA and international brands.",
   primaryCta: "Start Your Project",
   secondaryCta: "Explore Our Work",
   secondaryHref: "/projects",
@@ -44,33 +44,33 @@ export const WD_SERVICES: WdServiceCard[] = [
   },
   {
     title: "Business and Corporate Websites",
-    body: "Service pages, leadership profiles, and lead paths for B2B teams in Nepal and export markets.",
+    body: "Service pages, leadership profiles, and lead paths for B2B teams in USA and export markets.",
     href: "/contact",
   },
   {
     title: "E-commerce Website Development",
     body: "Catalogues, carts, and checkout flows on WooCommerce, Shopify, or custom stacks when scoped.",
-    href: "/service/ecommerce-development-nepal",
+    href: "/service/ecommerce-development-usa",
   },
   {
     title: "Hotel and Hospitality Website Development",
     body: "Room stories, galleries, enquiry or booking journeys, and local SEO for properties.",
-    href: "/hotel-website-development-nepal",
+    href: "/hotel-website-development-usa",
   },
   {
     title: "Trekking and Travel Website Development",
     body: "Itineraries, seasonal packages, filters, and enquiry funnels for operators and DMCs.",
-    href: "/trekking-website-development-nepal",
+    href: "/trekking-website-development-usa",
   },
   {
     title: "Restaurant Website Development",
     body: "Menus, reservations, location, and hours with mobile-first dining-room polish.",
-    href: "/restaurant-website-development-nepal",
+    href: "/restaurant-website-development-usa",
   },
   {
     title: "Custom Web Application Development",
     body: "Portals, dashboards, and authenticated workflows beyond a marketing site.",
-    href: "/custom-software-development-nepal",
+    href: "/custom-software-development-usa",
   },
   {
     title: "CMS and Website Management",
@@ -90,12 +90,12 @@ export const WD_SERVICES: WdServiceCard[] = [
   {
     title: "Website Performance Optimization",
     body: "Image pipelines, script budgets, and layout stability aimed at strong Core Web Vitals.",
-    href: "/service/seo-optimization-nepal",
+    href: "/service/seo-optimization-usa",
   },
   {
     title: "Technical SEO Implementation",
     body: "Metadata, sitemaps, schema, and crawl hygiene built into the project — not bolted on later.",
-    href: "/service/seo-optimization-nepal",
+    href: "/service/seo-optimization-usa",
   },
 ];
 
@@ -285,21 +285,21 @@ export const WD_PRICING = {
 export const WD_WHY = {
   title: "Why choose Global Orbit",
   paragraphs: [
-    "We are an engineering-led studio in Kathmandu with delivery overlap for India and the United States — websites, SEO, software, and ERP from one team when you need to grow.",
+    "We are an engineering-led studio in United States with delivery overlap for India and the United States — websites, SEO, software, and ERP from one team when you need to grow.",
     "Client sites receive original art direction. Our marketing site demonstrates our craft; your brand does not inherit its layout.",
     "Milestones, staging links, and named contacts keep projects legible for owners and finance. Handover includes documentation so you are not locked to mystery hosting.",
   ],
 };
 
 export const WD_RELATED = [
-  { label: "Web Development Nepal", href: "/web-development-nepal" },
-  { label: "Custom Software Development", href: "/custom-software-development-nepal" },
-  { label: "ERP Software Nepal", href: "/erp-software-nepal" },
-  { label: "SEO Services Nepal", href: "/seo-services-nepal" },
-  { label: "Local SEO Nepal", href: "/local-seo-nepal" },
-  { label: "E-commerce Development", href: "/service/ecommerce-development-nepal" },
-  { label: "Hotel Website Development", href: "/hotel-website-development-nepal" },
-  { label: "Trekking Website Development", href: "/trekking-website-development-nepal" },
+  { label: "Web Development USA", href: "/web-development-usa" },
+  { label: "Custom Software Development", href: "/custom-software-development-usa" },
+  { label: "ERP Software USA", href: "/erp-software-usa" },
+  { label: "SEO Services USA", href: "/seo-services-usa" },
+  { label: "Local SEO USA", href: "/local-seo-usa" },
+  { label: "E-commerce Development", href: "/service/ecommerce-development-usa" },
+  { label: "Hotel Website Development", href: "/hotel-website-development-usa" },
+  { label: "Trekking Website Development", href: "/trekking-website-development-usa" },
 ];
 
 export const WD_FINAL_CTA = {
@@ -314,8 +314,8 @@ export const WD_FINAL_CTA = {
 
 export const WD_FAQ_EXTENDED = [
   {
-    q: "How much does website development cost in Nepal?",
-    a: "Cost depends on pages, design, features, and integrations. Starter packages are listed on our Packages pages from NPR 15,000 for simple sites; larger builds are quoted after a brief discovery call.",
+    q: "How much does website development cost in USA?",
+    a: "Cost depends on pages, design, features, and integrations. Starter packages are listed on our Packages pages from about $299 for simple sites; larger builds are quoted after a brief discovery call.",
   },
   {
     q: "How long does it take to build a professional website?",

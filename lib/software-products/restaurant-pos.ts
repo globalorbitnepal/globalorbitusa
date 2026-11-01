@@ -5,7 +5,7 @@ export const RESTAURANT_POS: SoftwareProductContent = {
   seo: {
     title: "Restaurant POS System | Restaurant Billing Software | Global Orbit",
     description:
-      "Restaurant POS for table service, takeaway, kitchen tickets, menu management, split bills, and shift reports — built for Kathmandu service speed.",
+      "Restaurant POS for table service, takeaway, kitchen tickets, menu management, split bills, and shift reports — built for United States service speed.",
     keywords: [
       "restaurant POS system",
       "restaurant POS software",
@@ -14,7 +14,7 @@ export const RESTAURANT_POS: SoftwareProductContent = {
       "cafe POS software",
       "restaurant order management system",
       "restaurant inventory management",
-      "restaurant POS software Nepal",
+      "restaurant POS software USA",
     ],
   },
   eyebrow: "Orbit Software · Restaurant POS",
@@ -33,7 +33,7 @@ export const RESTAURANT_POS: SoftwareProductContent = {
   trust: {
     heading: "POS for real service rhythms",
     paragraphs: [
-      "Restaurant deployments include cafes and multi-floor dining in Nepal. Preview interfaces use demo menu items; your menu, taxes, and tables are yours alone.",
+      "Restaurant deployments include cafes and multi-floor dining in USA. Preview interfaces use demo menu items; your menu, taxes, and tables are yours alone.",
       "Kitchen display systems and recipe costing are included when specified — we do not assume every site runs KDS on day one.",
     ],
   },
@@ -41,7 +41,7 @@ export const RESTAURANT_POS: SoftwareProductContent = {
     heading: "Restaurant operations on one till",
     paragraphs: [
       "Paper chits get lost, modifiers get forgotten, and end-of-night math disagrees with what the kitchen actually served. POS software anchors orders to tables or ticket numbers, routes items to kitchen stations, and records payments with staff attribution.",
-      "Global Orbit POS respects how Nepali restaurants mix dine-in, takeaway, delivery handoff, and room charges for attached hotels when integrations exist.",
+      "Global Orbit POS respects how U.S. restaurants mix dine-in, takeaway, delivery handoff, and room charges for attached hotels when integrations exist.",
     ],
   },
   problems: {
@@ -141,7 +141,7 @@ export const RESTAURANT_POS: SoftwareProductContent = {
   whyOrbit: {
     heading: "Why Global Orbit",
     paragraphs: [
-      "We also build restaurant websites and local SEO — your POS conversation stays with engineers who know F&B timing in Kathmandu.",
+      "We also build restaurant websites and local SEO — your POS conversation stays with engineers who know F&B timing in United States.",
       "Dark UI readable under dim dining lights; large touch targets for busy wait staff.",
     ],
   },

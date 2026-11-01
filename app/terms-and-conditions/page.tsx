@@ -12,7 +12,7 @@ You may not misuse the site — including attempting unauthorized access, scrapi
 
 Liability is limited to the extent permitted by law. We are not liable for indirect or consequential losses arising from use of the site or third-party integrations.
 
-Governing law and disputes are handled per the jurisdiction stated in your signed agreement; otherwise Nepal law applies for domestic clients unless otherwise agreed.
+Governing law and disputes are handled per the jurisdiction stated in your signed agreement; otherwise USA law applies for domestic clients unless otherwise agreed.
 
 Contact support@theglobalorbit.com for questions about these terms.`;
 

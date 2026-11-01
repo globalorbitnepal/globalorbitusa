@@ -56,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      locale: "en_NP",
+      locale: "en_US",
       type: "website",
       url: SITE_ORIGIN,
       images: [
@@ -64,7 +64,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: absoluteUrl("/brand/og-default.jpg"),
           width: 1200,
           height: 630,
-          alt: "Global Orbit — website development, apps, SEO and digital marketing in Nepal",
+          alt: "Global Orbit — website development, apps, SEO and digital marketing in USA",
         },
       ],
     },

@@ -6,9 +6,9 @@ import { absoluteUrl } from "@/lib/site-origin";
 
 export async function generateMetadata(): Promise<Metadata> {
   return applyPageSeo("/orbit-software", {
-    title: "ERP Software Nepal · Orbit Software",
+    title: "ERP Software USA · Orbit Software",
     description:
-      "Orbit Software from Global Orbit: hotel PMS, billing, OTA, warehouse, manufacturing ERP, restaurant POS, CRM, and SaaS — operator systems built in Nepal.",
+      "Orbit Software from Global Orbit: hotel PMS, billing, OTA, warehouse, manufacturing ERP, restaurant POS, CRM, and SaaS — operator systems built in USA.",
     keywords: ERP_KEYWORDS,
   });
 }

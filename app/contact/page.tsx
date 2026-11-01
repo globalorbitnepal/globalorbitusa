@@ -6,7 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return applyPageSeo("/contact", {
     title: "Contact · Free Consultation",
     description:
-      "Contact Global Orbit — free consultation for websites, apps, ERP, SaaS, and SEO. Nepal, India, and United States sales offices. WhatsApp +977-9812322339.",
+      "Contact Global Orbit — free consultation for websites, apps, ERP, SaaS, and SEO. USA, India, and United States sales offices. WhatsApp +977-9812322339.",
   });
 }
 

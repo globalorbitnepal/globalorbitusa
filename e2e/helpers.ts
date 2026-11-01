@@ -3,7 +3,7 @@ import type { Page } from "@playwright/test";
 export const PRODUCTION_ORIGIN =
   process.env.PLAYWRIGHT_BASE_URL?.replace(/\/$/, "") ||
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://theglobalorbit.com";
+  "https://globalorbit.us";
 
 export const ALL_VIEWPORTS = [
   320, 360, 375, 390, 414, 430, 768, 1024, 1280, 1366, 1440, 1536, 1920, 2560, 3440, 3840,
@@ -28,15 +28,15 @@ export const TEMPLATE_PAGES: TemplatePage[] = [
   { path: "/contact", name: "Contact", h1: /Contact Global Orbit/i },
   { path: "/services", name: "Services", h1: /Complete digital solutions/i },
   {
-    path: "/service/website-development-nepal",
+    path: "/service/website-development-usa",
     name: "Website development",
-    h1: /Website Development Company in Nepal/i,
+    h1: /Website Development Company in USA/i,
     h1MustNot: /Book a quiet night/i,
   },
   {
-    path: "/trekking-website-development-nepal",
+    path: "/trekking-website-development-usa",
     name: "Trekking landing",
-    h1: /Trekking Website Development Nepal/i,
+    h1: /Trekking Website Development USA/i,
   },
   { path: "/blogs", name: "Blogs", h1: /Notes from the studio/i },
   { path: "/packages/starter-website", name: "Package", h1: /Starter Website/i },

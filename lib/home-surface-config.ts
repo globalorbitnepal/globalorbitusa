@@ -33,7 +33,7 @@ export const DEFAULT_HOME_SURFACE: HomeSurfaceConfig = {
   faqTitle: "Frequently asked questions",
   faqLede: "Cost, timelines, stack, SEO, and whether we are the right firm.",
   ctaTitle: "Let’s bring your project to life.",
-  ctaLede: "Websites, apps, ERP, and SEO from studios in Nepal, India, and the United States.",
+  ctaLede: "Websites, apps, ERP, and SEO from studios in USA, India, and global clients.",
   ctaButtonLabel: "Start a project",
 };
 

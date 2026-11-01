@@ -9,7 +9,7 @@ import { ORBIT_BRAND } from "@/lib/orbit/brand";
 function OfficeTitle() {
   return (
     <>
-      Nepal, India &amp; the{" "}
+      USA, India &amp; the{" "}
       <span className="orbit-offices-title-gold">United States</span>
     </>
   );

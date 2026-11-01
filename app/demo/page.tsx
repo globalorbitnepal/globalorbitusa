@@ -24,7 +24,7 @@ export default function DemoPage() {
       <OrbitPageHero
         eyebrow="Demo"
         title="See the software in motion"
-        lede="Book a walkthrough of billing, hotel, POS, CRM, or the SaaS suite — live from our Kathmandu studio."
+        lede="Book a walkthrough of billing, hotel, POS, CRM, or the SaaS suite — live from our United States studio."
         headingId="demo-hero"
       />
       <OrbitPremiumTrustStrip />

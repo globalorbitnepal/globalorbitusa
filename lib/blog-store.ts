@@ -23,7 +23,7 @@ function seedStore(): BlogStore {
   return {
     categories: DEFAULT_CATEGORIES,
     tags: [
-      { slug: "nepal", name: "Nepal" },
+      { slug: "usa", name: "USA" },
       { slug: "core-web-vitals", name: "Core Web Vitals" },
     ],
     posts: ORBIT_BLOGS.map((item) =>

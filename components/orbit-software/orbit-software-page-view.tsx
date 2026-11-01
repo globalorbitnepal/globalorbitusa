@@ -62,7 +62,7 @@ export function OrbitSoftwarePageView() {
               <Badge>Why Orbit Software</Badge>
               <h2 className="orbit-about-h2 mt-4">ERP that matches how the floor already works</h2>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/58">
-                Off-the-shelf suites fight Nepali hospitality, trek ops, and factory rhythm. We ship operator
+                Off-the-shelf suites fight U.S. hospitality, trek ops, and factory rhythm. We ship operator
                 software with the same dark premium bar as the homepage — gold accents, dense data, and motion
                 that respects the product, not a looping marketing clip.
               </p>
@@ -126,7 +126,7 @@ export function OrbitSoftwarePageView() {
             <div className="orbit-about-glass">
               <Badge>FAQ</Badge>
               <h2 id="erp-faq-heading" className="orbit-about-h2 mt-4">
-                ERP and Orbit Software — Nepal
+                ERP and Orbit Software — USA
               </h2>
               <dl className="erp-faq mt-8 space-y-6">
                 {ERP_FAQ.map((item) => (

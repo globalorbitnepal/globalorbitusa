@@ -26,7 +26,7 @@ function AppWindow({
         </span>
         <div className="erp-app-search">{search}</div>
         <div className="erp-app-user">
-          <span>Kathmandu · live</span>
+          <span>United States · live</span>
           <b>{user}</b>
         </div>
       </div>

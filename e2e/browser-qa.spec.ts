@@ -45,9 +45,9 @@ test.describe("metadata and DOM (desktop)", () => {
   }
 
   test("website-development — no lodge demo as document H1", async ({ page }) => {
-    await page.goto("/service/website-development-nepal", { waitUntil: "domcontentloaded" });
+    await page.goto("/service/website-development-usa", { waitUntil: "domcontentloaded" });
     const h1 = await primaryH1Text(page);
-    expect(h1).toMatch(/Website Development Company in Nepal/i);
+    expect(h1).toMatch(/Website Development Company in USA/i);
     expect(h1).not.toMatch(/Book a quiet night|above the ridge/i);
     const allH1 = await page.locator("h1").allInnerTexts();
     const lodge = allH1.filter((t) => /Book a quiet night/i.test(t));
@@ -96,10 +96,10 @@ test.describe("sitemap, robots, redirects", () => {
     expect(res.headers().location).toBe("/projects");
   });
 
-  test("redirect /services/website-development-nepal", async ({ request }) => {
-    const res = await request.get("/services/website-development-nepal", { maxRedirects: 0 });
+  test("redirect /services/website-development-usa", async ({ request }) => {
+    const res = await request.get("/services/website-development-usa", { maxRedirects: 0 });
     expect(res.status()).toBe(308);
-    expect(res.headers().location).toBe("/service/website-development-nepal");
+    expect(res.headers().location).toBe("/service/website-development-usa");
   });
 });
 
@@ -118,8 +118,8 @@ test.describe("horizontal overflow — key templates", () => {
     "/about",
     "/contact",
     "/services",
-    "/service/website-development-nepal",
-    "/trekking-website-development-nepal",
+    "/service/website-development-usa",
+    "/trekking-website-development-usa",
   ];
 
   for (const width of KEY_VIEWPORTS) {

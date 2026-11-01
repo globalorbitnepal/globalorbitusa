@@ -7,7 +7,7 @@ import {
 import { getAppEnv } from "@/lib/env";
 
 function storePath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "website-development-nepal.json");
+  return path.join(path.dirname(getAppEnv().uploadDir), "website-development-usa.json");
 }
 
 export async function getWebsiteDevelopmentPageConfig(): Promise<WebsiteDevelopmentPageConfig> {
