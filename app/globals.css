@@ -4046,6 +4046,10 @@ li.orbit-card:hover {
 
 .orbit-footer-logo {
   align-self: flex-start;
+  width: min(240px, 100%);
+  max-width: 240px;
+  height: auto;
+  max-height: 80px;
   filter: drop-shadow(0 8px 24px rgba(240, 196, 58, 0.18));
 }
 
@@ -4774,9 +4778,9 @@ li.orbit-card:hover {
 }
 
 .orbit-header-inner {
-  /* Logo column — bar asset is wide; height drives visual size on desktop */
-  --orbit-header-logo-w: clamp(10rem, 22vw, 18rem);
-  --orbit-header-logo-h: clamp(2.75rem, 5vw, 3.15rem);
+  /* Horizontal wordmark — max 240px wide (1024×341 source) */
+  --orbit-header-logo-w: min(240px, 100%);
+  --orbit-header-logo-h: 80px;
   --orbit-header-nav-h: clamp(2.65rem, 3.6vw, 3.15rem);
   position: relative;
   display: grid;
@@ -4796,8 +4800,6 @@ li.orbit-card:hover {
 
 @media (min-width: 1024px) {
   .orbit-header-inner {
-    --orbit-header-logo-h: clamp(5.2rem, calc(var(--orbit-header-nav-h) * 3.6), 7.6rem);
-    --orbit-header-logo-w: clamp(13.2rem, 28.8vw, 24rem);
     grid-template-columns: minmax(0, 0.38fr) minmax(0, 1fr) minmax(0, 0.36fr);
     gap: 1rem;
     align-items: center;
@@ -4881,7 +4883,7 @@ li.orbit-card:hover {
   height: var(--orbit-header-logo-h);
   line-height: 0;
   min-width: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .orbit-brand-logo-bar-img {
@@ -4903,9 +4905,8 @@ li.orbit-card:hover {
 
 @media (max-width: 1023px) {
   .orbit-header-inner {
-    /* +30% vs previous mobile logo size */
-    --orbit-header-logo-w: min(94vw, 26rem);
-    --orbit-header-logo-h: clamp(6.3rem, 20.8vw, 8.25rem);
+    --orbit-header-logo-w: min(240px, calc(100vw - 5.5rem));
+    --orbit-header-logo-h: min(80px, calc((100vw - 5.5rem) * 341 / 1024));
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.55rem;
     padding-top: calc(env(safe-area-inset-top, 0px) + 0.35rem);
@@ -4913,8 +4914,8 @@ li.orbit-card:hover {
   }
 
   .orbit-brand-logo-bar {
-    width: min(420px, calc(100vw - 5rem));
-    max-width: min(420px, calc(100vw - 5rem));
+    width: auto;
+    max-width: var(--orbit-header-logo-w);
     min-width: 0;
     height: var(--orbit-header-logo-h);
     max-height: var(--orbit-header-logo-h);
