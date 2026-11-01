@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState } from "react";
+import { BRAND_LOGO_ADMIN, brandAssetUrl } from "@/lib/brand-assets";
 
 const FEATURES = [
   {
@@ -93,7 +94,7 @@ export function AdminLogin() {
       <div className="go-login-shell">
         <section className="go-login-brand">
           <img
-            src="/brand/logo-admin-gold.png"
+            src={brandAssetUrl(BRAND_LOGO_ADMIN)}
             alt="Global Orbit Pvt Ltd"
             className="go-login-logo"
             width={522}

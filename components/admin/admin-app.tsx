@@ -40,6 +40,7 @@ import type { HomeSurfaceConfig } from "@/lib/home-surface-config";
 import type { WebsiteDevelopmentPageConfig } from "@/lib/website-development-page-config";
 import type { SiteChrome } from "@/lib/site-chrome-store";
 import { scoreSeo } from "@/lib/seo-score";
+import { BRAND_LOGO_PRIMARY, brandAssetUrl } from "@/lib/brand-assets";
 
 type AdminView =
   | "overview"
@@ -399,7 +400,14 @@ export function AdminApp(props: Props) {
       <aside className={`go-cms-side ${navOpen ? "is-open" : ""}`}>
         <div className="go-cms-side-inner">
         <div className="go-cms-brand">
-          <span className="go-cms-mark" aria-hidden="true" />
+          <img
+            src={brandAssetUrl(BRAND_LOGO_PRIMARY)}
+            alt="Global Orbit"
+            className="go-cms-brand-logo"
+            width={280}
+            height={94}
+            decoding="async"
+          />
           <div className="go-cms-brand-text">
             <strong>GLOBAL ORBIT</strong>
             <span>Management console</span>
@@ -888,7 +896,7 @@ export function AdminApp(props: Props) {
             <AdminMediaField
               label="Header & footer logo"
               description="Transparent PNG recommended. Replaces the gold Global Orbit mark in the site header and footer."
-              src={chrome.headerLogoSrc || "/brand/logo-official-gold.png"}
+              src={chrome.headerLogoSrc ? chrome.headerLogoSrc : brandAssetUrl(BRAND_LOGO_PRIMARY)}
               kind="image"
               accept="image/png,image/webp,image/jpeg,image/svg+xml"
               disabled={busy}

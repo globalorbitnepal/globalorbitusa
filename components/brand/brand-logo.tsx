@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BRAND_LOGO_PRIMARY, brandAssetUrl } from "@/lib/brand-assets";
 
 type BrandLogoProps = {
   priority?: boolean;
@@ -7,8 +8,14 @@ type BrandLogoProps = {
   src?: string;
 };
 
+function resolveLogoSrc(src?: string): string {
+  const raw = src?.trim() || BRAND_LOGO_PRIMARY;
+  if (raw.startsWith("/brand/")) return brandAssetUrl(raw);
+  return raw;
+}
+
 export function BrandLogo({ priority = false, variant = "default", src }: BrandLogoProps) {
-  const imageSrc = src?.trim() || "/brand/logo-official-gold.png";
+  const imageSrc = resolveLogoSrc(src);
   const bar = variant === "bar";
   const hero = variant === "hero";
   const footer = variant === "footer";

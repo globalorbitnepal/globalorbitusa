@@ -16,16 +16,13 @@ const GLOBE = path.join(brand, "globe-emblem.webp");
 const LOGO = path.join(brand, "logo-official-gold.png");
 const BG = { r: 7, g: 7, b: 11, alpha: 1 };
 
-async function squareGlobe(size, outPath, padding = 0.12) {
+async function squareLogo(size, outPath, padding = 0.1) {
   const inner = Math.round(size * (1 - padding * 2));
-  const globe = await sharp(GLOBE).resize(inner, inner, { fit: "contain" }).png().toBuffer();
+  const logo = await sharp(LOGO).resize(inner, null, { fit: "inside" }).png().toBuffer();
   const canvas = sharp({
     create: { width: size, height: size, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
   });
-  await canvas
-    .composite([{ input: globe, gravity: "centre" }])
-    .png()
-    .toFile(outPath);
+  await canvas.composite([{ input: logo, gravity: "centre" }]).png().toFile(outPath);
 }
 
 async function buildOgDefault() {
@@ -50,14 +47,16 @@ async function main() {
   }
   mkdirSync(icons, { recursive: true });
 
-  await squareGlobe(512, path.join(icons, "pwa-512.png"));
-  await squareGlobe(512, path.join(icons, "pwa-maskable-512.png"));
-  await squareGlobe(192, path.join(icons, "pwa-192.png"));
-  await squareGlobe(180, path.join(icons, "apple-touch-180.png"));
-  await squareGlobe(48, path.join(icons, "favicon-48.png"));
-  await squareGlobe(32, path.join(icons, "favicon-32.png"));
-  await squareGlobe(512, path.join(brand, "logo-emblem-square.png"));
-  await squareGlobe(192, path.join(brand, "google-logo-192.png"));
+  await squareLogo(512, path.join(icons, "pwa-512.png"));
+  await squareLogo(512, path.join(icons, "pwa-maskable-512.png"));
+  await squareLogo(192, path.join(icons, "pwa-192.png"));
+  await squareLogo(180, path.join(icons, "apple-touch-180.png"));
+  await squareLogo(48, path.join(icons, "favicon-48.png"));
+  await squareLogo(32, path.join(icons, "favicon-32.png"));
+  await squareLogo(512, path.join(brand, "logo-emblem-square.png"));
+  await squareLogo(192, path.join(brand, "google-logo-192.png"));
+
+  await sharp(LOGO).resize(340, 340, { fit: "inside" }).webp({ quality: 92, alphaQuality: 100 }).toFile(GLOBE);
 
   await buildOgDefault();
 
