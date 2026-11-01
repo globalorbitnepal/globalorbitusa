@@ -57,7 +57,7 @@ export function SiteShell({
           footer={footer}
         />
       </HideOnOrbit>
-      <OrbitChrome />
+      <OrbitChrome phone={phone} />
       <DeploymentRecovery />
     </div>
   );

@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 import { ORBIT_BLOGS } from "@/lib/orbit/catalog";
 import { isPublicPost } from "@/lib/blog-status";
 import {
@@ -16,7 +16,7 @@ export type { BlogCategory, BlogPost, BlogStore, BlogTag };
 export { DEFAULT_CATEGORIES, emptyPost, normalizePost } from "@/lib/blog-types";
 
 function blogPath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "blogs.json");
+  return contentFile("blogs.json");
 }
 
 function seedStore(): BlogStore {

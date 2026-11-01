@@ -1,3 +1,9 @@
+import {
+  USA_PHONE_DISPLAY,
+  USA_PHONE_TEL,
+  USA_WHATSAPP_URL,
+} from "@/lib/contact-info";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { AboutReveal } from "@/components/about/reveal";
@@ -203,8 +209,8 @@ export function ContactPageView() {
             Send enquiry
             <span aria-hidden="true">→</span>
           </a>
-          <a href="https://wa.me/9779812322339" className="orbit-about-cta-ghost" target="_blank" rel="noreferrer">
-            WhatsApp +977-9812322339
+          <a href={USA_WHATSAPP_URL} className="orbit-about-cta-ghost" target="_blank" rel="noreferrer">
+            WhatsApp {USA_PHONE_DISPLAY}
           </a>
         </div>
       </section>

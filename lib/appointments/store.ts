@@ -7,14 +7,14 @@ import {
   APPOINTMENT_STUDIOS,
 } from "@/lib/appointments/constants";
 import type { AppointmentInput, AppointmentRecord } from "@/lib/appointments/types";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 type StoreFile = {
   appointments: AppointmentRecord[];
 };
 
 function appointmentsPath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "appointments.json");
+  return contentFile("appointments.json");
 }
 
 async function readStore(): Promise<StoreFile> {

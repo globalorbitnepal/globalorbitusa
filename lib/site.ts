@@ -1,3 +1,5 @@
+import { USA_PHONE_DISPLAY, USA_SUPPORT_EMAIL } from "@/lib/contact-info";
+
 export type FallbackNavItem = {
   label: string;
   href: string;
@@ -7,8 +9,8 @@ export type FallbackNavItem = {
 export const FALLBACK_SITE = {
   companyName: "Global Orbit Pvt Ltd",
   tagline: "Studios in the United States, India, and Nepal",
-  email: "support@theglobalorbit.com",
-  phone: "+1 (646) 907-4410",
+  email: USA_SUPPORT_EMAIL,
+  phone: USA_PHONE_DISPLAY,
   address: "United States · India · Nepal",
   defaultSeoTitle: "Global Orbit | Web Development & Software Company in USA",
   defaultSeoDescription:

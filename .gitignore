@@ -40,6 +40,7 @@ dump.rdb
 # runtime / application data (lives outside this Git repo)
 /data/
 data/
+/.data/
 uploads/
 public/uploads/
 

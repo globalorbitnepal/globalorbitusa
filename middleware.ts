@@ -14,10 +14,23 @@ function equalHex(a: string, b: string) {
   return diff === 0;
 }
 
+/**
+ * Signing key must match lib/orbit-auth.ts. The edge runtime cannot read the
+ * content store, so an unknown key fails closed in production instead of falling
+ * back to a public default that anyone could use to forge a session cookie.
+ */
+function sessionKey(): string | null {
+  const fromEnv = process.env.ORBIT_EDITOR_KEY?.trim();
+  if (fromEnv && fromEnv.length >= 16) return fromEnv;
+  if (process.env.NODE_ENV === "production") return null;
+  return "globalorbit-usa-dev-editor-key";
+}
+
 async function sessionLooksSigned(token: string) {
   const [value, mac] = token.split(".");
   if (!value || !mac || !value.startsWith("ok:")) return false;
-  const secret = process.env.ORBIT_EDITOR_KEY || "globalorbitnepal-orbit-editor";
+  const secret = sessionKey();
+  if (!secret) return false;
   const key = await crypto.subtle.importKey(
     "raw",
     new TextEncoder().encode(secret),

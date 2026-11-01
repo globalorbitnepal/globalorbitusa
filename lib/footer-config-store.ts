@@ -5,13 +5,13 @@ import {
   mergeFooterConfig,
   type FooterConfig,
 } from "@/lib/footer-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 export type { FooterConfig } from "@/lib/footer-config";
 export { DEFAULT_FOOTER_CONFIG, mergeFooterConfig } from "@/lib/footer-config";
 
 function footerPath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "footer-config.json");
+  return contentFile("footer-config.json");
 }
 
 export async function getFooterConfig(): Promise<FooterConfig> {

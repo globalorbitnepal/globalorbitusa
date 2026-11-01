@@ -92,7 +92,7 @@ export function SiteFooter({
               {footer.offices.map((office) => (
                 <li key={office.code}>
                   <a href={office.phoneHref} className="orbit-footer-office-card">
-                    <span className="orbit-footer-office-flag">
+                    <span className="orbit-footer-office-flag" aria-hidden="true">
                       <OrbitFlag code={office.code} name={office.country} size={34} rounded="full" />
                     </span>
                     <span className="orbit-footer-office-body">

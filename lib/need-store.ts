@@ -1,11 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DEFAULT_NEED, parseNeedConfig, type NeedConfig } from "@/lib/need-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function needJsonPath() {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, "need.json");
+  return contentFile("need.json");
 }
 
 export async function getNeedConfig(): Promise<NeedConfig> {

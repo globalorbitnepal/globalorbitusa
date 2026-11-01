@@ -1,11 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DEFAULT_CAREERS, parseCareersConfig, type CareersConfig } from "@/lib/careers-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function careersJsonPath() {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, "careers.json");
+  return contentFile("careers.json");
 }
 
 export async function getCareersConfig(): Promise<CareersConfig> {

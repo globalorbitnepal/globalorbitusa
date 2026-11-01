@@ -10,6 +10,7 @@ import {
   ORBIT_SOFTWARE,
 } from "@/lib/orbit/catalog";
 import { listSeoDefaultPaths } from "@/lib/seo-page-defaults";
+import { localLandingPaths } from "@/lib/local-landings";
 
 export type RouteRecord = {
   path: string;
@@ -61,6 +62,7 @@ export function listInventoryPaths(): RouteRecord[] {
     }
   }
   for (const item of ORBIT_SERVICE_PAGES) add(item.href, "service");
+  for (const path of localLandingPaths()) add(path, "landing");
   for (const item of ORBIT_LANDINGS) add(item.href, "landing");
   for (const item of ORBIT_PACKAGES) add(item.href, "package");
   for (const href of uniqueSoftwareHrefs()) add(href, "software");

@@ -1,13 +1,20 @@
+import {
+  USA_PHONE_DISPLAY,
+  USA_PHONE_TEL,
+  USA_SALES_EMAIL,
+  USA_SUPPORT_EMAIL,
+  USA_WHATSAPP_URL,
+} from "@/lib/contact-info";
+
 export const ORBIT_BRAND = {
   name: "Global Orbit Pvt Ltd",
   phones: [
-    { label: "+1 (646) 907-4410", href: "tel:+16469074410" },
-    { label: "+977-9812322339", href: "tel:+9779812322339" },
+    { label: USA_PHONE_DISPLAY, href: USA_PHONE_TEL },
   ],
-  email: "support@theglobalorbit.com",
-  salesEmail: "usa@theglobalorbit.com",
+  email: USA_SUPPORT_EMAIL,
+  salesEmail: USA_SALES_EMAIL,
   webmail: "https://webmail.globalorbitmail.cloud/",
-  whatsapp: "https://wa.me/16469074410",
+  whatsapp: USA_WHATSAPP_URL,
   address: "United States · India · Nepal",
   offices: [
     { name: "United States", country: "USA", code: "us", role: "Sales & client success" },
@@ -17,13 +24,13 @@ export const ORBIT_BRAND = {
   salesOffices: [
     {
       code: "us",
-      country: "USA",
+      country: "United States",
       city: "United States",
       landmark: "Sales office · USA",
       image: "/brand/offices/usa.jpg",
-      phone: "+1 (646) 907-4410",
-      phoneHref: "tel:+16469074410",
-      email: "usa@theglobalorbit.com",
+      phone: USA_PHONE_DISPLAY,
+      phoneHref: USA_PHONE_TEL,
+      email: USA_SALES_EMAIL,
     },
     {
       code: "in",

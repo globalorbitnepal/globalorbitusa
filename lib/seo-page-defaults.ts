@@ -6,6 +6,7 @@ import {
   type OrbitCard,
 } from "@/lib/orbit/catalog";
 import { SERVICE_CATALOG } from "@/lib/content/services";
+import { LOCAL_LANDINGS } from "@/lib/local-landings";
 import { keywordsCsv, keywordsString, USA_AGENCY_KEYWORDS } from "@/lib/seo-keywords";
 
 export type PageSeoDefaults = {
@@ -220,6 +221,15 @@ function buildDynamicMap(): Record<string, PageSeoDefaults> {
     if (softwareSeen.has(item.href)) continue;
     softwareSeen.add(item.href);
     map[item.href] = cardSeo(item, `${item.title.toLowerCase()} usa`);
+  }
+
+  for (const landing of LOCAL_LANDINGS) {
+    map[`/${landing.slug}`] = {
+      title: landing.seoTitle,
+      description: trimDesc(landing.seoDescription),
+      keywords: keywordsCsv(landing.keywords),
+      focusKeyword: landing.focusKeyword,
+    };
   }
 
   for (const svc of SERVICE_CATALOG) {

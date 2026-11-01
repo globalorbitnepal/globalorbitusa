@@ -1,5 +1,7 @@
 /** Long-form copy and section data for /service/website-development-usa */
 
+import { USA_WHATSAPP_LABEL, USA_WHATSAPP_URL } from "@/lib/contact-info";
+
 export const WD_BREADCRUMB = { parent: "Solutions", parentHref: "/services", current: "Website Development USA" };
 
 export const WD_HERO = {
@@ -308,8 +310,8 @@ export const WD_FINAL_CTA = {
     "Tell us about your business, the pages you need, integrations, and timeline. We will respond with next steps and a scope conversation — no obligation.",
   primary: "Start Your Project",
   secondary: "Book a Consultation",
-  whatsappHref: "https://wa.me/9779812322339",
-  whatsappLabel: "WhatsApp +977-9812322339",
+  whatsappHref: USA_WHATSAPP_URL,
+  whatsappLabel: USA_WHATSAPP_LABEL,
 };
 
 export const WD_FAQ_EXTENDED = [
@@ -375,6 +377,6 @@ export const WD_FAQ_EXTENDED = [
   },
   {
     q: "How can I start a website development project with Global Orbit?",
-    a: "Contact us via the form, book a consultation, or message WhatsApp +977-9812322339 with your industry and goals.",
+    a: "Contact us via the form, book a consultation, or message WhatsApp +1 (303) 217-6150 with your industry and goals.",
   },
 ];

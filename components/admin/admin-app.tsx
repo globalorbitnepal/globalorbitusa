@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AdminBlogStudio, type BlogMode } from "@/components/admin/admin-blog-studio";
+import { AdminAccountPanel } from "@/components/admin/admin-account-panel";
 import { AdminMediaLibrary } from "@/components/admin/admin-media-library";
 import { AdminInquiriesPanel } from "@/components/admin/admin-inquiries-panel";
 import { AdminFooterEditor } from "@/components/admin/admin-footer-editor";
@@ -54,6 +55,7 @@ type AdminView =
   | "blog-seo"
   | "seo"
   | "chrome"
+  | "account"
   | "inquiries";
 
 type InquiryPreview = {
@@ -297,8 +299,15 @@ export function AdminApp(props: Props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(chrome),
     });
+    const data = (await response.json().catch(() => ({}))) as { chrome?: SiteChrome };
     setBusy(false);
-    setStatus(response.ok ? "Header and footer identity published." : "Could not save settings.");
+    if (response.ok) {
+      if (data.chrome) setChrome(data.chrome);
+      setStatus("Header, footer and contact details published.");
+      router.refresh();
+    } else {
+      setStatus("Could not save settings.");
+    }
   }
 
   async function saveHomeSurface() {
@@ -347,7 +356,9 @@ export function AdminApp(props: Props) {
       ? "Dashboard"
       : view === "inquiries"
         ? "Inquiries"
-        : view === "chrome"
+        : view === "account"
+          ? "Account & security"
+          : view === "chrome"
           ? "Header & footer"
           : view === "blogs"
             ? "Blog Posts"
@@ -482,6 +493,13 @@ export function AdminApp(props: Props) {
           <NavButton icon="P" label="Page metadata" hint="Every page, one list" active={view === "seo"} onClick={() => go("seo")} />
           <p>Global</p>
           <NavButton icon="H" label="Header & footer" hint="Logo, identity, links" active={view === "chrome"} onClick={() => go("chrome")} />
+          <NavButton
+            icon="⚿"
+            label="Account & security"
+            hint="Password, session"
+            active={view === "account"}
+            onClick={() => go("account")}
+          />
           <p>Business</p>
           <NavButton
             icon="!"
@@ -534,6 +552,9 @@ export function AdminApp(props: Props) {
                 <div className="go-cms-menu">
                   <button type="button" onClick={() => go("chrome")}>
                     Site identity
+                  </button>
+                  <button type="button" onClick={() => go("account")}>
+                    Change password
                   </button>
                   <button type="button" onClick={() => void logout()}>
                     Log out
@@ -905,8 +926,11 @@ export function AdminApp(props: Props) {
                   ["companyName", "Company name"],
                   ["tagline", "Header support line"],
                   ["footerTagline", "Footer tagline"],
-                  ["email", "Email"],
-                  ["phone", "Phone"],
+                  ["email", "Support email"],
+                  ["salesEmail", "Sales email"],
+                  ["phone", "Primary phone (USA)"],
+                  ["whatsapp", "WhatsApp number (display)"],
+                  ["whatsappHref", "WhatsApp link (wa.me/…)"],
                   ["address", "Address"],
                   ["defaultSeoTitle", "Default SEO title"],
                   ["defaultSeoDescription", "Default SEO description"],
@@ -928,6 +952,14 @@ export function AdminApp(props: Props) {
           </section>
           <AdminFooterEditor footer={footer} busy={busy} onChange={setFooter} onSave={() => void saveFooter()} />
           </>
+        ) : null}
+
+        {view === "account" ? (
+          <AdminAccountPanel
+            onSignedOut={() => {
+              void logout();
+            }}
+          />
         ) : null}
 
         {view === "inquiries" ? (

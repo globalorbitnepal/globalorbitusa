@@ -1,11 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DEFAULT_WORK, parseWorkConfig, type WorkConfig } from "@/lib/work-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function workJsonPath() {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, "work.json");
+  return contentFile("work.json");
 }
 
 export async function getWorkConfig(): Promise<WorkConfig> {

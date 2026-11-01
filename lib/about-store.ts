@@ -1,11 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DEFAULT_ABOUT, parseAboutConfig, type AboutConfig } from "@/lib/about-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function aboutJsonPath() {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, "about.json");
+  return contentFile("about.json");
 }
 
 export async function getAboutConfig(): Promise<AboutConfig> {

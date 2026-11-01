@@ -1,3 +1,10 @@
+import {
+  USA_PHONE_DISPLAY,
+  USA_PHONE_TEL,
+  USA_SALES_EMAIL,
+  USA_WHATSAPP_URL,
+} from "@/lib/contact-info";
+
 export const CONTACT_HERO = {
   eyebrow: "Contact · Free consultation",
   titleBefore: "Tell us what you run.",
@@ -9,9 +16,9 @@ export const CONTACT_HERO = {
 
 export const CONTACT_STATS = [
   { value: "< 24h", label: "First response on business days" },
-  { value: "3", label: "Sales offices · NP · IN · US" },
+  { value: "3", label: "Sales offices · US · IN · NP" },
   { value: "Free", label: "Consultation · no obligation" },
-  { value: "NP", label: "United States sales desk" },
+  { value: "US", label: "United States sales desk" },
 ] as const;
 
 export const CONTACT_CHANNELS = [
@@ -19,25 +26,25 @@ export const CONTACT_CHANNELS = [
     id: "whatsapp",
     title: "WhatsApp",
     hint: "Fastest for USA & international",
-    href: "https://wa.me/9779812322339",
+    href: USA_WHATSAPP_URL,
     external: true,
-    value: "+977-9812322339",
+    value: USA_PHONE_DISPLAY,
   },
   {
     id: "phone",
     title: "Call USA",
     hint: "Sales & project desk",
-    href: "tel:+9779823631899",
+    href: USA_PHONE_TEL,
     external: false,
-    value: "+977-9823631899",
+    value: USA_PHONE_DISPLAY,
   },
   {
     id: "email",
     title: "Email",
     hint: "Briefs, RFPs, attachments",
-    href: "mailto:sales@theglobalorbit.com",
+    href: `mailto:${USA_SALES_EMAIL}`,
     external: false,
-    value: "sales@theglobalorbit.com",
+    value: USA_SALES_EMAIL,
   },
   {
     id: "webmail",

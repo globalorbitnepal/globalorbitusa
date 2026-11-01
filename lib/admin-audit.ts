@@ -1,9 +1,9 @@
 import { appendFile, mkdir } from "node:fs/promises";
 import path from "node:path";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function auditPath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "admin-audit.jsonl");
+  return contentFile("admin-audit.jsonl");
 }
 
 export async function writeAdminAudit(action: string, detail?: string) {

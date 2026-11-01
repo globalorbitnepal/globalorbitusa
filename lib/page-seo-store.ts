@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 import { getPageSeoDefaults, listSeoDefaultPaths } from "@/lib/seo-page-defaults";
 
 export type PageSeo = {
@@ -68,7 +68,7 @@ export const DEFAULT_PAGE_SEO: PageSeo[] = listSeoDefaultPaths().map((pathname) 
 );
 
 function seoPath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "page-seo.json");
+  return contentFile("page-seo.json");
 }
 
 export async function getPageSeoList(): Promise<PageSeo[]> {

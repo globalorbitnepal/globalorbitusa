@@ -5,13 +5,13 @@ import {
   mergeHomeSurface,
   type HomeSurfaceConfig,
 } from "@/lib/home-surface-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 export type { HomeSurfaceConfig } from "@/lib/home-surface-config";
 export { DEFAULT_HOME_SURFACE, mergeHomeSurface } from "@/lib/home-surface-config";
 
 function storePath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "home-surface.json");
+  return contentFile("home-surface.json");
 }
 
 export async function getHomeSurfaceConfig(): Promise<HomeSurfaceConfig> {

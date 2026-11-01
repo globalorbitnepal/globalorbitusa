@@ -45,8 +45,8 @@ export const HOME_QUOTE =
   "Technology is not just what we do, it's how we help ideas grow beyond borders.";
 
 export const BRAND_CONTACT = {
-  phone: "+91 11 3500 7890",
-  email: "sales@theglobalorbit.com",
+  phone: "+1 (303) 217-6150",
+  email: "usa@theglobalorbit.com",
   webmail: "https://webmail.globalorbitmail.cloud/",
 } as const;
 

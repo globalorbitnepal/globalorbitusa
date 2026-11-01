@@ -25,6 +25,9 @@ export type AdminPageId =
   | "packages"
   | "services"
   | "website-development"
+  | "denver-website-design"
+  | "hire-developer-usa"
+  | "affordable-website-usa"
   | "privacy"
   | "terms"
   | "studio"
@@ -185,6 +188,30 @@ export const ADMIN_PAGES: AdminPage[] = [
     ],
   },
   {
+    id: "denver-website-design",
+    label: "Website Design Denver",
+    path: "/website-design-denver",
+    hint: "USA local landing · SEO",
+    seoOnly: true,
+    sections: [{ id: "seo", label: "SEO", hint: "Title, description, keywords" }],
+  },
+  {
+    id: "hire-developer-usa",
+    label: "Hire a Developer USA",
+    path: "/hire-website-developer-usa",
+    hint: "USA local landing · SEO",
+    seoOnly: true,
+    sections: [{ id: "seo", label: "SEO", hint: "Title, description, keywords" }],
+  },
+  {
+    id: "affordable-website-usa",
+    label: "Affordable Website Design USA",
+    path: "/affordable-website-design-usa",
+    hint: "USA local landing · SEO",
+    seoOnly: true,
+    sections: [{ id: "seo", label: "SEO", hint: "Title, description, keywords" }],
+  },
+  {
     id: "blogs",
     label: "Blog",
     path: "/blogs",
@@ -248,6 +275,11 @@ export const ADMIN_NAV_GROUPS: AdminNavGroup[] = [
     id: "main",
     label: "Main website",
     pageIds: ["home", "about", "software", "website-development", "projects", "careers", "contact"],
+  },
+  {
+    id: "local",
+    label: "USA local pages",
+    pageIds: ["denver-website-design", "hire-developer-usa", "affordable-website-usa"],
   },
   {
     id: "platforms",

@@ -1,11 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DEFAULT_SOFTWARE, parseSoftwareConfig, type SoftwareConfig } from "@/lib/software-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function softwareJsonPath() {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, "software.json");
+  return contentFile("software.json");
 }
 
 export async function getSoftwareConfig(): Promise<SoftwareConfig> {

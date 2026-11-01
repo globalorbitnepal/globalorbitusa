@@ -4,10 +4,10 @@ import {
   parseWebsiteDevelopmentPageConfig,
   type WebsiteDevelopmentPageConfig,
 } from "@/lib/website-development-page-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function storePath() {
-  return path.join(path.dirname(getAppEnv().uploadDir), "website-development-usa.json");
+  return contentFile("website-development-usa.json");
 }
 
 export async function getWebsiteDevelopmentPageConfig(): Promise<WebsiteDevelopmentPageConfig> {

@@ -5,12 +5,11 @@ import {
   parsePlatformPageConfig,
   type CustomAppsConfig,
 } from "@/lib/custom-apps-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 import type { PlatformPageSlug } from "@/lib/platform-page-slugs";
 
 function jsonPath(slug: PlatformPageSlug) {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, `${slug}.json`);
+  return contentFile(`${slug}.json`);
 }
 
 async function readConfigFile(file: string, slug: PlatformPageSlug): Promise<CustomAppsConfig> {

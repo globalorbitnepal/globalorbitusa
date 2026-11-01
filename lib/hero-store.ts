@@ -1,11 +1,11 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DEFAULT_HERO, parseHeroConfig, type HeroConfig } from "@/lib/hero-config";
+import { contentFile } from "@/lib/content-dir";
 import { getAppEnv } from "@/lib/env";
 
 function heroJsonPath() {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, "hero.json");
+  return contentFile("hero.json");
 }
 
 export function heroUploadDir() {

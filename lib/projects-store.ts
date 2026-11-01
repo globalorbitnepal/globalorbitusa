@@ -1,11 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { DEFAULT_PROJECTS, parseProjectsConfig, type ProjectsConfig } from "@/lib/projects-config";
-import { getAppEnv } from "@/lib/env";
+import { contentFile } from "@/lib/content-dir";
 
 function projectsJsonPath() {
-  const root = path.dirname(getAppEnv().uploadDir);
-  return path.join(root, "projects.json");
+  return contentFile("projects.json");
 }
 
 export async function getProjectsConfig(): Promise<ProjectsConfig> {

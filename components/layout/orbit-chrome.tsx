@@ -1,14 +1,18 @@
 "use client";
 
+import { USA_PHONE_DISPLAY, USA_WHATSAPP_URL, phoneToWhatsApp } from "@/lib/contact-info";
+
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { PwaInstallPrompt } from "@/components/layout/pwa-install-prompt";
 import { isOrbitAdminPath } from "@/lib/is-orbit-admin-route";
 
-export function OrbitChrome() {
+export function OrbitChrome({ phone }: { phone?: string }) {
   const pathname = usePathname();
   const hide = isOrbitAdminPath(pathname);
   const [showTop, setShowTop] = useState(false);
+  const displayPhone = phone?.trim() || USA_PHONE_DISPLAY;
+  const whatsappHref = phone?.trim() ? phoneToWhatsApp(displayPhone) : USA_WHATSAPP_URL;
 
   useEffect(() => {
     const update = () => setShowTop(window.scrollY > 420);
@@ -32,10 +36,10 @@ export function OrbitChrome() {
     <>
       <a
         className="orbit-wa-fab"
-        href="https://wa.me/9779812322339"
+        href={whatsappHref}
         target="_blank"
         rel="noreferrer"
-        aria-label="WhatsApp +977-9812322339"
+        aria-label={`WhatsApp ${displayPhone}`}
       >
         <span className="orbit-wa-fab-icon" aria-hidden="true">
           <svg viewBox="0 0 32 32">
@@ -51,7 +55,7 @@ export function OrbitChrome() {
         </span>
         <span className="orbit-wa-fab-copy">
           <strong>WhatsApp</strong>
-          <small>+977-9812322339</small>
+          <small>{displayPhone}</small>
         </span>
       </a>
 
