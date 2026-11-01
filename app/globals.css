@@ -4046,10 +4046,10 @@ li.orbit-card:hover {
 
 .orbit-footer-logo {
   align-self: flex-start;
-  width: min(240px, 100%);
-  max-width: 240px;
+  width: min(var(--orbit-logo-w, 240px), 100%);
+  max-width: var(--orbit-logo-w, 240px);
   height: auto;
-  max-height: 80px;
+  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
   filter: drop-shadow(0 8px 24px rgba(240, 196, 58, 0.18));
 }
 
@@ -4778,9 +4778,9 @@ li.orbit-card:hover {
 }
 
 .orbit-header-inner {
-  /* Horizontal wordmark — max 240px wide (1024×341 source) */
-  --orbit-header-logo-w: min(240px, 100%);
-  --orbit-header-logo-h: 80px;
+  /* Horizontal wordmark — width driven by --orbit-logo-w (admin: 100–480px) */
+  --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), 100%);
+  --orbit-header-logo-h: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
   --orbit-header-nav-h: clamp(2.65rem, 3.6vw, 3.15rem);
   position: relative;
   display: grid;
@@ -4800,9 +4800,41 @@ li.orbit-card:hover {
 
 @media (min-width: 1024px) {
   .orbit-header-inner {
-    grid-template-columns: minmax(0, 0.38fr) minmax(0, 1fr) minmax(0, 0.36fr);
+    /* Auto side columns so the admin logo width is honoured up to 480px.
+       The centre column may never shrink below the nav pill's intrinsic width,
+       which previously let the pill overlap the logo at wide logo settings. */
+    grid-template-columns: auto minmax(min-content, 1fr) auto;
     gap: 1rem;
     align-items: center;
+  }
+
+  .orbit-header-side {
+    white-space: nowrap;
+  }
+
+  .orbit-header-center {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .orbit-header-nav-pill {
+    max-width: 100%;
+  }
+}
+
+/* Keep the 6-item nav readable when a very wide logo is selected. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .orbit-header-inner {
+    --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), 220px);
+    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 341 / 1024), 73px);
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .orbit-header-inner {
+    --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), 340px);
+    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 341 / 1024), 113px);
   }
 }
 
@@ -4905,8 +4937,8 @@ li.orbit-card:hover {
 
 @media (max-width: 1023px) {
   .orbit-header-inner {
-    --orbit-header-logo-w: min(240px, calc(100vw - 5.5rem));
-    --orbit-header-logo-h: min(80px, calc((100vw - 5.5rem) * 341 / 1024));
+    --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), calc(100vw - 5.5rem));
+    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 341 / 1024), calc((100vw - 5.5rem) * 341 / 1024));
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.55rem;
     padding-top: calc(env(safe-area-inset-top, 0px) + 0.35rem);
@@ -11909,8 +11941,8 @@ body.go-login-open .orbit-gold-fab {
 
 .go-login-logo {
   display: block;
-  width: min(240px, 86%);
-  max-height: 80px;
+  width: min(var(--orbit-logo-w, 240px), 86%);
+  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
   height: auto;
   object-fit: contain;
   background: transparent;
@@ -12222,7 +12254,7 @@ body.go-login-open .orbit-gold-fab {
       linear-gradient(180deg, rgba(2, 5, 12, 0.78) 0%, rgba(2, 6, 16, 0.58) 36%, rgba(2, 5, 12, 0.82) 100%);
   }
   .go-login-logo {
-    width: min(280px, 88%);
+    width: min(var(--orbit-logo-w, 240px), 88%);
   }
   .go-login-features {
     grid-template-columns: 1fr 1fr;
@@ -12945,9 +12977,9 @@ body.go-cms-open .orbit-gold-fab {
 .go-cms-brand-logo {
   display: block;
   width: 100%;
-  max-width: 240px;
+  max-width: min(var(--orbit-logo-w, 240px), 100%);
   height: auto;
-  max-height: 80px;
+  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
   object-fit: contain;
   object-position: left center;
   background: transparent;
@@ -13322,6 +13354,118 @@ body.go-cms-open .orbit-gold-fab {
   margin-bottom: 0.7rem;
 }
 .go-cms-card h2 { margin: 0 0 0.8rem; font-size: 1.15rem; }
+
+/* Header & footer identity: logo preview + width control */
+.go-cms-logo-preview {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.15rem;
+  padding: 1rem;
+  border: 1px solid #e5edf7;
+  border-radius: 0.95rem;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(240, 196, 58, 0.12), transparent 55%),
+    #0b0d12;
+}
+@media (min-width: 720px) {
+  .go-cms-logo-preview {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 14rem);
+    align-items: center;
+  }
+}
+.go-cms-logo-preview-frame {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 5rem;
+  padding: 0.5rem 0;
+  overflow: hidden;
+}
+.go-cms-logo-preview-img {
+  display: block;
+  width: min(var(--orbit-logo-w, 240px), 100%);
+  max-width: 100%;
+  height: auto;
+  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
+  object-fit: contain;
+  object-position: left center;
+}
+.go-cms-logo-preview-meta {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+.go-cms-logo-preview-meta strong {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f0c43a;
+}
+.go-cms-file-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.35rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(240, 196, 58, 0.35);
+  background: rgba(240, 196, 58, 0.12);
+  color: #f0c43a;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.go-cms-file-btn:hover {
+  background: rgba(240, 196, 58, 0.2);
+}
+.go-cms-logo-size {
+  margin-bottom: 1.15rem;
+  padding: 1rem;
+  border: 1px solid #e5edf7;
+  border-radius: 0.95rem;
+  background: #f8fbff;
+}
+.go-cms-logo-size > label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+.go-cms-logo-size-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #9a7b1a;
+}
+.go-cms-logo-size input[type="range"] {
+  width: 100%;
+  margin: 0.7rem 0 0.55rem;
+  accent-color: #d9a922;
+}
+.go-cms-logo-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.go-cms-logo-presets button {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid #dbe7f4;
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+}
+.go-cms-logo-presets button.is-active {
+  border-color: #d9a922;
+  background: rgba(240, 196, 58, 0.18);
+  color: #8a6d12;
+}
 .go-cms-card header button,
 .go-cms-quick button,
 .go-cms-form button,

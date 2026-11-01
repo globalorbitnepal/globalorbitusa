@@ -4,6 +4,7 @@ import { writeAdminAudit } from "@/lib/admin-audit";
 import { isOrbitAuthed } from "@/lib/orbit-auth";
 import {
   DEFAULT_SITE_CHROME,
+  clampLogoWidth,
   getSiteChrome,
   normalizeSiteChrome,
   saveSiteChrome,
@@ -32,6 +33,7 @@ export async function POST(request: Request) {
     defaultSeoTitle: String(body.defaultSeoTitle || "").trim(),
     defaultSeoDescription: String(body.defaultSeoDescription || "").trim(),
     footerTagline: String(body.footerTagline || DEFAULT_SITE_CHROME.footerTagline).trim(),
+    logoWidth: clampLogoWidth(body.logoWidth),
     headerLogoSrc:
       typeof body.headerLogoSrc === "string" && body.headerLogoSrc.trim()
         ? String(body.headerLogoSrc).trim()

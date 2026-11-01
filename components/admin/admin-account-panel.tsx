@@ -52,9 +52,10 @@ export function AdminAccountPanel({ usernameHint, onSignedOut }: Props) {
           changes.
         </p>
         <form className="go-cms-form" onSubmit={submit} autoComplete="off">
-          <label>
+          <label htmlFor="go-account-current">
             Current password
             <input
+              id="go-account-current"
               type="password"
               value={currentPassword}
               autoComplete="current-password"
@@ -62,9 +63,10 @@ export function AdminAccountPanel({ usernameHint, onSignedOut }: Props) {
               required
             />
           </label>
-          <label>
+          <label htmlFor="go-account-new">
             New password
             <input
+              id="go-account-new"
               type="password"
               value={nextPassword}
               autoComplete="new-password"
@@ -74,9 +76,10 @@ export function AdminAccountPanel({ usernameHint, onSignedOut }: Props) {
             />
             <small>At least 10 characters with a mix of letters, numbers, or a symbol.</small>
           </label>
-          <label>
+          <label htmlFor="go-account-confirm">
             Confirm new password
             <input
+              id="go-account-confirm"
               type="password"
               value={confirmPassword}
               autoComplete="new-password"

@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from "next";
+import type { CSSProperties } from "react";
 import { SiteShell } from "@/components/layout/site-shell";
 import { GlobalJsonLd } from "@/components/seo/global-json-ld";
 import { listVisibleNavItems } from "@/lib/db/nav-items";
 import { getSiteSettings } from "@/lib/db/site-settings";
 import { getFooterConfig } from "@/lib/footer-config-store";
-import { getSiteChrome } from "@/lib/site-chrome-store";
+import { getSiteChrome, clampLogoWidth, LOGO_WIDTH_MIN, LOGO_WIDTH_MAX } from "@/lib/site-chrome-store";
+import { DEFAULT_SITE_CHROME } from "@/lib/chrome-defaults";
 import {
   FALLBACK_FOOTER_NAV,
   FALLBACK_HEADER_NAV,
@@ -111,7 +113,17 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   const tagline = chrome?.footerTagline || chrome?.tagline || settings?.tagline || FALLBACK_SITE.tagline;
 
   return (
-    <html lang="en" className="orbit-font-root orbit-app-mode h-full antialiased">
+    <html
+      lang="en"
+      className="orbit-font-root orbit-app-mode h-full antialiased"
+      style={
+        {
+          "--orbit-logo-w": `${clampLogoWidth(chrome?.logoWidth)}px`,
+          "--orbit-logo-min": `${LOGO_WIDTH_MIN}px`,
+          "--orbit-logo-max": `${LOGO_WIDTH_MAX}px`,
+        } as CSSProperties
+      }
+    >
       <head>
         <script
           dangerouslySetInnerHTML={{

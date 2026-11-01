@@ -1,48 +1,24 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { contentFile } from "@/lib/content-dir";
-import { USA_PHONE_DISPLAY, USA_SALES_EMAIL, USA_SUPPORT_EMAIL, phoneToTel, phoneToWhatsApp } from "@/lib/contact-info";
-import { FALLBACK_SITE } from "@/lib/site";
+import { DEFAULT_SITE_CHROME } from "@/lib/chrome-defaults";
+import { phoneToWhatsApp } from "@/lib/contact-info";
+import { clampLogoWidth } from "@/lib/logo-size";
+import type { SiteChrome } from "@/lib/chrome-types";
 
-export type SiteChrome = {
-  companyName: string;
-  tagline: string;
-  email: string;
-  phone: string;
-  /** WhatsApp display label; falls back to the primary phone. */
-  whatsapp?: string;
-  salesEmail?: string;
-  address: string;
-  defaultSeoTitle: string;
-  defaultSeoDescription: string;
-  footerTagline: string;
-  /** Optional header/footer logo override (uploaded via admin). */
-  headerLogoSrc?: string;
-  /** Optional WhatsApp floating button override; empty string hides it. */
-  whatsappHref?: string;
-};
+export type { SiteChrome } from "@/lib/chrome-types";
+export { DEFAULT_SITE_CHROME } from "@/lib/chrome-defaults";
+export { LOGO_WIDTH_DEFAULT, LOGO_WIDTH_MAX, LOGO_WIDTH_MIN, clampLogoWidth } from "@/lib/logo-size";
+export { chromePhoneHref } from "@/lib/chrome-defaults";
 
-export const DEFAULT_SITE_CHROME: SiteChrome = {
-  companyName: FALLBACK_SITE.companyName,
-  tagline: FALLBACK_SITE.tagline,
-  email: USA_SUPPORT_EMAIL,
-  phone: USA_PHONE_DISPLAY,
-  whatsapp: USA_PHONE_DISPLAY,
-  salesEmail: USA_SALES_EMAIL,
-  address: FALLBACK_SITE.address,
-  defaultSeoTitle: FALLBACK_SITE.defaultSeoTitle,
-  defaultSeoDescription: FALLBACK_SITE.defaultSeoDescription,
-  footerTagline: "Studios in the United States, India, and Nepal",
-  whatsappHref: phoneToWhatsApp(USA_PHONE_DISPLAY),
-};
 
-/** Normalise a stored record so old files (missing new keys) stay usable. */
 export function normalizeSiteChrome(input: Partial<SiteChrome> | null | undefined): SiteChrome {
   const merged = { ...DEFAULT_SITE_CHROME, ...(input ?? {}) } as SiteChrome;
   const phone = merged.phone?.trim() || DEFAULT_SITE_CHROME.phone;
   return {
     ...merged,
     phone,
+    logoWidth: clampLogoWidth(merged.logoWidth),
     email: merged.email?.trim() || DEFAULT_SITE_CHROME.email,
     whatsapp: merged.whatsapp?.trim() || phone,
     salesEmail: merged.salesEmail?.trim() || DEFAULT_SITE_CHROME.salesEmail,
@@ -53,10 +29,6 @@ export function normalizeSiteChrome(input: Partial<SiteChrome> | null | undefine
   };
 }
 
-/** Derived `tel:` target for the configured phone. */
-export function chromePhoneHref(chrome: SiteChrome) {
-  return phoneToTel(chrome.phone);
-}
 
 function chromePath() {
   return contentFile("site-chrome.json");

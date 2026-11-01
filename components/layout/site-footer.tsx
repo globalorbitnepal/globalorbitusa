@@ -9,7 +9,7 @@ import {
 import { OrbitFlag } from "@/components/orbit/flags";
 import type { FooterConfig } from "@/lib/footer-config";
 import { DEFAULT_FOOTER_CONFIG } from "@/lib/footer-config";
-import { DEFAULT_SITE_CHROME } from "@/lib/site-chrome-store";
+import { DEFAULT_SITE_CHROME } from "@/lib/chrome-defaults";
 import type { FallbackNavItem } from "@/lib/site";
 
 type SiteFooterProps = {

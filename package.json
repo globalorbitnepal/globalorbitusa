@@ -10,6 +10,7 @@
     "lint": "eslint",
     "seo:verify": "node scripts/verify-seo-routes.mjs",
     "seo:audit": "node scripts/audit-seo-live.mjs",
+    "audit:admin": "node scripts/admin-audit.mjs",
     "audit:full": "npm run seo:verify && CHECK_STAGING_REDIRECT=1 npm run migration:validate-apex && npm run seo:audit && npm run migration:validate-staging",
     "migration:validate": "node scripts/migration-validate.mjs",
     "migration:validate-staging": "BASE_URL=https://arnav.theglobalorbit.com EXPECT_ORIGIN=https://theglobalorbit.com node scripts/migration-validate.mjs",

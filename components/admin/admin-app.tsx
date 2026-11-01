@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AdminBlogStudio, type BlogMode } from "@/components/admin/admin-blog-studio";
 import { AdminAccountPanel } from "@/components/admin/admin-account-panel";
+import { AdminChromeEditor } from "@/components/admin/admin-chrome-editor";
 import { AdminMediaLibrary } from "@/components/admin/admin-media-library";
 import { AdminInquiriesPanel } from "@/components/admin/admin-inquiries-panel";
 import { AdminFooterEditor } from "@/components/admin/admin-footer-editor";
@@ -39,7 +40,7 @@ import type { PageSeo } from "@/lib/page-seo-store";
 import type { FooterConfig } from "@/lib/footer-config";
 import type { HomeSurfaceConfig } from "@/lib/home-surface-config";
 import type { WebsiteDevelopmentPageConfig } from "@/lib/website-development-page-config";
-import type { SiteChrome } from "@/lib/site-chrome-store";
+import type { SiteChrome } from "@/lib/chrome-types";
 import { scoreSeo } from "@/lib/seo-score";
 import { BRAND_LOGO_PRIMARY, brandAssetUrl } from "@/lib/brand-assets";
 
@@ -117,8 +118,24 @@ function writeHash(view: AdminView, pageId?: string, section?: string, slug?: st
   window.location.hash = params.toString();
 }
 
-function NavButton({
-  icon,
+/** Human-readable failure text for a non-2xx admin save response. */
+async function failureMessage(response: Response, what: string, knownError?: string): Promise<string> {
+  let reason = knownError?.trim() || "";
+  if (!reason) {
+    try {
+      const body = (await response.clone().json()) as { error?: string };
+      reason = body?.error?.trim() || "";
+    } catch {
+      /* non-JSON body */
+    }
+  }
+  if (response.status === 429) return "Too many attempts. Wait a moment and try again.";
+  if (response.status === 413) return `The ${what} payload is too large.`;
+  if (reason) return `Could not save ${what}: ${reason}.`;
+  return `Could not save ${what} (server returned ${response.status}).`;
+}
+
+function NavButton({  icon,
   label,
   hint,
   active,
@@ -212,13 +229,19 @@ export function AdminApp(props: Props) {
     form.set("kind", "chromeLogo");
     form.set("file", file);
     const response = await fetch("/api/orbit/upload", { method: "POST", body: form });
-    const data = await response.json();
     setBusy(false);
+    if (response.status === 401) {
+      setStatus("Session expired. Reloading the sign-in screen…");
+      router.push("/admin");
+      router.refresh();
+      return;
+    }
+    const data = (await response.json().catch(() => ({}))) as { chrome?: SiteChrome; error?: string };
     if (data.chrome) {
       setChrome(data.chrome);
       setStatus("Header logo updated on the live site.");
     } else {
-      setStatus("Could not upload logo.");
+      setStatus(`Could not upload logo: ${data.error || `server returned ${response.status}`}.`);
     }
   }
 
@@ -273,7 +296,8 @@ export function AdminApp(props: Props) {
       body: JSON.stringify({ pages }),
     });
     setBusy(false);
-    setStatus(response.ok ? "Page SEO published." : "Could not save SEO.");
+    if (handleAuthFailure(response)) return;
+    setStatus(response.ok ? "Page SEO published." : await failureMessage(response, "page SEO"));
   }
 
   async function uploadOgImage(pathname: string, file: File) {
@@ -299,14 +323,18 @@ export function AdminApp(props: Props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(chrome),
     });
-    const data = (await response.json().catch(() => ({}))) as { chrome?: SiteChrome };
+    if (handleAuthFailure(response)) {
+      setBusy(false);
+      return;
+    }
+    const data = (await response.json().catch(() => ({}))) as { chrome?: SiteChrome; error?: string };
     setBusy(false);
     if (response.ok) {
       if (data.chrome) setChrome(data.chrome);
       setStatus("Header, footer and contact details published.");
       router.refresh();
     } else {
-      setStatus("Could not save settings.");
+      setStatus(await failureMessage(response, "header and footer settings", data.error));
     }
   }
 
@@ -318,7 +346,8 @@ export function AdminApp(props: Props) {
       body: JSON.stringify(homeSurface),
     });
     setBusy(false);
-    setStatus(response.ok ? "Homepage lower sections published." : "Could not save homepage copy.");
+    if (handleAuthFailure(response)) return;
+    setStatus(response.ok ? "Homepage lower sections published." : await failureMessage(response, "homepage copy"));
   }
 
   async function saveWebsiteDevelopment(event: { preventDefault: () => void }) {
@@ -330,13 +359,20 @@ export function AdminApp(props: Props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(websiteDevelopment),
     });
-    const data = await response.json();
+    if (handleAuthFailure(response)) {
+      setBusy(false);
+      return;
+    }
+    const data = (await response.json().catch(() => ({}))) as {
+      config?: WebsiteDevelopmentPageConfig;
+      error?: string;
+    };
     setBusy(false);
     if (response.ok && data.config) {
       setWebsiteDevelopment(data.config);
       setWdStatus("Published. Open /service/website-development-usa on the live site.");
     } else {
-      setWdStatus("Could not save website development page.");
+      setWdStatus(await failureMessage(response, "website development page", data.error));
     }
   }
 
@@ -347,8 +383,31 @@ export function AdminApp(props: Props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(footer),
     });
+    if (handleAuthFailure(response)) {
+      setBusy(false);
+      return;
+    }
+    const data = (await response.json().catch(() => ({}))) as {
+      footer?: FooterConfig;
+      error?: string;
+    };
     setBusy(false);
-    setStatus(response.ok ? "Footer content published." : "Could not save footer.");
+    if (response.ok) {
+      setFooter(data.footer ?? footer);
+      setStatus("Footer content published.");
+      router.refresh();
+    } else {
+      setStatus(await failureMessage(response, "footer", data.error));
+    }
+  }
+
+  /** Sends the admin back to sign-in when the session cookie is no longer valid. */
+  function handleAuthFailure(response: Response) {
+    if (response.status !== 401) return false;
+    setStatus("Session expired. Reloading the sign-in screen…");
+    router.push("/admin");
+    router.refresh();
+    return true;
   }
 
   const title =
@@ -412,7 +471,7 @@ export function AdminApp(props: Props) {
         <div className="go-cms-side-inner">
         <div className="go-cms-brand">
           <img
-            src={brandAssetUrl(BRAND_LOGO_PRIMARY)}
+            src={chrome.headerLogoSrc ? chrome.headerLogoSrc : brandAssetUrl(BRAND_LOGO_PRIMARY)}
             alt="Global Orbit"
             className="go-cms-brand-logo"
             width={240}
@@ -909,47 +968,13 @@ export function AdminApp(props: Props) {
 
         {view === "chrome" ? (
           <>
-          <section className="go-cms-card">
-            <h2>Header, footer & identity</h2>
-            <AdminMediaField
-              label="Header & footer logo"
-              description="Transparent PNG recommended. Replaces the gold Global Orbit mark in the site header and footer."
-              src={chrome.headerLogoSrc ? chrome.headerLogoSrc : brandAssetUrl(BRAND_LOGO_PRIMARY)}
-              kind="image"
-              accept="image/png,image/webp,image/jpeg,image/svg+xml"
-              disabled={busy}
-              onPick={(file) => uploadHeaderLogo(file)}
-            />
-            <div className="go-cms-form">
-              {(
-                [
-                  ["companyName", "Company name"],
-                  ["tagline", "Header support line"],
-                  ["footerTagline", "Footer tagline"],
-                  ["email", "Support email"],
-                  ["salesEmail", "Sales email"],
-                  ["phone", "Primary phone (USA)"],
-                  ["whatsapp", "WhatsApp number (display)"],
-                  ["whatsappHref", "WhatsApp link (wa.me/…)"],
-                  ["address", "Address"],
-                  ["defaultSeoTitle", "Default SEO title"],
-                  ["defaultSeoDescription", "Default SEO description"],
-                ] as const
-              ).map(([key, label]) => (
-                <label key={key}>
-                  {label}
-                  {key.includes("tagline") || key === "address" || key === "defaultSeoDescription" ? (
-                    <textarea value={chrome[key]} onChange={(e) => setChrome({ ...chrome, [key]: e.target.value })} />
-                  ) : (
-                    <input value={chrome[key]} onChange={(e) => setChrome({ ...chrome, [key]: e.target.value })} />
-                  )}
-                </label>
-              ))}
-              <button type="button" disabled={busy} onClick={() => void saveChrome()}>
-                Publish
-              </button>
-            </div>
-          </section>
+          <AdminChromeEditor
+            chrome={chrome}
+            busy={busy}
+            onChange={setChrome}
+            onSave={() => void saveChrome()}
+            onUpload={(file) => void uploadHeaderLogo(file)}
+          />
           <AdminFooterEditor footer={footer} busy={busy} onChange={setFooter} onSave={() => void saveFooter()} />
           </>
         ) : null}
