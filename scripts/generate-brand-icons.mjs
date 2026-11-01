@@ -20,7 +20,7 @@ async function squareGlobe(size, outPath, padding = 0.12) {
   const inner = Math.round(size * (1 - padding * 2));
   const globe = await sharp(GLOBE).resize(inner, inner, { fit: "contain" }).png().toBuffer();
   const canvas = sharp({
-    create: { width: size, height: size, channels: 4, background: BG },
+    create: { width: size, height: size, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } },
   });
   await canvas
     .composite([{ input: globe, gravity: "centre" }])
@@ -32,20 +32,13 @@ async function buildOgDefault() {
   const w = 1200;
   const h = 630;
   const logoBuf = await sharp(LOGO)
-    .resize(520, null, { fit: "inside" })
-    .png()
-    .toBuffer();
-  const globeBuf = await sharp(GLOBE)
-    .resize(340, 340, { fit: "contain" })
+    .resize(720, null, { fit: "inside" })
     .png()
     .toBuffer();
   await sharp({
-    create: { width: w, height: h, channels: 3, background: { r: 7, g: 7, b: 11 } },
+    create: { width: w, height: h, channels: 4, background: { r: 7, g: 7, b: 11, alpha: 1 } },
   })
-    .composite([
-      { input: logoBuf, left: 72, top: Math.round((h - 280) / 2) },
-      { input: globeBuf, left: w - 420, top: Math.round((h - 340) / 2) },
-    ])
+    .composite([{ input: logoBuf, gravity: "centre" }])
     .jpeg({ quality: 88, mozjpeg: true })
     .toFile(path.join(brand, "og-default.jpg"));
 }

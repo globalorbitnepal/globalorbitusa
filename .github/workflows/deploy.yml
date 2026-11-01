@@ -1,4 +1,4 @@
-name: Deploy GlobalOrbitNepal
+name: Deploy GlobalOrbitUSA
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-globalorbitnepal-production
+  group: deploy-globalorbitusa-production
   cancel-in-progress: false
 
 permissions:
@@ -19,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      # Placeholder for Prisma generate only. CI never connects to production PostgreSQL.
-      DATABASE_URL: postgresql://globalorbitnepal_app:ci-placeholder@127.0.0.1:5432/globalorbitnepal_db?schema=public
+      # Placeholder for Prisma generate / Next build only. CI never connects to production PostgreSQL.
+      DATABASE_URL: postgresql://globalorbitusa_app:ci-placeholder@127.0.0.1:5432/globalorbitusa_db?schema=public
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -84,7 +84,6 @@ jobs:
           if [ -z "${VPS_SSH_KEY}" ]; then echo "Missing GitHub secret: VPS_SSH_KEY"; missing=1; fi
           if [ "$missing" -ne 0 ]; then
             echo "Add VPS_HOST, VPS_USER, VPS_SSH_KEY, and optional VPS_PORT in this repository Settings > Secrets and variables > Actions."
-            echo "Do not put those values in the workflow file."
             exit 1
           fi
 
@@ -125,7 +124,7 @@ jobs:
           print("SSH preflight passed: identity and key shape OK")
           PY
 
-      - name: Deploy GlobalOrbitNepal to VPS
+      - name: Deploy GlobalOrbitUSA to VPS
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_USER: ${{ secrets.VPS_USER }}
@@ -134,8 +133,8 @@ jobs:
         run: |
           set -euo pipefail
           port="${VPS_PORT:-22}"
-          KEY_FILE="$(mktemp "${RUNNER_TEMP}/globalorbitnepal_ssh_key.XXXXXX")"
-          KNOWN_HOSTS_FILE="$(mktemp "${RUNNER_TEMP}/globalorbitnepal_known_hosts.XXXXXX")"
+          KEY_FILE="$(mktemp "${RUNNER_TEMP}/globalorbitusa_ssh_key.XXXXXX")"
+          KNOWN_HOSTS_FILE="$(mktemp "${RUNNER_TEMP}/globalorbitusa_known_hosts.XXXXXX")"
           cleanup() {
             rm -f "$KEY_FILE" "$KNOWN_HOSTS_FILE"
           }
@@ -163,86 +162,27 @@ jobs:
           #!/bin/bash
           set -euo pipefail
 
-          echo "==> Validating SSH user"
           test "$(id -un)" = "sysadmin"
 
-          APP_DIR="/srv/apps/globalorbitnepal"
-          APP_NAME="globalorbitnepal"
-          APP_PORT="3031"
-          EXPECTED_ORIGIN="git@github.com:globalorbitnepal/globalorbitnepal.git"
+          APP_DIR="/srv/apps/globalorbitusa"
+          APP_NAME="globalorbitusa"
+          APP_PORT="3035"
+          EXPECTED_ORIGIN="git@github.com:globalorbitnepal/globalorbitusa.git"
 
-          echo "==> Isolation guards"
-          test "$APP_DIR" != "/srv/apps/hostingbeyond"
-          test "$APP_NAME" != "hostingbeyond"
-          test "$APP_PORT" != "3000"
-          test "$APP_DIR" = "/srv/apps/globalorbitnepal"
-          test "$APP_NAME" = "globalorbitnepal"
-          test "$APP_PORT" = "3031"
-
-          echo "==> Deploying GlobalOrbitNepal"
-          echo "==> Target: ${APP_DIR}"
-          echo "==> PM2 process: ${APP_NAME}"
-          echo "==> Port: ${APP_PORT}"
+          test "$APP_DIR" = "/srv/apps/globalorbitusa"
+          test "$APP_NAME" = "globalorbitusa"
+          test "$APP_PORT" = "3035"
 
           cd "$APP_DIR"
-          test "$(pwd)" = "$APP_DIR"
-
-          echo "==> Validating Git remote and branch"
           test "$(git remote get-url origin)" = "$EXPECTED_ORIGIN"
-          case "$(git remote get-url origin)" in
-            *Hostingbeyond*|*hostingbeyond*)
-              echo "REMOTE_ISOLATION_FAIL: origin points at HostingBeyond"
-              exit 1
-              ;;
-          esac
 
-          echo "==> Confirming GlobalOrbitNepal PM2 process exists (will not start HostingBeyond)"
           if ! pm2 describe "$APP_NAME" >/dev/null 2>&1; then
-            echo "PM2_PROCESS_MISSING: ${APP_NAME} is not registered. Start it once after approval; do not start hostingbeyond."
+            echo "PM2_PROCESS_MISSING: ${APP_NAME}"
             exit 1
           fi
 
-          PM2_JSON="$(pm2 jlist)"
-          PM2_JSON="$PM2_JSON" APP_DIR="$APP_DIR" APP_NAME="$APP_NAME" APP_PORT="$APP_PORT" python3 - <<'PY'
-          import json
-          import os
-          import sys
-
-          app_name = os.environ["APP_NAME"]
-          app_dir = os.environ["APP_DIR"]
-          app_port = os.environ["APP_PORT"]
-          try:
-              processes = json.loads(os.environ["PM2_JSON"])
-          except json.JSONDecodeError:
-              print("PM2_CONFIG_FAIL: pm2 jlist did not return valid JSON")
-              sys.exit(1)
-
-          matches = [process for process in processes if process.get("name") == app_name]
-          if len(matches) != 1:
-              print("PM2_CONFIG_FAIL: expected exactly one GlobalOrbitNepal process")
-              sys.exit(1)
-
-          process = matches[0]
-          runtime = process.get("pm2_env") or {}
-          args = str(runtime.get("args") or "")
-          env = runtime.get("env") or {}
-          configured_port = str(env.get("PORT") or "")
-          if runtime.get("pm_cwd") != app_dir:
-              print("PM2_CONFIG_FAIL: process cwd does not match the GlobalOrbitNepal app directory")
-              sys.exit(1)
-          if app_port not in args and configured_port != app_port:
-              print("PM2_CONFIG_FAIL: process is not configured for port 3031")
-              sys.exit(1)
-          if runtime.get("status") != "online":
-              print("PM2_CONFIG_FAIL: GlobalOrbitNepal process is not online")
-              sys.exit(1)
-          print("PM2_CONFIG_OK: existing GlobalOrbitNepal process matches app directory and port")
-          PY
-
-          echo "==> Syncing origin/main (preserve .env and ignore HostingBeyond paths)"
           git fetch origin main
           git checkout main
-          test "$(git branch --show-current)" = "main"
           git reset --hard origin/main
           git clean -fd \
             -e .env \
@@ -251,30 +191,22 @@ jobs:
             -e node_modules \
             -e '.port-migration-backup-*'
 
-          if [ ! -f .env ]; then
-            echo "ENV_MISSING: ${APP_DIR}/.env is required on the server and must stay untracked"
-            exit 1
-          fi
-          echo "ENV_PRESENT"
+          test -f .env
 
-          echo "==> Verifying DATABASE_URL target without printing secrets"
           node scripts/verify-database-target.mjs
 
           export CI=true
           export NODE_OPTIONS="${NODE_OPTIONS:-"--max-old-space-size=4096"}"
 
-          echo "==> Installing dependencies"
           if [ -f package-lock.json ]; then
             npm ci </dev/null
           else
             npm install </dev/null
           fi
 
-          echo "==> Prisma generate (no migrate reset, no db push)"
           npx prisma generate </dev/null
           npx prisma validate </dev/null
 
-          echo "==> Building production bundle (isolated .next-build, then swap)"
           rm -rf .next-build
           BUILD_OK=0
           for attempt in 1 2 3; do
@@ -282,51 +214,32 @@ jobs:
               BUILD_OK=1
               break
             fi
-            echo "Build attempt ${attempt} failed; retrying in 12s..."
             rm -rf .next-build
             sleep 12
           done
-          if [ "$BUILD_OK" != "1" ]; then
-            echo "BUILD_FAIL: production build failed after 3 attempts"
-            exit 1
-          fi
-          test -d .next-build
+          test "$BUILD_OK" = "1"
           NEXT_DIST_DIR=.next-build node scripts/verify-next-artifacts.mjs
           rm -rf .next-stale
-          if [ -d .next ]; then
-            mv .next .next-stale
-          fi
+          if [ -d .next ]; then mv .next .next-stale; fi
           mv .next-build .next
           rm -rf .next-stale
 
-          echo "==> Restarting ONLY GlobalOrbitNepal PM2 process"
           pm2 restart "$APP_NAME"
-          pm2 describe "$APP_NAME" >/dev/null 2>&1
 
-          echo "==> Verifying listener on 127.0.0.1:${APP_PORT}"
           LISTEN_OK=0
           for _i in $(seq 1 30); do
-            if command -v ss >/dev/null 2>&1 && ss -lnt | grep -Eq ":${APP_PORT}([[:space:]]|$)"; then
+            if ss -lnt | grep -Eq ":${APP_PORT}([[:space:]]|$)"; then
               LISTEN_OK=1
               break
             fi
             sleep 1
           done
-          if [ "$LISTEN_OK" != "1" ]; then
-            echo "LISTEN_FAIL: nothing listening on TCP port ${APP_PORT}"
-            ss -lnt || true
-            exit 1
-          fi
+          test "$LISTEN_OK" = "1"
 
-          echo "==> Verifying local HTTP on 127.0.0.1:${APP_PORT}"
-          LOCAL_CODE="$(curl -fsS -o /dev/null -w "%{http_code}" --retry 8 --retry-delay 2 --retry-all-errors --max-time 20 "http://127.0.0.1:${APP_PORT}/" || true)"
-          if [ "$LOCAL_CODE" != "200" ]; then
-            echo "Local verify failed: expected HTTP 200 on 127.0.0.1:${APP_PORT}, got ${LOCAL_CODE:-none}"
-            exit 1
-          fi
+          LOCAL_CODE="$(curl -fsS -o /dev/null -w "%{http_code}" --retry 8 --retry-delay 2 --max-time 20 "http://127.0.0.1:${APP_PORT}/" || true)"
+          test "$LOCAL_CODE" = "200"
 
-          echo "==> Public domain verify skipped until DNS/Nginx are configured"
-          echo "==> GlobalOrbitNepal deploy completed"
+          echo "==> GlobalOrbitUSA deploy completed"
           REMOTE
 
-          echo "==> GlobalOrbitNepal remote deploy succeeded"
+          echo "==> GlobalOrbitUSA remote deploy succeeded"

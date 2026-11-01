@@ -2,7 +2,7 @@ name: E2E Production Smoke
 
 on:
   workflow_run:
-    workflows: ["Deploy GlobalOrbitNepal"]
+    workflows: ["Deploy GlobalOrbitUSA"]
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      PLAYWRIGHT_BASE_URL: https://arnav.theglobalorbit.com
+      PLAYWRIGHT_BASE_URL: https://globalorbit.us
       CI: true
     steps:
       - name: Checkout repository

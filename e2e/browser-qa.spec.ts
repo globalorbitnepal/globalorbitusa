@@ -11,7 +11,7 @@ import {
 
 test.beforeEach(async ({}, testInfo) => {
   const base = testInfo.project.use?.baseURL ?? process.env.PLAYWRIGHT_BASE_URL;
-  if (!String(base).includes("theglobalorbit.com") && process.env.CI) {
+  if (!String(base).includes("globalorbit.us") && process.env.CI) {
     test.skip(true, "CI must target production PLAYWRIGHT_BASE_URL");
   }
 });
