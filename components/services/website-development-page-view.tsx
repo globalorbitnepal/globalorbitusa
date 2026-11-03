@@ -7,7 +7,6 @@ import { WebsiteDevBreadcrumbs } from "@/components/services/website-development
 import { WebsiteDevFaq } from "@/components/services/website-development/wd-faq";
 import { WdIndustryMock } from "@/components/services/website-development/wd-visuals";
 import type { WebsiteDevelopmentPageConfig } from "@/lib/website-development-page-config";
-import { WD_CWV, WD_STACK_COMPARE, WD_STATS, WD_USA_MARKETS } from "@/lib/website-development-content";
 
 function Badge({ children }: { children: ReactNode }) {
   return <span className="orbit-about-badge">{children}</span>;
@@ -34,6 +33,10 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
     related,
     faq,
     finalCta,
+    stats,
+    usaMarkets,
+    cwv,
+    stackCompare,
   } = config;
 
   return (
@@ -75,7 +78,7 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
         <div className="mx-auto max-w-[82rem]">
           <AboutReveal>
             <ul className="wd-stats-band">
-              {WD_STATS.map((stat) => (
+              {stats.map((stat) => (
                 <li key={stat.label}>
                   <strong>{stat.value}</strong>
                   <span>{stat.label}</span>
@@ -108,15 +111,15 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
             <div className="orbit-about-glass orbit-about-story">
               <Badge>United States</Badge>
               <h2 id="wd-usa-markets-heading" className="orbit-about-h2 mt-4">
-                {WD_USA_MARKETS.title}
+                {usaMarkets.title}
               </h2>
-              {WD_USA_MARKETS.paragraphs.map((p) => (
+              {usaMarkets.paragraphs.map((p) => (
                 <p key={p.slice(0, 48)} className="mt-4 text-base leading-relaxed text-white/58">
                   {p}
                 </p>
               ))}
               <ul className="wd-usa-links mt-8 flex flex-wrap gap-2">
-                {WD_USA_MARKETS.links.map((link) => (
+                {usaMarkets.links.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="wd-usa-link-pill">
                       {link.label}
@@ -270,15 +273,15 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
             <div className="orbit-about-glass orbit-about-story">
               <Badge>Performance</Badge>
               <h2 id="wd-cwv-heading" className="orbit-about-h2 mt-4">
-                {WD_CWV.title}
+                {cwv.title}
               </h2>
-              {WD_CWV.paragraphs.map((p) => (
+              {cwv.paragraphs.map((p) => (
                 <p key={p.slice(0, 40)} className="mt-4 text-base leading-relaxed text-white/58">
                   {p}
                 </p>
               ))}
               <div className="wd-metric-grid mt-8">
-                {WD_CWV.metrics.map((metric) => (
+                {cwv.metrics.map((metric) => (
                   <article key={metric.name} className="wd-metric-card">
                     <p className="wd-metric-name">{metric.name}</p>
                     <p className="wd-metric-target">{metric.target}</p>
@@ -297,9 +300,9 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
             <div className="orbit-about-glass orbit-about-story">
               <Badge>Architecture</Badge>
               <h2 id="wd-stack-heading" className="orbit-about-h2 mt-4">
-                {WD_STACK_COMPARE.title}
+                {stackCompare.title}
               </h2>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/58">{WD_STACK_COMPARE.intro}</p>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/58">{stackCompare.intro}</p>
               <div className="wd-compare-table-wrap mt-8">
                 <table className="wd-compare-table">
                   <thead>
@@ -310,7 +313,7 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
                     </tr>
                   </thead>
                   <tbody>
-                    {WD_STACK_COMPARE.rows.map((row) => (
+                    {stackCompare.rows.map((row) => (
                       <tr key={row.stack}>
                         <th scope="row">{row.stack}</th>
                         <td>{row.bestFor}</td>

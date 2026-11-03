@@ -16051,6 +16051,29 @@ html.orbit-standalone .orbit-app-dock {
   line-height: 1.55;
 }
 
+.wd-demo-bullets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+}
+
+.wd-demo-bullets li {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.62);
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wd-demo-stack {
+  margin-top: 0.65rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(240, 196, 58, 0.8);
+}
+
 @media (max-width: 640px) {
   .wd-hero-preview-main {
     grid-template-columns: 1fr;

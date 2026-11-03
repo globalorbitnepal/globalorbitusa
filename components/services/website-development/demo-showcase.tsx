@@ -92,6 +92,16 @@ export function WebsiteDevDemoShowcase({ demos, header }: { demos: WebsiteDevDem
                   </div>
                 </dl>
                 <p className="wd-demo-story">{demo.story}</p>
+                {demo.bullets.length ? (
+                  <ul className="wd-demo-bullets">
+                    {demo.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                {demo.stack.length ? (
+                  <p className="wd-demo-stack">{demo.stack.join(" · ")}</p>
+                ) : null}
               </article>
             );
           })}

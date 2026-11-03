@@ -1,9 +1,13 @@
 import {
+  WD_CWV,
   WD_FAQ_EXTENDED,
   WD_FINAL_CTA,
   WD_HERO,
   WD_INDUSTRIES,
   WD_INTRO,
+  WD_STACK_COMPARE,
+  WD_STATS,
+  WD_USA_MARKETS,
   WD_PERF_A11Y,
   WD_PRICING,
   WD_PROCESS_STEPS,
@@ -33,7 +37,7 @@ export type WebsiteDevDemoConfig = {
   uxNote: string;
   fictionalLabel: string;
   demoUrl: string;
-  /** When set, replaces the coded demo with a static screenshot in the showcase */
+  /** Unused. This page never renders images; parser always clears the field. */
   previewImageSrc: string;
 };
 
@@ -53,7 +57,19 @@ export type WebsiteDevelopmentPageConfig = {
     satellites: { src: string; url: string; alt: string }[];
   };
   trust: { label: string }[];
+  stats: { value: string; label: string }[];
   intro: { title: string; paragraphs: string[] };
+  usaMarkets: { title: string; paragraphs: string[]; links: { label: string; href: string }[] };
+  cwv: {
+    title: string;
+    paragraphs: string[];
+    metrics: { name: string; target: string; note: string }[];
+  };
+  stackCompare: {
+    title: string;
+    intro: string;
+    rows: { stack: string; bestFor: string; tradeoff: string }[];
+  };
   services: { title: string; body: string; href: string }[];
   industries: {
     id: string;
@@ -116,7 +132,7 @@ export function buildDefaultWebsiteDevelopmentPageConfig(): WebsiteDevelopmentPa
     hero: { ...WD_HERO },
     heroComposition: {
       caption: "Coded interface preview — no stock photography on this page",
-      mainImage: "",
+      mainImage: "", // image-free page — never rendered
       mainBrowserUrl: "yourbrand.com",
       satellites: [
         { src: "", url: "hotel.demo", alt: "Hospitality layout concept" },
@@ -126,16 +142,32 @@ export function buildDefaultWebsiteDevelopmentPageConfig(): WebsiteDevelopmentPa
       ],
     },
     trust: WD_TRUST.map((item) => ({ ...item })),
+    stats: WD_STATS.map((item) => ({ ...item })),
     intro: {
       title: WD_INTRO.title,
       paragraphs: [...WD_INTRO.paragraphs],
+    },
+    usaMarkets: {
+      title: WD_USA_MARKETS.title,
+      paragraphs: [...WD_USA_MARKETS.paragraphs],
+      links: WD_USA_MARKETS.links.map((link) => ({ ...link })),
+    },
+    cwv: {
+      title: WD_CWV.title,
+      paragraphs: [...WD_CWV.paragraphs],
+      metrics: WD_CWV.metrics.map((metric) => ({ ...metric })),
+    },
+    stackCompare: {
+      title: WD_STACK_COMPARE.title,
+      intro: WD_STACK_COMPARE.intro,
+      rows: WD_STACK_COMPARE.rows.map((row) => ({ ...row })),
     },
     services: WD_SERVICES.map((s) => ({
       title: s.title,
       body: s.body,
       href: s.href ?? "",
     })),
-    industries: WD_INDUSTRIES.map((p) => ({ ...p, points: [...p.points] })),
+    industries: WD_INDUSTRIES.map((p) => ({ ...p, image: "", imageAlt: "", points: [...p.points] })),
     demoHeader: {
       eyebrow: "Fictional demos · coded UI only",
       title: "Six coded homepages,",
@@ -216,22 +248,64 @@ export function parseWebsiteDevelopmentPageConfig(input: unknown): WebsiteDevelo
     },
     heroComposition: {
       caption: str(mergeComposition.caption, base.heroComposition.caption),
-      mainImage: str(mergeComposition.mainImage, base.heroComposition.mainImage),
+      mainImage: "",
       mainBrowserUrl: str(mergeComposition.mainBrowserUrl, base.heroComposition.mainBrowserUrl),
       satellites: Array.isArray(mergeComposition.satellites)
         ? mergeComposition.satellites.map((sat, i) => ({
-            src: str(sat?.src, base.heroComposition.satellites[i]?.src ?? ""),
+            src: "",
             url: str(sat?.url, base.heroComposition.satellites[i]?.url ?? ""),
             alt: str(sat?.alt, base.heroComposition.satellites[i]?.alt ?? ""),
           }))
-        : base.heroComposition.satellites,
+        : base.heroComposition.satellites.map((sat) => ({ ...sat, src: "" })),
     },
     trust: Array.isArray(raw.trust)
       ? raw.trust.map((t, i) => ({ label: str(t?.label, base.trust[i]?.label ?? "") })).filter((t) => t.label)
       : base.trust,
+    stats: Array.isArray(raw.stats)
+      ? raw.stats
+          .map((item, i) => ({
+            value: str(item?.value, base.stats[i]?.value ?? ""),
+            label: str(item?.label, base.stats[i]?.label ?? ""),
+          }))
+          .filter((item) => item.value || item.label)
+      : base.stats,
     intro: {
       title: str(raw.intro?.title, base.intro.title),
       paragraphs: strArray(raw.intro?.paragraphs, base.intro.paragraphs),
+    },
+    usaMarkets: {
+      title: str(raw.usaMarkets?.title, base.usaMarkets.title),
+      paragraphs: strArray(raw.usaMarkets?.paragraphs, base.usaMarkets.paragraphs),
+      links: Array.isArray(raw.usaMarkets?.links)
+        ? raw.usaMarkets.links
+            .map((link, i) => ({
+              label: str(link?.label, base.usaMarkets.links[i]?.label ?? ""),
+              href: str(link?.href, base.usaMarkets.links[i]?.href ?? ""),
+            }))
+            .filter((link) => link.label && link.href)
+        : base.usaMarkets.links,
+    },
+    cwv: {
+      title: str(raw.cwv?.title, base.cwv.title),
+      paragraphs: strArray(raw.cwv?.paragraphs, base.cwv.paragraphs),
+      metrics: Array.isArray(raw.cwv?.metrics)
+        ? raw.cwv.metrics.map((metric, i) => ({
+            name: str(metric?.name, base.cwv.metrics[i]?.name ?? ""),
+            target: str(metric?.target, base.cwv.metrics[i]?.target ?? ""),
+            note: str(metric?.note, base.cwv.metrics[i]?.note ?? ""),
+          }))
+        : base.cwv.metrics,
+    },
+    stackCompare: {
+      title: str(raw.stackCompare?.title, base.stackCompare.title),
+      intro: str(raw.stackCompare?.intro, base.stackCompare.intro),
+      rows: Array.isArray(raw.stackCompare?.rows)
+        ? raw.stackCompare.rows.map((row, i) => ({
+            stack: str(row?.stack, base.stackCompare.rows[i]?.stack ?? ""),
+            bestFor: str(row?.bestFor, base.stackCompare.rows[i]?.bestFor ?? ""),
+            tradeoff: str(row?.tradeoff, base.stackCompare.rows[i]?.tradeoff ?? ""),
+          }))
+        : base.stackCompare.rows,
     },
     services: Array.isArray(raw.services)
       ? raw.services.map((s, i) => ({
@@ -244,8 +318,8 @@ export function parseWebsiteDevelopmentPageConfig(input: unknown): WebsiteDevelo
       ? raw.industries.map((p, i) => ({
           id: str(p?.id, base.industries[i]?.id ?? `industry-${i}`),
           title: str(p?.title, base.industries[i]?.title ?? ""),
-          image: str(p?.image, base.industries[i]?.image ?? ""),
-          imageAlt: str(p?.imageAlt, base.industries[i]?.imageAlt ?? ""),
+          image: "",
+          imageAlt: "",
           body: str(p?.body, base.industries[i]?.body ?? ""),
           points: strArray(p?.points, base.industries[i]?.points ?? []),
         }))
@@ -272,7 +346,7 @@ export function parseWebsiteDevelopmentPageConfig(input: unknown): WebsiteDevelo
             uxNote: str(d?.uxNote, fallback.uxNote),
             fictionalLabel: str(d?.fictionalLabel, fallback.fictionalLabel),
             demoUrl: str(d?.demoUrl, fallback.demoUrl),
-            previewImageSrc: str(d?.previewImageSrc, fallback.previewImageSrc),
+            previewImageSrc: "",
           };
         })
       : base.demos,

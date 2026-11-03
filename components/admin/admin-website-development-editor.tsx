@@ -1,7 +1,6 @@
 "use client";
 
 import type { FormEvent } from "react";
-import { AdminMediaField } from "@/components/admin/admin-media-field";
 import type { WebsiteDevelopmentPageConfig } from "@/lib/website-development-page-config";
 
 function Field({
@@ -49,17 +48,6 @@ function Panel({ title, description, children }: { title: string; description?: 
   );
 }
 
-async function uploadWebsiteDevImage(assetKey: string, file: File) {
-  const form = new FormData();
-  form.set("kind", "websiteDevImage");
-  form.set("assetKey", assetKey);
-  form.set("file", file);
-  const response = await fetch("/api/orbit/upload", { method: "POST", body: form });
-  const data = await response.json();
-  if (!response.ok) throw new Error(data.error || "Upload failed");
-  return data.url as string;
-}
-
 type Props = {
   config: WebsiteDevelopmentPageConfig;
   busy: boolean;
@@ -73,7 +61,7 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
 
   return (
     <form onSubmit={onSubmit} className="space-y-6 pb-16">
-      <Panel title="Hero" description="Headline, CTAs, and browser showcase images">
+      <Panel title="Hero" description="Headline and CTAs. This page never uses images — the hero is a coded browser frame.">
         <Field label="Eyebrow" value={config.hero.eyebrow} onChange={(v) => set({ hero: { ...config.hero, eyebrow: v } })} />
         <Field label="H1" value={config.hero.h1} onChange={(v) => set({ hero: { ...config.hero, h1: v } })} multiline />
         <Field label="Intro" value={config.hero.lede} onChange={(v) => set({ hero: { ...config.hero, lede: v } })} multiline />
@@ -82,18 +70,6 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
           <Field label="Secondary CTA" value={config.hero.secondaryCta} onChange={(v) => set({ hero: { ...config.hero, secondaryCta: v } })} />
         </div>
         <Field label="Secondary CTA link" value={config.hero.secondaryHref} onChange={(v) => set({ hero: { ...config.hero, secondaryHref: v } })} />
-        <AdminMediaField
-          label="Hero main browser image"
-          description="Central lodge / hospitality preview in the hero composition"
-          src={config.heroComposition.mainImage}
-          kind="image"
-          accept="image/jpeg,image/png,image/webp"
-          disabled={busy}
-          onPick={async (file) => {
-            const url = await uploadWebsiteDevImage("hero-main", file);
-            set({ heroComposition: { ...config.heroComposition, mainImage: url } });
-          }}
-        />
         <Field
           label="Main browser URL bar"
           value={config.heroComposition.mainBrowserUrl}
@@ -106,39 +82,48 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
         />
         {config.heroComposition.satellites.map((sat, index) => (
           <div key={index} className="rounded-xl border border-black/10 p-4">
-            <p className="mb-2 text-xs font-bold uppercase tracking-wide text-black/50">Satellite preview {index + 1}</p>
-            <AdminMediaField
-              label="Image"
-              src={sat.src}
-              kind="image"
-              accept="image/jpeg,image/png,image/webp"
-              disabled={busy}
-              onPick={async (file) => {
-                const url = await uploadWebsiteDevImage(`hero-sat-${index}`, file);
-                const satellites = config.heroComposition.satellites.map((s, i) =>
-                  i === index ? { ...s, src: url } : s,
-                );
-                set({ heroComposition: { ...config.heroComposition, satellites } });
-              }}
-            />
-            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            <p className="mb-2 text-xs font-bold uppercase tracking-wide text-black/50">Satellite label {index + 1}</p>
+            <div className="grid gap-3 sm:grid-cols-2">
               <Field
                 label="URL bar"
                 value={sat.url}
                 onChange={(v) => {
-                  const satellites = config.heroComposition.satellites.map((s, i) => (i === index ? { ...s, url: v } : s));
-                  set({ heroComposition: { ...config.heroComposition, satellites } });
+                  const satellites = config.heroComposition.satellites.map((s, i) => (i === index ? { ...s, url: v, src: "" } : s));
+                  set({ heroComposition: { ...config.heroComposition, mainImage: "", satellites } });
                 }}
               />
               <Field
-                label="Alt text"
+                label="Label"
                 value={sat.alt}
                 onChange={(v) => {
-                  const satellites = config.heroComposition.satellites.map((s, i) => (i === index ? { ...s, alt: v } : s));
-                  set({ heroComposition: { ...config.heroComposition, satellites } });
+                  const satellites = config.heroComposition.satellites.map((s, i) => (i === index ? { ...s, alt: v, src: "" } : s));
+                  set({ heroComposition: { ...config.heroComposition, mainImage: "", satellites } });
                 }}
               />
             </div>
+          </div>
+        ))}
+      </Panel>
+
+      <Panel title="Delivery stats" description="Four highlight tiles under the hero">
+        {config.stats.map((item, index) => (
+          <div key={index} className="grid gap-3 sm:grid-cols-2">
+            <Field
+              label={`Stat ${index + 1} value`}
+              value={item.value}
+              onChange={(v) => {
+                const stats = config.stats.map((s, i) => (i === index ? { ...s, value: v } : s));
+                set({ stats });
+              }}
+            />
+            <Field
+              label={`Stat ${index + 1} label`}
+              value={item.label}
+              onChange={(v) => {
+                const stats = config.stats.map((s, i) => (i === index ? { ...s, label: v } : s));
+                set({ stats });
+              }}
+            />
           </div>
         ))}
       </Panel>
@@ -170,6 +155,47 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
               set({ intro: { ...config.intro, paragraphs } });
             }}
           />
+        ))}
+      </Panel>
+
+      <Panel title="United States markets" description="Local and national copy plus internal links">
+        <Field
+          label="Section title"
+          value={config.usaMarkets.title}
+          multiline
+          onChange={(v) => set({ usaMarkets: { ...config.usaMarkets, title: v } })}
+        />
+        {config.usaMarkets.paragraphs.map((p, index) => (
+          <Field
+            key={index}
+            label={`Paragraph ${index + 1}`}
+            value={p}
+            multiline
+            onChange={(v) => {
+              const paragraphs = config.usaMarkets.paragraphs.map((para, i) => (i === index ? v : para));
+              set({ usaMarkets: { ...config.usaMarkets, paragraphs } });
+            }}
+          />
+        ))}
+        {config.usaMarkets.links.map((link, index) => (
+          <div key={index} className="grid gap-3 sm:grid-cols-2">
+            <Field
+              label={`Link ${index + 1} label`}
+              value={link.label}
+              onChange={(v) => {
+                const links = config.usaMarkets.links.map((item, i) => (i === index ? { ...item, label: v } : item));
+                set({ usaMarkets: { ...config.usaMarkets, links } });
+              }}
+            />
+            <Field
+              label={`Link ${index + 1} href`}
+              value={link.href}
+              onChange={(v) => {
+                const links = config.usaMarkets.links.map((item, i) => (i === index ? { ...item, href: v } : item));
+                set({ usaMarkets: { ...config.usaMarkets, links } });
+              }}
+            />
+          </div>
         ))}
       </Panel>
 
@@ -206,35 +232,15 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
         ))}
       </Panel>
 
-      <Panel title="Industry panels" description="Six showcases with replaceable images">
+      <Panel title="Industry panels" description="Six text showcases. Layout mocks are coded — no images.">
         {config.industries.map((panel, index) => (
           <div key={panel.id} className="rounded-xl border border-black/10 p-4 space-y-3">
             <p className="text-xs font-bold text-black/45">{panel.title}</p>
-            <AdminMediaField
-              label="Panel image"
-              src={panel.image}
-              kind="image"
-              accept="image/jpeg,image/png,image/webp"
-              disabled={busy}
-              onPick={async (file) => {
-                const url = await uploadWebsiteDevImage(`industry-${panel.id}`, file);
-                const industries = config.industries.map((p, i) => (i === index ? { ...p, image: url } : p));
-                set({ industries });
-              }}
-            />
-            <Field
-              label="Image alt"
-              value={panel.imageAlt}
-              onChange={(v) => {
-                const industries = config.industries.map((p, i) => (i === index ? { ...p, imageAlt: v } : p));
-                set({ industries });
-              }}
-            />
             <Field
               label="Title"
               value={panel.title}
               onChange={(v) => {
-                const industries = config.industries.map((p, i) => (i === index ? { ...p, title: v } : p));
+                const industries = config.industries.map((p, i) => (i === index ? { ...p, title: v, image: "", imageAlt: "" } : p));
                 set({ industries });
               }}
             />
@@ -243,7 +249,7 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
               value={panel.body}
               multiline
               onChange={(v) => {
-                const industries = config.industries.map((p, i) => (i === index ? { ...p, body: v } : p));
+                const industries = config.industries.map((p, i) => (i === index ? { ...p, body: v, image: "", imageAlt: "" } : p));
                 set({ industries });
               }}
             />
@@ -254,7 +260,7 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
                 value={point}
                 onChange={(v) => {
                   const points = panel.points.map((pt, i) => (i === pi ? v : pt));
-                  const industries = config.industries.map((p, i) => (i === index ? { ...p, points } : p));
+                  const industries = config.industries.map((p, i) => (i === index ? { ...p, points, image: "", imageAlt: "" } : p));
                   set({ industries });
                 }}
               />
@@ -263,24 +269,18 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
         ))}
       </Panel>
 
-      <Panel title="Demo showcase" description="Six fictional coded demos — upload a screenshot to replace the live demo UI">
+      <Panel title="Demo showcase" description="Six fictional coded demos. Screenshots are disabled — the page stays image-free.">
         <Field label="Section eyebrow" value={config.demoHeader.eyebrow} onChange={(v) => set({ demoHeader: { ...config.demoHeader, eyebrow: v } })} />
         <Field label="Title" value={config.demoHeader.title} onChange={(v) => set({ demoHeader: { ...config.demoHeader, title: v } })} />
         <Field label="Title accent" value={config.demoHeader.titleAccent} onChange={(v) => set({ demoHeader: { ...config.demoHeader, titleAccent: v } })} />
         <Field label="Lede" value={config.demoHeader.lede} onChange={(v) => set({ demoHeader: { ...config.demoHeader, lede: v } })} multiline />
         {config.demos.map((demo, index) => (
           <div key={demo.id} className="rounded-xl border border-black/10 p-4 space-y-3">
-            <p className="font-semibold text-[#1a1a22]">{demo.brand}</p>
-            <AdminMediaField
-              label="Static preview image (optional)"
-              description="When set, replaces the interactive coded demo in the browser frame"
-              src={demo.previewImageSrc}
-              kind="image"
-              accept="image/jpeg,image/png,image/webp"
-              disabled={busy}
-              onPick={async (file) => {
-                const url = await uploadWebsiteDevImage(`demo-${demo.id}`, file);
-                const demos = config.demos.map((d, i) => (i === index ? { ...d, previewImageSrc: url } : d));
+            <Field
+              label="Brand"
+              value={demo.brand}
+              onChange={(v) => {
+                const demos = config.demos.map((d, i) => (i === index ? { ...d, brand: v, previewImageSrc: "" } : d));
                 set({ demos });
               }}
             />
@@ -316,15 +316,39 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
               const demos = config.demos.map((d, i) => (i === index ? { ...d, conversionAction: v } : d));
               set({ demos });
             }} />
-            <Field label="UX note" value={demo.uxNote} onChange={(v) => {
-              const demos = config.demos.map((d, i) => (i === index ? { ...d, uxNote: v } : d));
+            <Field label="UX note" value={demo.uxNote} multiline onChange={(v) => {
+              const demos = config.demos.map((d, i) => (i === index ? { ...d, uxNote: v, previewImageSrc: "" } : d));
               set({ demos });
-            }} multiline />
+            }} />
+            {demo.bullets.map((bullet, bi) => (
+              <Field
+                key={`b-${bi}`}
+                label={`Bullet ${bi + 1}`}
+                value={bullet}
+                onChange={(v) => {
+                  const bullets = demo.bullets.map((item, i) => (i === bi ? v : item));
+                  const demos = config.demos.map((d, i) => (i === index ? { ...d, bullets, previewImageSrc: "" } : d));
+                  set({ demos });
+                }}
+              />
+            ))}
+            {demo.stack.map((item, si) => (
+              <Field
+                key={`s-${si}`}
+                label={`Stack ${si + 1}`}
+                value={item}
+                onChange={(v) => {
+                  const stack = demo.stack.map((entry, i) => (i === si ? v : entry));
+                  const demos = config.demos.map((d, i) => (i === index ? { ...d, stack, previewImageSrc: "" } : d));
+                  set({ demos });
+                }}
+              />
+            ))}
           </div>
         ))}
       </Panel>
 
-      <Panel title="Process, SEO, pricing, FAQ, closing CTA">
+      <Panel title="Process">
         {config.processSteps.map((step, index) => (
           <div key={index} className="space-y-2 border-b border-black/5 pb-4">
             <Field label={`Step ${index + 1} title`} value={step.title} onChange={(v) => {
@@ -341,17 +365,159 @@ export function AdminWebsiteDevelopmentEditor({ config, busy, status, onChange, 
             }} />
           </div>
         ))}
-        <Field label="SEO section title" value={config.seo.title} onChange={(v) => set({ seo: { ...config.seo, title: v } })} />
+      </Panel>
+
+      <Panel title="Technology">
+        <Field label="Title" value={config.tech.title} multiline onChange={(v) => set({ tech: { ...config.tech, title: v } })} />
+        {config.tech.paragraphs.map((p, i) => (
+          <Field key={i} label={`Paragraph ${i + 1}`} value={p} multiline onChange={(v) => {
+            const paragraphs = config.tech.paragraphs.map((para, j) => (j === i ? v : para));
+            set({ tech: { ...config.tech, paragraphs } });
+          }} />
+        ))}
+        {config.tech.stacks.map((stack, i) => (
+          <Field key={i} label={`Stack ${i + 1}`} value={stack} onChange={(v) => {
+            const stacks = config.tech.stacks.map((item, j) => (j === i ? v : item));
+            set({ tech: { ...config.tech, stacks } });
+          }} />
+        ))}
+      </Panel>
+
+      <Panel title="SEO section">
+        <Field label="Eyebrow" value={config.seo.eyebrow} onChange={(v) => set({ seo: { ...config.seo, eyebrow: v } })} />
+        <Field label="Title" value={config.seo.title} multiline onChange={(v) => set({ seo: { ...config.seo, title: v } })} />
         {config.seo.paragraphs.map((p, i) => (
-          <Field key={i} label={`SEO paragraph ${i + 1}`} value={p} multiline onChange={(v) => {
+          <Field key={i} label={`Paragraph ${i + 1}`} value={p} multiline onChange={(v) => {
             const paragraphs = config.seo.paragraphs.map((para, j) => (j === i ? v : para));
             set({ seo: { ...config.seo, paragraphs } });
           }} />
         ))}
-        <Field label="Pricing title" value={config.pricing.title} onChange={(v) => set({ pricing: { ...config.pricing, title: v } })} />
-        <Field label="Pricing intro" value={config.pricing.intro} multiline onChange={(v) => set({ pricing: { ...config.pricing, intro: v } })} />
-        <Field label="Final CTA title" value={config.finalCta.title} multiline onChange={(v) => set({ finalCta: { ...config.finalCta, title: v } })} />
-        <Field label="Final CTA lede" value={config.finalCta.lede} multiline onChange={(v) => set({ finalCta: { ...config.finalCta, lede: v } })} />
+        {config.seo.bullets.map((bullet, i) => (
+          <Field key={i} label={`Bullet ${i + 1}`} value={bullet} onChange={(v) => {
+            const bullets = config.seo.bullets.map((item, j) => (j === i ? v : item));
+            set({ seo: { ...config.seo, bullets } });
+          }} />
+        ))}
+      </Panel>
+
+      <Panel title="Core Web Vitals">
+        <Field label="Title" value={config.cwv.title} multiline onChange={(v) => set({ cwv: { ...config.cwv, title: v } })} />
+        {config.cwv.paragraphs.map((p, i) => (
+          <Field key={i} label={`Paragraph ${i + 1}`} value={p} multiline onChange={(v) => {
+            const paragraphs = config.cwv.paragraphs.map((para, j) => (j === i ? v : para));
+            set({ cwv: { ...config.cwv, paragraphs } });
+          }} />
+        ))}
+        {config.cwv.metrics.map((metric, index) => (
+          <div key={index} className="space-y-2 rounded-xl border border-black/10 p-4">
+            <Field label="Metric name" value={metric.name} onChange={(v) => {
+              const metrics = config.cwv.metrics.map((item, i) => (i === index ? { ...item, name: v } : item));
+              set({ cwv: { ...config.cwv, metrics } });
+            }} />
+            <Field label="Target" value={metric.target} onChange={(v) => {
+              const metrics = config.cwv.metrics.map((item, i) => (i === index ? { ...item, target: v } : item));
+              set({ cwv: { ...config.cwv, metrics } });
+            }} />
+            <Field label="Note" value={metric.note} multiline onChange={(v) => {
+              const metrics = config.cwv.metrics.map((item, i) => (i === index ? { ...item, note: v } : item));
+              set({ cwv: { ...config.cwv, metrics } });
+            }} />
+          </div>
+        ))}
+      </Panel>
+
+      <Panel title="Stack comparison">
+        <Field label="Title" value={config.stackCompare.title} multiline onChange={(v) => set({ stackCompare: { ...config.stackCompare, title: v } })} />
+        <Field label="Intro" value={config.stackCompare.intro} multiline onChange={(v) => set({ stackCompare: { ...config.stackCompare, intro: v } })} />
+        {config.stackCompare.rows.map((row, index) => (
+          <div key={index} className="space-y-2 rounded-xl border border-black/10 p-4">
+            <Field label="Stack" value={row.stack} onChange={(v) => {
+              const rows = config.stackCompare.rows.map((item, i) => (i === index ? { ...item, stack: v } : item));
+              set({ stackCompare: { ...config.stackCompare, rows } });
+            }} />
+            <Field label="Best for" value={row.bestFor} multiline onChange={(v) => {
+              const rows = config.stackCompare.rows.map((item, i) => (i === index ? { ...item, bestFor: v } : item));
+              set({ stackCompare: { ...config.stackCompare, rows } });
+            }} />
+            <Field label="Trade-off" value={row.tradeoff} multiline onChange={(v) => {
+              const rows = config.stackCompare.rows.map((item, i) => (i === index ? { ...item, tradeoff: v } : item));
+              set({ stackCompare: { ...config.stackCompare, rows } });
+            }} />
+          </div>
+        ))}
+      </Panel>
+
+      <Panel title="Quality and deliverables">
+        <Field label="Quality title" value={config.perf.title} onChange={(v) => set({ perf: { ...config.perf, title: v } })} />
+        {config.perf.paragraphs.map((p, i) => (
+          <Field key={i} label={`Quality paragraph ${i + 1}`} value={p} multiline onChange={(v) => {
+            const paragraphs = config.perf.paragraphs.map((para, j) => (j === i ? v : para));
+            set({ perf: { ...config.perf, paragraphs } });
+          }} />
+        ))}
+        {config.perf.bullets.map((bullet, i) => (
+          <Field key={i} label={`Quality bullet ${i + 1}`} value={bullet} onChange={(v) => {
+            const bullets = config.perf.bullets.map((item, j) => (j === i ? v : item));
+            set({ perf: { ...config.perf, bullets } });
+          }} />
+        ))}
+        <Field label="Deliverables eyebrow" value={config.deliverables.eyebrow} onChange={(v) => set({ deliverables: { ...config.deliverables, eyebrow: v } })} />
+        <Field label="Deliverables title" value={config.deliverables.title} onChange={(v) => set({ deliverables: { ...config.deliverables, title: v } })} />
+        {config.deliverables.bullets.map((bullet, i) => (
+          <Field key={i} label={`Deliverable ${i + 1}`} value={bullet} onChange={(v) => {
+            const bullets = config.deliverables.bullets.map((item, j) => (j === i ? v : item));
+            set({ deliverables: { ...config.deliverables, bullets } });
+          }} />
+        ))}
+      </Panel>
+
+      <Panel title="Pricing">
+        <Field label="Title" value={config.pricing.title} onChange={(v) => set({ pricing: { ...config.pricing, title: v } })} />
+        <Field label="Intro" value={config.pricing.intro} multiline onChange={(v) => set({ pricing: { ...config.pricing, intro: v } })} />
+        {config.pricing.factors.map((factor, i) => (
+          <Field key={i} label={`Factor ${i + 1}`} value={factor} onChange={(v) => {
+            const factors = config.pricing.factors.map((item, j) => (j === i ? v : item));
+            set({ pricing: { ...config.pricing, factors } });
+          }} />
+        ))}
+        <Field label="Packages link" value={config.pricing.packagesHref} onChange={(v) => set({ pricing: { ...config.pricing, packagesHref: v } })} />
+        <Field label="CTA label" value={config.pricing.ctaLabel} onChange={(v) => set({ pricing: { ...config.pricing, ctaLabel: v } })} />
+      </Panel>
+
+      <Panel title="Why Global Orbit and related links">
+        <Field label="Why title" value={config.why.title} onChange={(v) => set({ why: { ...config.why, title: v } })} />
+        {config.why.paragraphs.map((p, i) => (
+          <Field key={i} label={`Why paragraph ${i + 1}`} value={p} multiline onChange={(v) => {
+            const paragraphs = config.why.paragraphs.map((para, j) => (j === i ? v : para));
+            set({ why: { ...config.why, paragraphs } });
+          }} />
+        ))}
+        <Field label="Portfolio eyebrow" value={config.portfolio.eyebrow} onChange={(v) => set({ portfolio: { ...config.portfolio, eyebrow: v } })} />
+        <Field label="Portfolio title" value={config.portfolio.title} onChange={(v) => set({ portfolio: { ...config.portfolio, title: v } })} />
+        <Field label="Portfolio lede" value={config.portfolio.lede} multiline onChange={(v) => set({ portfolio: { ...config.portfolio, lede: v } })} />
+        <Field label="Portfolio link label" value={config.portfolio.linkLabel} onChange={(v) => set({ portfolio: { ...config.portfolio, linkLabel: v } })} />
+        <Field label="Portfolio href" value={config.portfolio.href} onChange={(v) => set({ portfolio: { ...config.portfolio, href: v } })} />
+        {config.related.map((item, index) => (
+          <div key={index} className="grid gap-3 sm:grid-cols-2">
+            <Field label={`Related ${index + 1} label`} value={item.label} onChange={(v) => {
+              const related = config.related.map((entry, i) => (i === index ? { ...entry, label: v } : entry));
+              set({ related });
+            }} />
+            <Field label={`Related ${index + 1} href`} value={item.href} onChange={(v) => {
+              const related = config.related.map((entry, i) => (i === index ? { ...entry, href: v } : entry));
+              set({ related });
+            }} />
+          </div>
+        ))}
+      </Panel>
+
+      <Panel title="Closing CTA">
+        <Field label="Title" value={config.finalCta.title} multiline onChange={(v) => set({ finalCta: { ...config.finalCta, title: v } })} />
+        <Field label="Lede" value={config.finalCta.lede} multiline onChange={(v) => set({ finalCta: { ...config.finalCta, lede: v } })} />
+        <Field label="Primary button" value={config.finalCta.primary} onChange={(v) => set({ finalCta: { ...config.finalCta, primary: v } })} />
+        <Field label="Secondary button" value={config.finalCta.secondary} onChange={(v) => set({ finalCta: { ...config.finalCta, secondary: v } })} />
+        <Field label="WhatsApp label" value={config.finalCta.whatsappLabel} onChange={(v) => set({ finalCta: { ...config.finalCta, whatsappLabel: v } })} />
+        <Field label="WhatsApp link" value={config.finalCta.whatsappHref} onChange={(v) => set({ finalCta: { ...config.finalCta, whatsappHref: v } })} />
       </Panel>
 
       <Panel title="FAQ" description="Accordion questions — one block per item">
