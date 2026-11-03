@@ -1,6 +1,5 @@
 import type { ComponentType } from "react";
-
-const IMG = "/brand/website-demos";
+import { WdPh } from "@/components/services/website-development/wd-visuals";
 
 function Topbar({
   brand,
@@ -32,10 +31,10 @@ export function DemoSummitLodge() {
       <Topbar brand="Summit Lodge" links={["Rooms", "Dining", "Offers"]} cta="Check availability" theme="light" />
       <section className="wd-app-hero-row">
         <div>
-          <p className="wd-app-kicker">Nagarkot · 12 rooms</p>
+          <p className="wd-app-kicker">Rocky Mountain · 24 rooms</p>
           <p className="wd-app-demo-title">Book a quiet night above the ridge</p>
           <p className="wd-app-lede">Forest suites, fireside dining, and airport transfer on request.</p>
-          <form className="wd-app-book" onSubmit={(e) => e.preventDefault()}>
+          <div className="wd-app-book">
             <label>
               Check-in
               <input defaultValue="12 Oct" readOnly />
@@ -49,24 +48,24 @@ export function DemoSummitLodge() {
               <input defaultValue="2 adults" readOnly />
             </label>
             <button type="button">Show rooms</button>
-          </form>
+          </div>
         </div>
         <aside className="wd-app-gallery">
-          <img src={`${IMG}/lodge-hero.jpg`} alt="" />
+          <WdPh variant="lodge" ratio="16 / 11" />
           <div>
-            <img src={`${IMG}/lodge-room-1.jpg`} alt="" />
-            <img src={`${IMG}/lodge-room-2.jpg`} alt="" />
+            <WdPh variant="lodge" ratio="1" compact />
+            <WdPh variant="lodge" ratio="1" compact />
           </div>
         </aside>
       </section>
       <section className="wd-app-rooms">
         {[
-          [`${IMG}/lodge-room-1.jpg`, "Forest deluxe", "NPR 12,500", "King · garden"],
-          [`${IMG}/lodge-room-2.jpg`, "Panorama suite", "NPR 18,900", "Valley view"],
-          [`${IMG}/lodge-room-3.jpg`, "Hill cottage", "NPR 15,200", "Fireplace"],
-        ].map(([src, name, price, meta]) => (
+          ["Forest deluxe", "From $189", "King · garden"],
+          ["Panorama suite", "From $279", "Valley view"],
+          ["Hill cottage", "From $219", "Fireplace"],
+        ].map(([name, price, meta]) => (
           <article key={name}>
-            <img src={src} alt="" />
+            <WdPh variant="lodge" ratio="4 / 3" compact />
             <div>
               <h2>{name}</h2>
               <p>{meta}</p>
@@ -85,9 +84,9 @@ export function DemoTrailhead() {
       <Topbar brand="Trailhead" links={["Expeditions", "Guides", "Gear"]} cta="Request dates" />
       <section className="wd-app-hero-row wd-app-hero-row--trail">
         <div>
-          <p className="wd-app-kicker">Everest region · 14 days</p>
+          <p className="wd-app-kicker">Colorado · 14 days</p>
           <p className="wd-app-demo-title">Departures with named guides</p>
-          <p className="wd-app-lede">Small groups, porter welfare, and a written altitude plan before you fly to Lukla.</p>
+          <p className="wd-app-lede">Small groups, gear checks, and a written altitude plan before you fly.</p>
           <button type="button" className="wd-app-primary">
             Get the itinerary
           </button>
@@ -103,17 +102,17 @@ export function DemoTrailhead() {
           <tbody>
             <tr>
               <td>18 Oct</td>
-              <td>EBC classic</td>
+              <td>High route classic</td>
               <td>4 left</td>
             </tr>
             <tr>
               <td>02 Nov</td>
-              <td>Gokyo lakes</td>
+              <td>Alpine lakes</td>
               <td>6 left</td>
             </tr>
             <tr>
               <td>14 Nov</td>
-              <td>Island Peak</td>
+              <td>Summit skills</td>
               <td>Waitlist</td>
             </tr>
           </tbody>
@@ -129,14 +128,14 @@ export function DemoEmberSlate() {
       <Topbar brand="Ember & Slate" links={["Menu", "Wine", "Private"]} cta="Reserve" />
       <section className="wd-app-hero-row wd-app-hero-row--ember">
         <div>
-          <p className="wd-app-kicker">United States · Thu–Sun</p>
+          <p className="wd-app-kicker">Denver · Thu–Sun</p>
           <p className="wd-app-demo-title">Seven-course tasting, one seating</p>
           <p className="wd-app-lede">Wood-fired produce and natural wines. Last table 21:30.</p>
-          <form className="wd-app-reserve" onSubmit={(e) => e.preventDefault()}>
+          <div className="wd-app-reserve">
             <input defaultValue="Saturday" readOnly />
             <input defaultValue="2 guests" readOnly />
             <button type="button">Hold table</button>
-          </form>
+          </div>
         </div>
         <ol className="wd-app-menu">
           <li>
@@ -163,17 +162,17 @@ export function DemoNorwood() {
           <p className="wd-app-kicker">Winter 2026</p>
           <p className="wd-app-demo-title">Hill-morning layers</p>
         </div>
-        <p>Merino, structure, and export-ready sizes. Pickup in Thamel.</p>
+        <p>Merino, structure, and export-ready sizes. Pickup in-store.</p>
       </section>
       <section className="wd-app-products">
         {[
-          [`${IMG}/fashion-1.jpg`, "Alpine coat", "NPR 18,900"],
-          [`${IMG}/fashion-2.jpg`, "Ridge scarf", "NPR 4,200"],
-          [`${IMG}/fashion-3.jpg`, "Summit boot", "NPR 12,400"],
-          [`${IMG}/fashion-hero.jpg`, "Wool overshirt", "NPR 9,800"],
-        ].map(([src, name, price]) => (
+          ["Alpine coat", "$189"],
+          ["Ridge scarf", "$42"],
+          ["Summit boot", "$124"],
+          ["Wool overshirt", "$98"],
+        ].map(([name, price]) => (
           <article key={name}>
-            <img src={src} alt="" />
+            <WdPh variant="shop" ratio="3 / 4" compact />
             <h2>{name}</h2>
             <p>{price}</p>
             <button type="button">Add</button>
@@ -234,10 +233,10 @@ export function DemoHavenSpa() {
       <Topbar brand="Haven Spa" links={["Rituals", "Therapists", "Gifts"]} cta="Book" theme="sage" />
       <section className="wd-app-hero-row wd-app-hero-row--spa">
         <div>
-          <p className="wd-app-kicker">Thamel · Daily 10:00–21:00</p>
+          <p className="wd-app-kicker">Downtown · Daily 10:00–21:00</p>
           <p className="wd-app-demo-title">Book a ritual, not a popup</p>
           <p className="wd-app-lede">Therapist matched to pressure. Gift vouchers at reception.</p>
-          <form className="wd-app-book wd-app-book--spa" onSubmit={(e) => e.preventDefault()}>
+          <div className="wd-app-book wd-app-book--spa">
             <label>
               Treatment
               <input defaultValue="Deep tissue 60" readOnly />
@@ -247,21 +246,21 @@ export function DemoHavenSpa() {
               <input defaultValue="16:30" readOnly />
             </label>
             <button type="button">Confirm</button>
-          </form>
+          </div>
         </div>
         <ul className="wd-app-treats">
           <li>
-            <img src={`${IMG}/spa-1.jpg`} alt="" />
+            <WdPh variant="spa" ratio="1" compact />
             <div>
               <h2>Deep tissue</h2>
-              <p>60 min · NPR 4,200</p>
+              <p>60 min · $89</p>
             </div>
           </li>
           <li>
-            <img src={`${IMG}/spa-hero.jpg`} alt="" />
+            <WdPh variant="spa" ratio="1" compact />
             <div>
               <h2>Couples ritual</h2>
-              <p>120 min · NPR 9,800</p>
+              <p>120 min · $198</p>
             </div>
           </li>
         </ul>

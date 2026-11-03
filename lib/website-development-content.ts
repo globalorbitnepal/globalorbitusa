@@ -6,12 +6,77 @@ export const WD_BREADCRUMB = { parent: "Solutions", parentHref: "/services", cur
 
 export const WD_HERO = {
   eyebrow: "Global Orbit · Website Development USA",
-  h1: "Website Development Company in USA for Ambitious Businesses",
+  h1: "Website Development Company in the USA for Growth-Focused Businesses",
   lede:
-    "Global Orbit designs and builds custom business websites, e-commerce stores, hospitality and travel experiences, restaurant sites, and scalable web applications — with responsive layouts, clear user journeys, and SEO-ready structure from United States for USA and international brands.",
+    "Global Orbit plans, designs, and engineers custom websites for U.S. companies — from Denver startups to nationwide brands. You get mobile-first layouts, conversion-ready service pages, technical SEO structure, and maintainable code on Next.js, WordPress, or the stack that fits your team — without relying on stock-photo templates.",
   primaryCta: "Start Your Project",
   secondaryCta: "Explore Our Work",
   secondaryHref: "/projects",
+};
+
+export const WD_STATS = [
+  { value: "6–10 wk", label: "Typical business site delivery" },
+  { value: "100%", label: "Mobile-responsive builds" },
+  { value: "SEO", label: "Technical foundations included" },
+  { value: "+1 (303) 217-6150", label: "Denver · WhatsApp & phone" },
+];
+
+export const WD_USA_MARKETS = {
+  title: "Website development for U.S. markets — local intent, national reach",
+  paragraphs: [
+    "Whether you need a Denver service business site, a multi-location franchise hub, or an e-commerce brand shipping across the United States, the same principles apply: clear hierarchy, fast first paint on mobile, trustworthy contact paths, and crawlable URLs that match how people search.",
+    "We map page templates to search intent — “website developer near me,” “custom WordPress developer USA,” “affordable business website design,” and industry-specific queries for hotels, restaurants, SaaS, and professional services. Content depth on this page is intentional: search engines and buyers both reward specificity over thin service blurbs.",
+    "Global Orbit works in English for U.S. audiences by default. Spanish or bilingual rollouts are scoped when you need them. Hosting, DNS, and analytics setup are documented in your handover — you keep ownership of domains and accounts.",
+  ],
+  links: [
+    { label: "Affordable website design USA", href: "/affordable-website-design-usa" },
+    { label: "Hire a website developer", href: "/hire-website-developer-usa" },
+    { label: "Website design Denver", href: "/website-design-denver" },
+    { label: "SEO services USA", href: "/seo-services-usa" },
+  ],
+};
+
+export const WD_CWV = {
+  title: "Core Web Vitals, performance budgets, and why they matter for revenue",
+  paragraphs: [
+    "Google’s Core Web Vitals — Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS) — correlate with real user patience. A slow mobile hero costs enquiries even when your copy is perfect.",
+    "We treat performance as a requirement, not a launch-week patch: font loading strategy, minimal blocking JavaScript on marketing routes, stable hero layout without jumping buttons, and lazy hydration for interactive widgets. When you choose Next.js, we use the App Router, static generation where possible, and edge-friendly assets.",
+    "We do not guarantee a specific Lighthouse score on day one — third-party scripts, chat widgets, and heavy video embeds affect results — but we document trade-offs before you approve them.",
+  ],
+  metrics: [
+    { name: "LCP", target: "Under ~2.5s on representative mobile", note: "Typography-led heroes without oversized media" },
+    { name: "INP", target: "Responsive taps on forms and nav", note: "Lean client bundles on brochure pages" },
+    { name: "CLS", target: "Stable layout while fonts load", note: "Reserved space for CTAs and embeds" },
+    { name: "Crawl", target: "Clean sitemap + canonical URLs", note: "Robots, redirects, and schema in launch checklist" },
+  ],
+};
+
+export const WD_STACK_COMPARE = {
+  title: "Choosing the right website stack for your team",
+  intro:
+    "There is no universal “best” platform — only the best fit for who will edit the site, how complex checkout or booking is, and how unique the UX must be.",
+  rows: [
+    {
+      stack: "Next.js + React",
+      bestFor: "Performance-led marketing sites, product landing pages, and app shells",
+      tradeoff: "Editors need a defined CMS or developer for structural changes",
+    },
+    {
+      stack: "WordPress + WooCommerce",
+      bestFor: "Teams that live in the block editor and mid-size catalogues",
+      tradeoff: "Plugin hygiene and hosting quality determine speed",
+    },
+    {
+      stack: "Shopify",
+      bestFor: "Retail brands that prioritize catalogue ops over custom cart logic",
+      tradeoff: "Theme constraints unless headless is scoped",
+    },
+    {
+      stack: "Laravel / Node APIs",
+      bestFor: "Portals, dashboards, and authenticated workflows",
+      tradeoff: "Higher build investment; separate from brochure templates",
+    },
+  ],
 };
 
 export const WD_TRUST = [
@@ -24,11 +89,12 @@ export const WD_TRUST = [
 ];
 
 export const WD_INTRO = {
-  title: "What professional website development actually means",
+  title: "What professional website development actually means in 2026",
   paragraphs: [
     "A basic website is a collection of pages online. A professional business website is a planned digital asset: it presents your brand credibly, guides visitors toward enquiry or purchase, loads quickly on phones, and can be found when people search for what you offer.",
-    "Professional development connects brand presentation, user experience, mobile responsiveness, page speed, search-friendly structure, conversion-focused layout, maintainable code, and integrations with the tools you already use — payments, booking, CRM, or inventory.",
+    "Professional development connects brand presentation, user experience, mobile responsiveness, page speed, search-friendly structure, conversion-focused layout, maintainable code, and integrations with the tools you already use — Stripe, Square, OpenTable-style reservations, HubSpot forms, booking engines, or inventory systems.",
     "Global Orbit treats these elements as one delivery, not a checklist added at the end. The goal is a site your team can run after launch, not a fragile template that breaks the first time you edit a heading.",
+    "This service page is long on purpose. It explains how we scope, build, and launch so you can compare agencies fairly — and so search engines understand our expertise across industries and technologies.",
   ],
 };
 
@@ -285,11 +351,12 @@ export const WD_PRICING = {
 };
 
 export const WD_WHY = {
-  title: "Why choose Global Orbit",
+  title: "Why choose Global Orbit for website development in the USA",
   paragraphs: [
-    "We are an engineering-led studio in United States with delivery overlap for India and the United States — websites, SEO, software, and ERP from one team when you need to grow.",
-    "Client sites receive original art direction. Our marketing site demonstrates our craft; your brand does not inherit its layout.",
-    "Milestones, staging links, and named contacts keep projects legible for owners and finance. Handover includes documentation so you are not locked to mystery hosting.",
+    "We are an engineering-led studio serving U.S. clients from Denver, Colorado, with delivery support across time zones — websites, SEO, custom software, and ERP from one team when you need to grow without juggling vendors.",
+    "Every client receives original art direction. The coded demos on this page show craft; your brand never inherits our marketing layout.",
+    "Milestones, staging links, and named contacts keep projects legible for owners and finance. Handover includes documentation so you are not locked to opaque hosting.",
+    "Call or WhatsApp +1 (303) 217-6150 when you want a scope conversation — we respond with next steps, not a generic brochure PDF.",
   ],
 };
 
@@ -345,7 +412,15 @@ export const WD_FAQ_EXTENDED = [
   },
   {
     q: "Can you integrate online payments?",
-    a: "Yes when gateways such as Stripe, eSewa, or Khalti are in scope. Integration work is documented in your quote.",
+    a: "Yes when gateways such as Stripe, Square, PayPal, or Authorize.net are in scope. Integration work and PCI considerations are documented in your quote.",
+  },
+  {
+    q: "Do you offer affordable website development for small businesses in the USA?",
+    a: "Yes. Starter packages and structured templates keep cost predictable for solopreneurs and local service businesses. See our affordable website design page or contact us with your page list for a written estimate.",
+  },
+  {
+    q: "Can I hire Global Orbit as a dedicated website developer for my company?",
+    a: "Yes — project-based builds and longer retainers are available. Share your stack, timeline, and internal stakeholders on the hire-a-developer page or via contact.",
   },
   {
     q: "Will my website be SEO-friendly?",

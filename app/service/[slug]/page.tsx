@@ -22,6 +22,10 @@ const WEBSITE_DEV_KEYWORDS = [
   "Next.js website usa",
   "SEO friendly website usa",
   "business website united states",
+  "affordable website design usa",
+  "hire website developer usa",
+  "website design denver",
+  "custom wordpress developer usa",
   "Global Orbit web development",
 ];
 
@@ -36,9 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === WEBSITE_DEV_SLUG) {
     return applyPageSeo(item.href, {
-      title: "Website Development USA | Custom Business Websites | Global Orbit",
+      title: "Website Development USA | Custom Business Websites · Global Orbit",
       description:
-        "Website development in USA — custom business sites, e-commerce, hotel and travel websites, responsive design, and SEO-ready builds by Global Orbit United States.",
+        "Long-form guide to professional website development in the USA — custom design, Next.js and WordPress builds, e-commerce, hospitality, technical SEO, Core Web Vitals, pricing factors, and FAQs. Denver-based Global Orbit. Call +1 (303) 217-6150.",
       keywords: WEBSITE_DEV_KEYWORDS,
     });
   }

@@ -10296,6 +10296,7 @@ li.orbit-card:hover {
   color: #fff;
 }
 
+.wd-app-gallery .wd-ph,
 .wd-app-gallery img {
   height: 9.5rem;
   border-radius: 0.7rem;
@@ -10308,6 +10309,7 @@ li.orbit-card:hover {
   margin-top: 0.4rem;
 }
 
+.wd-app-gallery div .wd-ph,
 .wd-app-gallery div img {
   height: 4.4rem;
 }
@@ -10331,6 +10333,7 @@ li.orbit-card:hover {
   border: 1px solid rgba(0,0,0,0.06);
 }
 
+.wd-app-rooms .wd-ph,
 .wd-app-rooms img {
   height: 3.4rem;
   border-radius: 0.4rem;
@@ -10473,6 +10476,7 @@ li.orbit-card:hover {
   padding-bottom: 0.55rem;
 }
 
+.wd-app-products .wd-ph,
 .wd-app-products img {
   height: 7.2rem;
 }
@@ -10608,6 +10612,7 @@ li.orbit-card:hover {
   overflow: hidden;
 }
 
+.wd-app-treats .wd-ph,
 .wd-app-treats img {
   height: 4.4rem;
 }
@@ -14797,9 +14802,10 @@ html.orbit-mobile-lite .orbit-premium-reveal {
   text-align: right;
 }
 
+.wd-hero-sat-screen .wd-hero-sat-ui,
 .wd-hero-sat-screen img {
   width: 100%;
-  height: auto;
+  min-height: 4.5rem;
   display: block;
 }
 
@@ -15685,5 +15691,372 @@ html.orbit-standalone .orbit-app-dock {
   .orbit-pwa-banner,
   .orbit-pwa-ios {
     display: none !important;
+  }
+}
+
+/* Website development — image-free placeholders & long-form sections */
+.wd-ph {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--wd-ph-ratio, 4 / 3);
+  border-radius: 0.55rem;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.08));
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.wd-ph--compact {
+  border-radius: 0.4rem;
+}
+
+.wd-ph-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.18) 50%, transparent 70%);
+  opacity: 0.45;
+}
+
+.wd-ph-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: 0.35;
+}
+
+.wd-ph--lodge {
+  background: linear-gradient(145deg, #3d5a45, #1e2f24 55%, #0f1712);
+}
+
+.wd-ph--trail {
+  background: linear-gradient(145deg, #2b3d52, #111820);
+}
+
+.wd-ph--shop {
+  background: linear-gradient(145deg, #e8e4dc, #c9c0b0);
+}
+
+.wd-ph--spa {
+  background: linear-gradient(145deg, #d8e8e0, #9bb8a8);
+}
+
+.wd-ph--ember {
+  background: linear-gradient(145deg, #3a2418, #120c08);
+}
+
+.wd-ph--corporate {
+  background: linear-gradient(145deg, #4f46e5, #1e1b4b);
+}
+
+.wd-ph--saas {
+  background: linear-gradient(145deg, #0ea5e9, #0f172a);
+}
+
+.wd-ph--neutral {
+  background: linear-gradient(145deg, #27272a, #09090b);
+}
+
+.wd-hero-preview-main {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1rem;
+  padding: 1.1rem 1.15rem 1.25rem;
+  align-items: start;
+}
+
+.wd-hero-preview-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.wd-hero-preview-cta span {
+  font-size: 0.72rem;
+  font-weight: 650;
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.4rem;
+  background: #111;
+  color: #fff;
+}
+
+.wd-hero-preview-ghost {
+  background: transparent !important;
+  color: #111 !important;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.wd-hero-preview-stack {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.wd-hero-preview-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.wd-hero-preview-metrics span {
+  font-size: 0.58rem;
+  text-align: center;
+  padding: 0.35rem 0.25rem;
+  border-radius: 0.35rem;
+  background: rgba(0, 0, 0, 0.04);
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.wd-hero-preview-metrics b {
+  display: block;
+  font-size: 0.78rem;
+  color: #111;
+}
+
+.wd-hero-sat-ui {
+  padding: 0.45rem 0.4rem 0.55rem;
+  min-height: 4.25rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.wd-hero-sat-ui-bar {
+  height: 0.35rem;
+  width: 38%;
+  border-radius: 999px;
+  background: rgba(240, 196, 58, 0.75);
+}
+
+.wd-hero-sat-ui-line {
+  height: 0.22rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.wd-hero-sat-ui-line--lg {
+  width: 72%;
+}
+
+.wd-hero-sat-ui-block {
+  margin-top: 0.15rem;
+  height: 1.35rem;
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.wd-hero-sat-ui--lodge {
+  background: linear-gradient(180deg, #2f4535, #141c16);
+}
+
+.wd-hero-sat-ui--trail {
+  background: linear-gradient(180deg, #1a2838, #0a0e14);
+}
+
+.wd-hero-sat-ui--shop {
+  background: linear-gradient(180deg, #ebe6dc, #b8ae9c);
+}
+
+.wd-hero-sat-ui--shop .wd-hero-sat-ui-line {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.wd-hero-sat-ui--saas {
+  background: linear-gradient(180deg, #1e3a5f, #0b1220);
+}
+
+.wd-industry-mock {
+  background: #0a0a10;
+  min-height: 12rem;
+}
+
+.wd-industry-mock-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.55rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.wd-industry-mock-chrome span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.wd-industry-mock-chrome em {
+  margin-left: auto;
+  font-size: 0.62rem;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.wd-industry-mock-body {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0.65rem;
+  padding: 0.75rem;
+  align-items: stretch;
+}
+
+.wd-industry-mock-copy {
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+}
+
+.wd-industry-mock-copy i {
+  display: block;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.wd-industry-mock-copy i:nth-child(1) {
+  width: 55%;
+}
+
+.wd-industry-mock-copy i:nth-child(2) {
+  width: 88%;
+}
+
+.wd-industry-mock-copy i:nth-child(3) {
+  width: 72%;
+}
+
+.wd-industry-mock-copy b {
+  display: block;
+  margin-top: 0.35rem;
+  height: 1.6rem;
+  border-radius: 0.35rem;
+  background: rgba(240, 196, 58, 0.22);
+}
+
+.wd-stats-band {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+}
+
+.wd-stats-band li {
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.wd-stats-band strong {
+  display: block;
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #f0c43a;
+}
+
+.wd-stats-band span {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.wd-usa-link-pill {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(240, 196, 58, 0.28);
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.wd-usa-link-pill:hover {
+  border-color: rgba(240, 196, 58, 0.55);
+  background: rgba(240, 196, 58, 0.08);
+}
+
+.wd-metric-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+.wd-metric-card {
+  padding: 1rem 1.05rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.wd-metric-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f0c43a;
+}
+
+.wd-metric-target {
+  margin-top: 0.45rem;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.wd-metric-note {
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.wd-compare-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wd-compare-table {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.wd-compare-table th,
+.wd-compare-table td {
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+  vertical-align: top;
+}
+
+.wd-compare-table thead th {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.wd-compare-table tbody th {
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.88);
+  white-space: nowrap;
+}
+
+.wd-compare-table td {
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .wd-hero-preview-main {
+    grid-template-columns: 1fr;
+  }
+
+  .wd-industry-mock-body {
+    grid-template-columns: 1fr;
   }
 }

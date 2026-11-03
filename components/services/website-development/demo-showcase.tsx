@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import type { WebsiteDevDemoConfig } from "@/lib/website-development-page-config";
 import { bindOrbitScroll } from "@/lib/orbit/scroll-performance";
 import { WebsiteDemoBrowser } from "@/components/services/website-development/demo-browser";
@@ -72,20 +71,7 @@ export function WebsiteDevDemoShowcase({ demos, header }: { demos: WebsiteDevDem
                   }}
                   className="orbit-wd-hero-frame"
                 >
-                  <WebsiteDemoBrowser url={demo.demoUrl || "demo.test"}>
-                    {demo.previewImageSrc?.trim() ? (
-                      <Image
-                        src={demo.previewImageSrc}
-                        alt={`${demo.brand} demo preview`}
-                        width={1280}
-                        height={800}
-                        className="wd-demo-static-preview"
-                        sizes="(max-width: 900px) 94vw, 820px"
-                      />
-                    ) : Demo ? (
-                      <Demo />
-                    ) : null}
-                  </WebsiteDemoBrowser>
+                  <WebsiteDemoBrowser url={demo.demoUrl || "demo.test"}>{Demo ? <Demo /> : null}</WebsiteDemoBrowser>
                 </div>
                 <dl className="wd-demo-details">
                   <div>

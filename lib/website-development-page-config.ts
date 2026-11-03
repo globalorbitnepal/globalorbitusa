@@ -115,14 +115,14 @@ export function buildDefaultWebsiteDevelopmentPageConfig(): WebsiteDevelopmentPa
   return {
     hero: { ...WD_HERO },
     heroComposition: {
-      caption: "Conceptual layouts — fictional brands for demonstration",
-      mainImage: "/brand/website-demos/lodge-hero.jpg",
-      mainBrowserUrl: "yourbrand.com.np",
+      caption: "Coded interface preview — no stock photography on this page",
+      mainImage: "",
+      mainBrowserUrl: "yourbrand.com",
       satellites: [
-        { src: "/brand/website-demos/trek-hero.jpg", url: "trail.demo", alt: "Trekking website concept preview" },
-        { src: "/brand/website-demos/fashion-hero.jpg", url: "shop.demo", alt: "E-commerce website concept preview" },
-        { src: "/brand/website-demos/dine-hero.jpg", url: "dine.demo", alt: "Restaurant website concept preview" },
-        { src: "/brand/website-demos/saas-hero.jpg", url: "app.demo", alt: "SaaS marketing site concept preview" },
+        { src: "", url: "hotel.demo", alt: "Hospitality layout concept" },
+        { src: "", url: "trek.demo", alt: "Travel layout concept" },
+        { src: "", url: "shop.demo", alt: "Retail layout concept" },
+        { src: "", url: "app.demo", alt: "SaaS layout concept" },
       ],
     },
     trust: WD_TRUST.map((item) => ({ ...item })),
@@ -137,11 +137,11 @@ export function buildDefaultWebsiteDevelopmentPageConfig(): WebsiteDevelopmentPa
     })),
     industries: WD_INDUSTRIES.map((p) => ({ ...p, points: [...p.points] })),
     demoHeader: {
-      eyebrow: "Fictional demos · original art direction",
+      eyebrow: "Fictional demos · coded UI only",
       title: "Six coded homepages,",
       titleAccent: "six distinct industries",
       lede:
-        "Each frame is a working interface — navigation, forms, and product UI. These are fictional brands for demonstration; your project receives original design after discovery.",
+        "Each frame is a working interface — navigation, forms, and product UI built with HTML and CSS placeholders instead of stock images. These are fictional brands for demonstration; your project receives original design after discovery.",
     },
     demos: WEBSITE_DEV_DEMOS.map((demo) => ({
       ...demo,

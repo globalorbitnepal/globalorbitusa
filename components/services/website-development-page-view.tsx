@@ -5,8 +5,9 @@ import { WebsiteDevDemoShowcase } from "@/components/services/website-developmen
 import { WebsiteDevHeroShowcase } from "@/components/services/website-development/hero-showcase";
 import { WebsiteDevBreadcrumbs } from "@/components/services/website-development/wd-breadcrumbs";
 import { WebsiteDevFaq } from "@/components/services/website-development/wd-faq";
+import { WdIndustryMock } from "@/components/services/website-development/wd-visuals";
 import type { WebsiteDevelopmentPageConfig } from "@/lib/website-development-page-config";
-import Image from "next/image";
+import { WD_CWV, WD_STACK_COMPARE, WD_STATS, WD_USA_MARKETS } from "@/lib/website-development-content";
 
 function Badge({ children }: { children: ReactNode }) {
   return <span className="orbit-about-badge">{children}</span>;
@@ -70,6 +71,21 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
         </div>
       </section>
 
+      <section className="orbit-projects-tight px-4 sm:px-6 lg:px-8" aria-label="Delivery highlights">
+        <div className="mx-auto max-w-[82rem]">
+          <AboutReveal>
+            <ul className="wd-stats-band">
+              {WD_STATS.map((stat) => (
+                <li key={stat.label}>
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
+                </li>
+              ))}
+            </ul>
+          </AboutReveal>
+        </div>
+      </section>
+
       <section className="orbit-projects-tight px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[82rem]">
           <AboutReveal>
@@ -81,6 +97,33 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
                   {p}
                 </p>
               ))}
+            </div>
+          </AboutReveal>
+        </div>
+      </section>
+
+      <section className="orbit-projects-tight px-4 sm:px-6 lg:px-8" aria-labelledby="wd-usa-markets-heading">
+        <div className="mx-auto max-w-[82rem]">
+          <AboutReveal>
+            <div className="orbit-about-glass orbit-about-story">
+              <Badge>United States</Badge>
+              <h2 id="wd-usa-markets-heading" className="orbit-about-h2 mt-4">
+                {WD_USA_MARKETS.title}
+              </h2>
+              {WD_USA_MARKETS.paragraphs.map((p) => (
+                <p key={p.slice(0, 48)} className="mt-4 text-base leading-relaxed text-white/58">
+                  {p}
+                </p>
+              ))}
+              <ul className="wd-usa-links mt-8 flex flex-wrap gap-2">
+                {WD_USA_MARKETS.links.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="wd-usa-link-pill">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </AboutReveal>
         </div>
@@ -128,7 +171,7 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
               {industries.map((panel) => (
                 <li key={panel.id} className="wd-industry-panel">
                   <div className="wd-industry-visual">
-                    <Image src={panel.image} alt={panel.imageAlt} width={800} height={500} sizes="(max-width: 768px) 100vw, 50vw" />
+                    <WdIndustryMock id={panel.id} />
                   </div>
                   <div className="wd-industry-copy">
                     <h3>{panel.title}</h3>
@@ -221,6 +264,67 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
         </div>
       </section>
 
+      <section className="orbit-projects-tight px-4 sm:px-6 lg:px-8" aria-labelledby="wd-cwv-heading">
+        <div className="mx-auto max-w-[82rem]">
+          <AboutReveal>
+            <div className="orbit-about-glass orbit-about-story">
+              <Badge>Performance</Badge>
+              <h2 id="wd-cwv-heading" className="orbit-about-h2 mt-4">
+                {WD_CWV.title}
+              </h2>
+              {WD_CWV.paragraphs.map((p) => (
+                <p key={p.slice(0, 40)} className="mt-4 text-base leading-relaxed text-white/58">
+                  {p}
+                </p>
+              ))}
+              <div className="wd-metric-grid mt-8">
+                {WD_CWV.metrics.map((metric) => (
+                  <article key={metric.name} className="wd-metric-card">
+                    <p className="wd-metric-name">{metric.name}</p>
+                    <p className="wd-metric-target">{metric.target}</p>
+                    <p className="wd-metric-note">{metric.note}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </AboutReveal>
+        </div>
+      </section>
+
+      <section className="orbit-projects-tight px-4 sm:px-6 lg:px-8" aria-labelledby="wd-stack-heading">
+        <div className="mx-auto max-w-[82rem]">
+          <AboutReveal>
+            <div className="orbit-about-glass orbit-about-story">
+              <Badge>Architecture</Badge>
+              <h2 id="wd-stack-heading" className="orbit-about-h2 mt-4">
+                {WD_STACK_COMPARE.title}
+              </h2>
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-white/58">{WD_STACK_COMPARE.intro}</p>
+              <div className="wd-compare-table-wrap mt-8">
+                <table className="wd-compare-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Stack</th>
+                      <th scope="col">Best for</th>
+                      <th scope="col">Trade-off</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {WD_STACK_COMPARE.rows.map((row) => (
+                      <tr key={row.stack}>
+                        <th scope="row">{row.stack}</th>
+                        <td>{row.bestFor}</td>
+                        <td>{row.tradeoff}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </AboutReveal>
+        </div>
+      </section>
+
       <section className="orbit-projects-tight px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[82rem] grid gap-6 lg:grid-cols-2">
           <AboutReveal>
@@ -232,6 +336,14 @@ export function WebsiteDevelopmentPageView({ config }: { config: WebsiteDevelopm
                   {p}
                 </p>
               ))}
+              <ul className="mt-6 grid gap-2.5">
+                {perf.bullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-3 text-sm leading-relaxed text-white/55">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#f0c43a]" aria-hidden="true" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </div>
           </AboutReveal>
           <AboutReveal>
