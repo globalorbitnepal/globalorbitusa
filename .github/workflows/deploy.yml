@@ -177,8 +177,9 @@ jobs:
           test "$(git remote get-url origin)" = "$EXPECTED_ORIGIN"
 
           if ! pm2 describe "$APP_NAME" >/dev/null 2>&1; then
-            echo "PM2_PROCESS_MISSING: ${APP_NAME}"
-            exit 1
+            echo "PM2 process ${APP_NAME} missing; starting it before deploy"
+            pm2 start "$APP_DIR/ecosystem.config.cjs" --only "$APP_NAME"
+            pm2 save
           fi
 
           git fetch origin main
@@ -224,7 +225,10 @@ jobs:
           mv .next-build .next
           rm -rf .next-stale
 
-          pm2 restart "$APP_NAME"
+          if ! pm2 restart "$APP_NAME"; then
+            pm2 start "$APP_DIR/ecosystem.config.cjs" --only "$APP_NAME"
+          fi
+          pm2 save
 
           LISTEN_OK=0
           for _i in $(seq 1 30); do
