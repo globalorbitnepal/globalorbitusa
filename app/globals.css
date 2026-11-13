@@ -13100,8 +13100,8 @@ body.go-cms-open .orbit-gold-fab {
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .go-cms-nav-icon {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.85rem;
+  height: 1.85rem;
   border-radius: 0.55rem;
   background: rgba(255, 255, 255, 0.08);
   display: inline-flex;
@@ -13110,7 +13110,12 @@ body.go-cms-open .orbit-gold-fab {
   font-size: 0.72rem;
   font-weight: 800;
   flex-shrink: 0;
-  color: rgba(240, 196, 58, 0.85);
+  color: rgba(240, 196, 58, 0.92);
+}
+.go-cms-nav-svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
 }
 .go-cms-side nav button.is-active .go-cms-nav-icon {
   background: linear-gradient(135deg, #f5d76a, #c9a227);
