@@ -474,8 +474,8 @@ export function AdminApp(props: Props) {
             src={chrome.headerLogoSrc ? chrome.headerLogoSrc : brandAssetUrl(BRAND_LOGO_PRIMARY)}
             alt="Global Orbit"
             className="go-cms-brand-logo"
-            width={240}
-            height={80}
+            width={952}
+            height={150}
             decoding="async"
           />
           <span className="go-cms-brand-kicker">Management console</span>
