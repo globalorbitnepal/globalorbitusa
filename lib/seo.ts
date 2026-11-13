@@ -78,7 +78,7 @@ export function organizationJsonLd(input: {
     "@id": `${url}/#organization`,
     name: input.name,
     url,
-    logo: absoluteUrl("/brand/logo-emblem-square.png"),
+    logo: absoluteUrl("/brand/logo-hd-emblem.png"),
     image: absoluteUrl("/brand/og-default.jpg"),
     description: input.description || FALLBACK_SITE.defaultSeoDescription,
     alternateName: ["Global Orbit USA", "Website development company United States"],
@@ -131,7 +131,7 @@ export function localBusinessJsonLd(input: {
     description: input.description,
     url: SITE_ORIGIN,
     image: absoluteUrl("/brand/og-default.jpg"),
-    logo: absoluteUrl("/brand/logo-emblem-square.png"),
+    logo: absoluteUrl("/brand/logo-hd-emblem.png"),
     email: input.email,
     telephone: input.phone,
     address: {

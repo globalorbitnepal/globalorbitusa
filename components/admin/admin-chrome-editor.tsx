@@ -34,7 +34,7 @@ export function AdminChromeEditor({ chrome, busy, onChange, onSave, onUpload }: 
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={chrome.headerLogoSrc || "/brand/logo-official-gold.png"}
+            src={chrome.headerLogoSrc || "/brand/logo-hd-gold.png"}
             alt="Global Orbit"
             className="go-cms-logo-preview-img"
             decoding="async"

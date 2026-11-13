@@ -4049,7 +4049,7 @@ li.orbit-card:hover {
   width: min(var(--orbit-logo-w, 240px), 100%);
   max-width: var(--orbit-logo-w, 240px);
   height: auto;
-  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
+  max-height: calc(var(--orbit-logo-w, 240px) * 426 / 2400);
   filter: drop-shadow(0 8px 24px rgba(240, 196, 58, 0.18));
 }
 
@@ -4752,6 +4752,12 @@ li.orbit-card:hover {
     opacity 0.32s ease;
 }
 
+@media (min-width: 1024px) {
+  .orbit-header-bar {
+    padding-top: 0.85rem;
+  }
+}
+
 .orbit-header-bar.orbit-header-bar--past-hero {
   transform: translate3d(0, calc(-100% - 0.5rem), 0);
   opacity: 0;
@@ -4778,9 +4784,9 @@ li.orbit-card:hover {
 }
 
 .orbit-header-inner {
-  /* Horizontal wordmark — width driven by --orbit-logo-w (admin: 100–480px) */
-  --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), 100%);
-  --orbit-header-logo-h: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
+  /* Header wordmark is 10% under the admin width. Aspect is the HD logo (2400×426). */
+  --orbit-header-logo-w: min(calc(var(--orbit-logo-w, 240px) * 0.9), 100%);
+  --orbit-header-logo-h: calc(var(--orbit-logo-w, 240px) * 0.9 * 426 / 2400);
   --orbit-header-nav-h: clamp(2.65rem, 3.6vw, 3.15rem);
   position: relative;
   display: grid;
@@ -4800,10 +4806,8 @@ li.orbit-card:hover {
 
 @media (min-width: 1024px) {
   .orbit-header-inner {
-    /* Auto side columns so the admin logo width is honoured up to 480px.
-       The centre column may never shrink below the nav pill's intrinsic width,
-       which previously let the pill overlap the logo at wide logo settings. */
-    grid-template-columns: auto minmax(min-content, 1fr) auto;
+    /* Logo and CTA sit on the edges. The nav is centered on the header itself. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 1rem;
     align-items: center;
   }
@@ -4812,10 +4816,26 @@ li.orbit-card:hover {
     white-space: nowrap;
   }
 
+  .orbit-header-side.is-left {
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .orbit-header-side.is-right {
+    grid-column: 2;
+    justify-self: end;
+  }
+
   .orbit-header-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 4;
     display: flex;
+    width: max-content;
+    max-width: calc(100% - 2rem);
+    transform: translate(-50%, -50%);
     justify-content: center;
-    min-width: 0;
   }
 
   .orbit-header-nav-pill {
@@ -4826,15 +4846,15 @@ li.orbit-card:hover {
 /* Keep the 6-item nav readable when a very wide logo is selected. */
 @media (min-width: 1024px) and (max-width: 1279px) {
   .orbit-header-inner {
-    --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), 220px);
-    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 341 / 1024), 73px);
+    --orbit-header-logo-w: min(calc(var(--orbit-logo-w, 240px) * 0.9), 198px);
+    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 0.9 * 426 / 2400), 36px);
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
   .orbit-header-inner {
-    --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), 340px);
-    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 341 / 1024), 113px);
+    --orbit-header-logo-w: min(calc(var(--orbit-logo-w, 240px) * 0.9), 306px);
+    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 0.9 * 426 / 2400), 55px);
   }
 }
 
@@ -4867,11 +4887,8 @@ li.orbit-card:hover {
 @media (min-width: 1024px) {
   .orbit-header-center {
     display: flex;
-    grid-column: 2;
-    grid-row: 1;
-    align-self: center;
-    height: var(--orbit-header-nav-h);
     align-items: center;
+    height: var(--orbit-header-nav-h);
   }
 
   .orbit-header-side.is-left {
@@ -4879,7 +4896,7 @@ li.orbit-card:hover {
   }
 
   .orbit-header-side.is-right {
-    grid-column: 3;
+    grid-column: 2;
   }
 }
 
@@ -4937,8 +4954,8 @@ li.orbit-card:hover {
 
 @media (max-width: 1023px) {
   .orbit-header-inner {
-    --orbit-header-logo-w: min(var(--orbit-logo-w, 240px), calc(100vw - 5.5rem));
-    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 341 / 1024), calc((100vw - 5.5rem) * 341 / 1024));
+    --orbit-header-logo-w: min(calc(var(--orbit-logo-w, 240px) * 0.9), calc(100vw - 5.5rem));
+    --orbit-header-logo-h: min(calc(var(--orbit-logo-w, 240px) * 0.9 * 426 / 2400), calc((100vw - 5.5rem) * 426 / 2400));
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.55rem;
     padding-top: calc(env(safe-area-inset-top, 0px) + 0.35rem);
@@ -5006,17 +5023,16 @@ li.orbit-card:hover {
 }
 
 .orbit-header-glass-light {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.14) 0%,
-    rgba(18, 18, 26, 0.42) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.04) 42%, rgba(8, 10, 16, 0.46) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow:
-    0 12px 32px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(22px) saturate(180%);
-  -webkit-backdrop-filter: blur(22px) saturate(180%);
+    0 18px 48px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(240, 196, 58, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 0 rgba(240, 196, 58, 0.22);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
 }
 
 .orbit-header-nav-list {
@@ -5025,13 +5041,16 @@ li.orbit-card:hover {
 
 .orbit-header-nav-link {
   font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
-  color: rgba(255, 255, 255, 0.78);
+  font-weight: 560;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.86);
   border-radius: 999px;
   padding: 0.42rem clamp(0.7rem, 0.9vw, 1rem);
-  text-shadow: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
   transition:
     color 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .orbit-header-nav-link:hover {
@@ -5043,11 +5062,13 @@ li.orbit-card:hover {
 .orbit-header-nav-link.is-active {
   position: relative;
   color: #ffffff;
-  font-weight: 600;
-  background: transparent;
+  font-weight: 650;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
   text-decoration: none;
-  text-shadow: none;
-  box-shadow: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
 .orbit-header-nav-link.is-active::after {
@@ -5055,10 +5076,10 @@ li.orbit-card:hover {
   position: absolute;
   left: 22%;
   right: 22%;
-  bottom: 0.22rem;
+  bottom: 0.18rem;
   height: 2px;
   border-radius: 99px;
-  background: #3b82f6;
+  background: linear-gradient(90deg, #f0c43a, #8ec5ff);
 }
 
 .orbit-book-appointment-btn {
@@ -11947,7 +11968,7 @@ body.go-login-open .orbit-gold-fab {
 .go-login-logo {
   display: block;
   width: min(var(--orbit-logo-w, 240px), 86%);
-  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
+  max-height: calc(var(--orbit-logo-w, 240px) * 426 / 2400);
   height: auto;
   object-fit: contain;
   background: transparent;
@@ -12984,7 +13005,7 @@ body.go-cms-open .orbit-gold-fab {
   width: 100%;
   max-width: min(var(--orbit-logo-w, 240px), 100%);
   height: auto;
-  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
+  max-height: calc(var(--orbit-logo-w, 240px) * 426 / 2400);
   object-fit: contain;
   object-position: left center;
   background: transparent;
@@ -13391,7 +13412,7 @@ body.go-cms-open .orbit-gold-fab {
   width: min(var(--orbit-logo-w, 240px), 100%);
   max-width: 100%;
   height: auto;
-  max-height: calc(var(--orbit-logo-w, 240px) * 341 / 1024);
+  max-height: calc(var(--orbit-logo-w, 240px) * 426 / 2400);
   object-fit: contain;
   object-position: left center;
 }
